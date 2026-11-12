@@ -12,8 +12,8 @@ export const faqs: Faq[] = [
       de: "Wie funktioniert der Online-Unterricht?",
     },
     a: {
-      en: "Every class is live and 1-to-1 with your tutor on Zoom or Google Meet. Each lesson is 30 minutes: your tutor shares the lesson on screen, listens to your recitation, corrects pronunciation gently, and sets a short practice task for the week.",
-      de: "Jede Stunde ist live und im Einzelunterricht mit Ihrem Lehrer über Zoom oder Google Meet. Eine Stunde dauert 30 Minuten: Ihr Lehrer teilt den Unterricht auf dem Bildschirm, hört Ihrer Rezitation zu, korrigiert die Aussprache behutsam und gibt eine kurze Übung für die Woche auf.",
+      en: "Every class is live and 1-to-1 with your tutor on Zoom or Google Meet. Each lesson is 25–45 minutes, depending on your plan: your tutor shares the lesson on screen, listens to your recitation, corrects pronunciation gently, and sets a short practice task for the week.",
+      de: "Jede Stunde ist live und im Einzelunterricht mit Ihrem Lehrer über Zoom oder Google Meet. Eine Stunde dauert je nach Tarif 25–45 Minuten: Ihr Lehrer teilt den Unterricht auf dem Bildschirm, hört Ihrer Rezitation zu, korrigiert die Aussprache behutsam und gibt eine kurze Übung für die Woche auf.",
     },
   },
   {

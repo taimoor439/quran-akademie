@@ -6,7 +6,7 @@ import { CtaBand } from "@/components/Shared";
 
 // SAMPLE blog post. Cover image verified 200 on 2026-11-12 (see CONVENTIONS.md).
 const COVER =
-  "https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&w=1600&q=80";
+  "https://images.pexels.com/photos/7155575/pexels-photo-7155575.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1";
 
 interface Section {
   heading: string;
@@ -60,7 +60,7 @@ const content: {
       {
         heading: "Building a routine that sticks",
         paragraphs: [
-          "Consistency beats intensity. Three short lessons a week will achieve far more than one long, tiring session on a Sunday. Pick a fixed time — for example, straight after homework or before dinner — and protect it the way you would a school lesson. Children thrive on predictability, and a fixed slot removes the daily negotiation about when to practise.",
+          "Consistency beats intensity. Several short lessons a week will achieve far more than one long, tiring session on a Sunday. Pick a fixed time — for example, straight after homework or before dinner — and protect it the way you would a school lesson. Children thrive on predictability, and a fixed slot removes the daily negotiation about when to practise.",
           "Keep the daily practice small and achievable. Five minutes of revision between lessons is enough for a young child, and it matters far more than an occasional hour of cramming. A simple wall chart where your child ticks off each day's practice can work wonders: children love seeing their own streak grow.",
         ],
         list: [
@@ -107,7 +107,7 @@ const content: {
           },
           {
             q: "How long will it take before my child reads fluently?",
-            a: "With two to three lessons a week and a little daily practice, most children finish Qaida within six to twelve months and begin reading the Quran itself. Fluency with good Tajweed typically takes one to two years of steady learning. Every child is different — the goal is steady progress, not speed.",
+            a: "With four to five lessons a week and a little daily practice, most children finish Qaida within six to twelve months and begin reading the Quran itself. Fluency with good Tajweed typically takes one to two years of steady learning. Every child is different — the goal is steady progress, not speed.",
           },
         ],
       },
@@ -139,7 +139,7 @@ const content: {
       {
         heading: "Eine Routine aufbauen, die hält",
         paragraphs: [
-          "Regelmäßigkeit schlägt Intensität. Drei kurze Stunden pro Woche erreichen deutlich mehr als eine lange, ermüdende Einheit am Sonntag. Wählen Sie eine feste Uhrzeit — zum Beispiel direkt nach den Hausaufgaben oder vor dem Abendessen — und schützen Sie sie wie eine Schulstunde. Kinder lieben Berechenbarkeit, und ein fester Termin erspart das tägliche Verhandeln darüber, wann geübt wird.",
+          "Regelmäßigkeit schlägt Intensität. Mehrere kurze Stunden pro Woche erreichen deutlich mehr als eine lange, ermüdende Einheit am Sonntag. Wählen Sie eine feste Uhrzeit — zum Beispiel direkt nach den Hausaufgaben oder vor dem Abendessen — und schützen Sie sie wie eine Schulstunde. Kinder lieben Berechenbarkeit, und ein fester Termin erspart das tägliche Verhandeln darüber, wann geübt wird.",
           "Halten Sie das tägliche Üben klein und machbar. Fünf Minuten Wiederholung zwischen den Stunden reichen für ein junges Kind völlig aus — und sie bringen weit mehr als gelegentliches stundenlanges Pauken. Eine einfache Wandtafel, auf der Ihr Kind jeden Übungstag abhakt, kann Wunder wirken: Kinder lieben es, ihre eigene Serie wachsen zu sehen.",
         ],
         list: [
@@ -186,7 +186,7 @@ const content: {
           },
           {
             q: "Wie lange dauert es, bis mein Kind flüssig liest?",
-            a: "Mit zwei bis drei Stunden pro Woche und etwas täglichem Üben schließen die meisten Kinder die Qaida innerhalb von sechs bis zwölf Monaten ab und beginnen, den Koran selbst zu lesen. Flüssigkeit mit gutem Tadschwid braucht in der Regel ein bis zwei Jahre stetigen Lernens. Jedes Kind ist anders — das Ziel ist stetiger Fortschritt, nicht Geschwindigkeit.",
+            a: "Mit vier bis fünf Stunden pro Woche und etwas täglichem Üben schließen die meisten Kinder die Qaida innerhalb von sechs bis zwölf Monaten ab und beginnen, den Koran selbst zu lesen. Flüssigkeit mit gutem Tadschwid braucht in der Regel ein bis zwei Jahre stetigen Lernens. Jedes Kind ist anders — das Ziel ist stetiger Fortschritt, nicht Geschwindigkeit.",
           },
         ],
       },

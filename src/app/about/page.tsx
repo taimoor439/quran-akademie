@@ -51,7 +51,7 @@ const content = {
           body: "The lesson ends with a short summary, a small practice task for the week, and a word of encouragement.",
         },
       ],
-      note: "Lesson length can be adjusted to suit the student — 30 minutes is our standard for children; adults often choose 45 or 60 minutes.",
+      note: "Lesson length depends on your plan — 25, 30 or 45 minutes — and can be adjusted to suit the student.",
     },
     different: {
       eyebrow: "What makes us different",
@@ -74,7 +74,7 @@ const content = {
           body: "Parents receive regular updates on their child's progress — what has been covered, what is improving, and what comes next.",
         },
       ],
-      imageAlt: "A student learning online on a laptop",
+      imageAlt: "A Quran tutor teaching a live online lesson",
     },
     values: {
       eyebrow: "Our values",
@@ -144,7 +144,7 @@ const content = {
           body: "Die Stunde endet mit einer kurzen Zusammenfassung, einer kleinen Übungsaufgabe für die Woche und einem Wort der Ermutigung.",
         },
       ],
-      note: "Die Unterrichtsdauer kann an den Schüler angepasst werden — 30 Minuten sind unser Standard für Kinder; Erwachsene wählen oft 45 oder 60 Minuten.",
+      note: "Die Unterrichtsdauer hängt vom Tarif ab — 25, 30 oder 45 Minuten — und kann an den Schüler angepasst werden.",
     },
     different: {
       eyebrow: "Was uns anders macht",
@@ -167,7 +167,7 @@ const content = {
           body: "Eltern erhalten regelmäßige Rückmeldungen über den Fortschritt ihres Kindes — was behandelt wurde, was sich verbessert und was als Nächstes kommt.",
         },
       ],
-      imageAlt: "Ein Schüler lernt online am Laptop",
+      imageAlt: "Ein Koranlehrer im Live-Online-Unterricht",
     },
     values: {
       eyebrow: "Unsere Werte",
@@ -272,7 +272,7 @@ export default function AboutPage() {
         <div className="mx-auto grid max-w-7xl items-center gap-10 px-4 py-16 sm:px-6 lg:grid-cols-2 lg:gap-14 lg:px-8 lg:py-20">
           <div className="order-2 overflow-hidden rounded-3xl shadow-card lg:order-1">
             <img
-              src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1200&q=80"
+              src="https://images.pexels.com/photos/6937687/pexels-photo-6937687.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
               alt={t.different.imageAlt}
               loading="lazy"
               className="h-full w-full object-cover"

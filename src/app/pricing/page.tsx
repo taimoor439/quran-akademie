@@ -18,7 +18,7 @@ const content = {
       "One-to-one lessons with a certified Quran tutor, in Germany time (CET/CEST). No lock-in, no hidden fees — and your first class is free.",
     perMonth: "/month",
     classesPerWeek: (n: number) => `${n} classes per week`,
-    minutesPerClass: "30 minutes per class, 1-to-1",
+    minutesPerClass: (n: number) => `${n} minutes per class, 1-to-1`,
     mostPopular: "Most popular",
     choosePlan: "Choose this plan",
     notesEyebrow: "Good to know",
@@ -43,7 +43,7 @@ const content = {
       "Einzelunterricht mit einer zertifizierten Koranlehrkraft, nach deutscher Zeit (MEZ/MESZ). Keine Mindestlaufzeit, keine versteckten Kosten — und die erste Stunde ist kostenlos.",
     perMonth: "/Monat",
     classesPerWeek: (n: number) => `${n} Stunden pro Woche`,
-    minutesPerClass: "30 Minuten pro Stunde, Einzelunterricht",
+    minutesPerClass: (n: number) => `${n} Minuten pro Stunde, Einzelunterricht`,
     mostPopular: "Am beliebtesten",
     choosePlan: "Diesen Tarif wählen",
     notesEyebrow: "Gut zu wissen",
@@ -120,7 +120,7 @@ export default function PricingPage() {
                     plan.popular ? "text-white/75" : "text-ink/70"
                   }`}
                 >
-                  {t.minutesPerClass}
+                  {t.minutesPerClass(plan.minutesPerClass)}
                 </p>
                 <ul className="mt-8 flex-1 space-y-3">
                   {plan.features[locale].map((feature) => (

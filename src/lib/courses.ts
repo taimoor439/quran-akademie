@@ -23,7 +23,7 @@ export const courses: CourseMeta[] = [
     ages: { en: "Ages 4+ · Beginners", de: "Ab 4 Jahren · Anfänger" },
     level: { en: "Beginner", de: "Anfänger" },
     image:
-      "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=1200&q=80",
+      "https://www.barakahislamicstore.com/cdn/shop/files/Noorani-Qaeda1_grande_33b8a558-42bc-4bdd-8e32-e9171343fa01.png?v=1706029182",
   },
   {
     slug: "tajweed",
@@ -52,7 +52,7 @@ export const courses: CourseMeta[] = [
     },
     level: { en: "Intermediate", de: "Fortgeschritten" },
     image:
-      "https://images.pexels.com/photos/372326/pexels-photo-372326.jpeg?auto=compress&cs=tinysrgb&w=1200",
+      "https://images.pexels.com/photos/5801003/pexels-photo-5801003.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
   },
   {
     slug: "tafseer",
@@ -68,19 +68,6 @@ export const courses: CourseMeta[] = [
       "https://images.unsplash.com/photo-1519817650390-64a93db51149?auto=format&fit=crop&w=1200&q=80",
   },
   {
-    slug: "arabic",
-    name: { en: "Arabic Language", de: "Arabische Sprache" },
-    tagline: {
-      en: "Reading, writing and speaking Arabic, from the alphabet to everyday conversation.",
-      de: "Arabisch lesen, schreiben und sprechen — vom Alphabet bis zur Alltagskonversation.",
-    },
-    arabic: "اللغة العربية",
-    ages: { en: "Ages 6+ · All levels", de: "Ab 6 Jahren · Alle Stufen" },
-    level: { en: "All levels", de: "Alle Stufen" },
-    image:
-      "https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1200&q=80",
-  },
-  {
     slug: "kids-islamic-studies",
     name: { en: "Islamic Studies for Kids", de: "Islamkunde für Kinder" },
     tagline: {
@@ -91,7 +78,7 @@ export const courses: CourseMeta[] = [
     ages: { en: "Ages 5–12", de: "5–12 Jahre" },
     level: { en: "Beginner", de: "Anfänger" },
     image:
-      "https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&w=1200&q=80",
+      "https://images.pexels.com/photos/7155575/pexels-photo-7155575.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
   },
 ];
 

@@ -34,7 +34,7 @@ const content = {
     formatHeading: "Class format",
     format: [
       "1-to-1 live lessons with a dedicated Hafiz or Hafiza",
-      "30 minutes per class (longer sessions on the Hifz Intensive plan)",
+      "45 minutes per class on the Hifz Intensive plan",
       "Zoom or Google Meet — link sent before class",
       "Germany time (CET/CEST)",
       "After-school & evening slots, including weekends",
@@ -91,7 +91,7 @@ const content = {
     formatHeading: "Unterrichtsformat",
     format: [
       "Live-Unterricht 1-zu-1 mit einem festen Hafiz oder einer festen Hafiza",
-      "30 Minuten pro Stunde (längere Stunden im Hifz-Intensivplan)",
+      "45 Minuten pro Stunde im Hifz-Intensivplan",
       "Zoom oder Google Meet — Link kommt vor der Stunde",
       "Deutsche Zeit (MEZ/MESZ)",
       "Nachmittags- und Abendtermine, auch am Wochenende",

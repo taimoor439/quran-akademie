@@ -28,3 +28,68 @@ body {
 .gold-rule {
   @apply mx-auto h-1 w-16 rounded-full bg-gold;
 }
+
+/* Home trust strip: subtle staggered icon bob + slow shimmer sweep.
+   Kept gentle and premium; fully disabled for reduced-motion users. */
+@keyframes trust-bob {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-3px);
+  }
+}
+
+@keyframes trust-shimmer {
+  0% {
+    transform: translateX(-120%);
+  }
+  55%,
+  100% {
+    transform: translateX(120%);
+  }
+}
+
+.trust-strip {
+  position: relative;
+  overflow: hidden;
+}
+
+.trust-strip::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    105deg,
+    transparent 42%,
+    rgba(255, 255, 255, 0.09) 50%,
+    transparent 58%
+  );
+  transform: translateX(-120%);
+  animation: trust-shimmer 7s ease-in-out infinite;
+  pointer-events: none;
+}
+
+.trust-strip .trust-item svg {
+  animation: trust-bob 3.2s ease-in-out infinite;
+}
+
+.trust-strip .trust-item:nth-child(2) svg {
+  animation-delay: 0.4s;
+}
+
+.trust-strip .trust-item:nth-child(3) svg {
+  animation-delay: 0.8s;
+}
+
+.trust-strip .trust-item:nth-child(4) svg {
+  animation-delay: 1.2s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .trust-strip::after,
+  .trust-strip .trust-item svg {
+    animation: none;
+  }
+}

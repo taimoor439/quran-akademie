@@ -12,7 +12,7 @@ import { SectionHeading, CtaBand } from "@/components/Shared";
 const HERO_IMAGE =
   "https://images.unsplash.com/photo-1585036156171-384164a8c675?auto=format&fit=crop&w=1600&q=80";
 const WHY_IMAGE =
-  "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1200&q=80";
+  "https://images.pexels.com/photos/6937687/pexels-photo-6937687.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1";
 
 const content = {
   en: {
@@ -45,7 +45,7 @@ const content = {
       },
       {
         title: "Learn weekly, at your time",
-        body: "Regular 30-minute lessons, with a monthly progress report for parents.",
+        body: "Regular lessons, 4–5 times a week, with a monthly progress report for parents.",
       },
     ],
     coursesEyebrow: "Our courses",
@@ -122,7 +122,7 @@ const content = {
       },
       {
         title: "Wöchentlich lernen, zu Ihrer Zeit",
-        body: "Regelmäßige 30-Minuten-Stunden, mit monatlichem Fortschrittsbericht für Eltern.",
+        body: "Regelmäßige Stunden, 4–5 Mal pro Woche, mit monatlichem Fortschrittsbericht für Eltern.",
       },
     ],
     coursesEyebrow: "Unsere Kurse",
@@ -236,10 +236,10 @@ export default function HomePage() {
       </section>
 
       {/* TRUST STRIP */}
-      <section className="bg-brand">
+      <section className="trust-strip bg-brand">
         <div className="mx-auto grid max-w-7xl grid-cols-2 gap-4 px-4 py-6 sm:px-6 lg:grid-cols-4 lg:px-8">
           {t.trust.map((item) => (
-            <div key={item} className="flex items-center gap-2.5 text-white">
+            <div key={item} className="trust-item flex items-center gap-2.5 text-white">
               <CheckIcon />
               <span className="text-sm font-semibold">{item}</span>
             </div>
@@ -317,7 +317,7 @@ export default function HomePage() {
           <div className="order-2 lg:order-1">
             <img
               src={WHY_IMAGE}
-              alt={locale === "de" ? "Online-Unterricht am Laptop" : "Online lesson on a laptop"}
+              alt={locale === "de" ? "Koranlehrer im Live-Online-Unterricht" : "Quran tutor teaching a live online lesson"}
               loading="lazy"
               className="aspect-[4/3] w-full rounded-[2rem] object-cover shadow-lift"
             />

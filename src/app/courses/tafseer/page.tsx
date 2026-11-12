@@ -34,14 +34,14 @@ const content = {
     formatHeading: "Class format",
     format: [
       "1-to-1 live lessons with a dedicated tutor",
-      "30 minutes per class",
+      "25–45 minutes per class, depending on your plan",
       "Zoom or Google Meet — link sent before class",
       "Germany time (CET/CEST)",
       "After-school & evening slots, including weekends",
     ],
     pricingHeading: "Simple monthly pricing",
     pricingBody:
-      "Plans start from $35/month — choose 2, 3 or 5 classes per week. Start with a free trial class, no payment details needed.",
+      "Plans start from $35/month — choose 4 or 5 classes per week. Start with a free trial class, no payment details needed.",
     pricingCta: "View pricing",
     trialCta: "Book a free trial",
     faqHeading: "Questions about this course",
@@ -91,14 +91,14 @@ const content = {
     formatHeading: "Unterrichtsformat",
     format: [
       "Live-Unterricht 1-zu-1 mit einer festen Lehrkraft",
-      "30 Minuten pro Unterrichtsstunde",
+      "25–45 Minuten pro Stunde, je nach Tarif",
       "Zoom oder Google Meet — Link kommt vor der Stunde",
       "Deutsche Zeit (MEZ/MESZ)",
       "Nachmittags- und Abendtermine, auch am Wochenende",
     ],
     pricingHeading: "Einfache monatliche Preise",
     pricingBody:
-      "Die Pläne beginnen ab 35 $/Monat — wählen Sie 2, 3 oder 5 Stunden pro Woche. Beginnen Sie mit einer kostenlosen Probestunde, ohne Zahlungsdaten.",
+      "Die Pläne beginnen ab 35 $/Monat — wählen Sie 4 oder 5 Stunden pro Woche. Beginnen Sie mit einer kostenlosen Probestunde, ohne Zahlungsdaten.",
     pricingCta: "Preise ansehen",
     trialCta: "Kostenlose Probestunde buchen",
     faqHeading: "Fragen zu diesem Kurs",
@@ -122,7 +122,7 @@ const content = {
   },
 } as const;
 
-const relatedSlugs = ["arabic", "tajweed"] as const;
+const relatedSlugs = ["tajweed", "hifz"] as const;
 
 export default function TafseerPage() {
   const { locale } = useLocale();

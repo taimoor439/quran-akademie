@@ -21,7 +21,7 @@ const content = {
         body: "Your own dedicated tutor in every class, teaching at your pace.",
       },
       {
-        title: "30 minutes per class",
+        title: "25–45 minutes per class",
         body: "Focused, friendly sessions that fit around school and work.",
       },
       {
@@ -49,7 +49,7 @@ const content = {
         body: "Ihre eigene Lehrkraft in jeder Stunde — in Ihrem Tempo.",
       },
       {
-        title: "30 Minuten pro Stunde",
+        title: "25–45 Minuten pro Stunde",
         body: "Konzentrierte, freundliche Stunden, die zu Schule und Beruf passen.",
       },
       {

@@ -21,7 +21,7 @@ const content = {
       {
         heading: "1. Services",
         paragraphs: [
-          "Quran Akademie provides live online Quran classes taught one-to-one by a tutor over video call. Classes cover Quran reading, Tajweed, Hifz (memorisation), Tafseer and Arabic, and are offered for children and adults.",
+          "Quran Akademie provides live online Quran classes taught one-to-one by a tutor over video call. Classes cover Quran reading, Tajweed, Hifz (memorisation) and Tafseer, and are offered for children and adults.",
           "All classes are held online at the scheduled time in Germany time (CET/CEST). You are responsible for providing a suitable device, a stable internet connection and a quiet place for the lesson.",
         ],
       },
@@ -98,7 +98,7 @@ const content = {
       {
         heading: "1. Leistungen",
         paragraphs: [
-          "Die Quran Akademie bietet Live-Online-Quran-Kurse an, die im Einzelunterricht per Videoanruf von einer Lehrkraft durchgeführt werden. Die Kurse umfassen Quran-Lesen, Tajweed, Hifz (Auswendiglernen), Tafseer und Arabisch und richten sich an Kinder und Erwachsene.",
+          "Die Quran Akademie bietet Live-Online-Quran-Kurse an, die im Einzelunterricht per Videoanruf von einer Lehrkraft durchgeführt werden. Die Kurse umfassen Quran-Lesen, Tajweed, Hifz (Auswendiglernen) und Tafsir und richten sich an Kinder und Erwachsene.",
           "Alle Stunden finden online zur vereinbarten Zeit in deutscher Zeit (MEZ/MESZ) statt. Sie sind dafür verantwortlich, ein geeignetes Endgerät, eine stabile Internetverbindung und einen ruhigen Ort für die Stunde bereitzustellen.",
         ],
       },

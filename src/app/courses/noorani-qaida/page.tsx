@@ -34,14 +34,14 @@ const content = {
     formatHeading: "Class format",
     format: [
       "1-to-1 live lessons with a dedicated tutor",
-      "30 minutes per class",
+      "25–45 minutes per class, depending on your plan",
       "Zoom or Google Meet — link sent before class",
       "Germany time (CET/CEST)",
       "After-school & evening slots, including weekends",
     ],
     pricingHeading: "Simple monthly pricing",
     pricingBody:
-      "Plans start from $35/month — choose 2, 3 or 5 classes per week. Start with a free trial class, no payment details needed.",
+      "Plans start from $35/month — choose 4 or 5 classes per week. Start with a free trial class, no payment details needed.",
     pricingCta: "View pricing",
     trialCta: "Book a free trial",
     faqHeading: "Questions about this course",
@@ -49,14 +49,14 @@ const content = {
     faqs: [
       {
         q: "How long does it take to complete Noorani Qaida?",
-        a: "Most students finish in 3–6 months with two or three classes per week. Younger children may take a little longer — and that is completely fine. Progress depends on age, practice and consistency, never on speed.",
+        a: "Most students finish in 3–6 months with four or five classes per week. Younger children may take a little longer — and that is completely fine. Progress depends on age, practice and consistency, never on speed.",
       },
       {
         q: "Does my child need to know any Arabic first?",
         a: "No — this course starts from zero. The tutor begins with the very first letter and builds up slowly, so children never feel lost.",
       },
       {
-        q: "What if my child finds it hard to sit still for 30 minutes?",
+        q: "What if my child finds it hard to sit still for 25 minutes?",
         a: "Our tutors are experienced with young children. Lessons are broken into short, varied activities — reading, games, repetition and praise — so children stay engaged. If needed, we can discuss shorter sessions for very young learners.",
       },
     ],
@@ -91,14 +91,14 @@ const content = {
     formatHeading: "Unterrichtsformat",
     format: [
       "Live-Unterricht 1-zu-1 mit einer festen Lehrkraft",
-      "30 Minuten pro Unterrichtsstunde",
+      "25–45 Minuten pro Stunde, je nach Tarif",
       "Zoom oder Google Meet — Link kommt vor der Stunde",
       "Deutsche Zeit (MEZ/MESZ)",
       "Nachmittags- und Abendtermine, auch am Wochenende",
     ],
     pricingHeading: "Einfache monatliche Preise",
     pricingBody:
-      "Die Pläne beginnen ab 35 $/Monat — wählen Sie 2, 3 oder 5 Stunden pro Woche. Beginnen Sie mit einer kostenlosen Probestunde, ohne Zahlungsdaten.",
+      "Die Pläne beginnen ab 35 $/Monat — wählen Sie 4 oder 5 Stunden pro Woche. Beginnen Sie mit einer kostenlosen Probestunde, ohne Zahlungsdaten.",
     pricingCta: "Preise ansehen",
     trialCta: "Kostenlose Probestunde buchen",
     faqHeading: "Fragen zu diesem Kurs",
@@ -106,14 +106,14 @@ const content = {
     faqs: [
       {
         q: "Wie lange dauert es, Noorani Qaida abzuschließen?",
-        a: "Die meisten Schüler schließen den Kurs in 3–6 Monaten mit zwei bis drei Stunden pro Woche ab. Jüngere Kinder brauchen vielleicht etwas länger — und das ist völlig in Ordnung. Der Fortschritt hängt von Alter, Übung und Regelmäßigkeit ab, nie von Geschwindigkeit.",
+        a: "Die meisten Schüler schließen den Kurs in 3–6 Monaten mit vier bis fünf Stunden pro Woche ab. Jüngere Kinder brauchen vielleicht etwas länger — und das ist völlig in Ordnung. Der Fortschritt hängt von Alter, Übung und Regelmäßigkeit ab, nie von Geschwindigkeit.",
       },
       {
         q: "Muss mein Kind schon Arabisch können?",
         a: "Nein — dieser Kurs beginnt bei null. Die Lehrkraft startet mit dem allerersten Buchstaben und baut langsam auf, sodass Kinder sich nie überfordert fühlen.",
       },
       {
-        q: "Was, wenn mein Kind keine 30 Minuten still sitzen kann?",
+        q: "Was, wenn mein Kind keine 25 Minuten still sitzen kann?",
         a: "Unsere Lehrkräfte haben Erfahrung mit kleinen Kindern. Die Stunden sind in kurze, abwechslungsreiche Abschnitte gegliedert — Lesen, Spiele, Wiederholung und Lob — damit Kinder aufmerksam bleiben. Bei Bedarf können wir kürzere Stunden für sehr junge Lernende besprechen.",
       },
     ],

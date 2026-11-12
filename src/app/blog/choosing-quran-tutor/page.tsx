@@ -6,7 +6,7 @@ import { CtaBand } from "@/components/Shared";
 
 // SAMPLE blog post. Cover image verified 200 on 2026-11-12 (see CONVENTIONS.md).
 const COVER =
-  "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1600&q=80";
+  "https://images.pexels.com/photos/6937687/pexels-photo-6937687.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1";
 
 interface Section {
   heading: string;

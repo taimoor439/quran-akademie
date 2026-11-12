@@ -9,7 +9,7 @@ const posts = [
   {
     slug: "teaching-kids-quran-germany",
     cover:
-      "https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&w=1200&q=80",
+      "https://images.pexels.com/photos/7155575/pexels-photo-7155575.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     category: { en: "For Parents", de: "Für Eltern" },
     readTime: { en: "6 min read", de: "6 Min. Lesezeit" },
     title: {
@@ -24,7 +24,7 @@ const posts = [
   {
     slug: "choosing-quran-tutor",
     cover:
-      "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1200&q=80",
+      "https://images.pexels.com/photos/6937687/pexels-photo-6937687.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     category: { en: "Guides", de: "Ratgeber" },
     readTime: { en: "7 min read", de: "7 Min. Lesezeit" },
     title: {
