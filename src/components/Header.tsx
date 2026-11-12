@@ -325,12 +325,13 @@ export default function Header() {
     <header className="sticky top-0 z-50 border-b border-brand/10 bg-white/95 backdrop-blur">
       <div className="mx-auto flex h-[72px] max-w-[1440px] items-center justify-between gap-3 px-4 sm:px-6 lg:px-8">
         <Logo height={44} />
-        {/* Desktop nav shows from 1400px up: with 10 items + switcher + CTA
-            (and longer German labels) there is no room for a clean row below
-            that, so narrower viewports get the hamburger menu instead. */}
+        {/* Desktop nav shows from xl (1280px) up: 10 items + switcher fit
+            a normal desktop row there. The "Book a free trial" CTA is wider
+            (much wider in German), so it only joins the row from 1400px up;
+            below 1280px the hamburger menu takes over. */}
         <nav
           ref={navRef}
-          className="hidden min-[1400px]:flex items-center gap-1"
+          className="hidden items-center gap-1 xl:flex"
           aria-label="Main"
         >
           {NAV_BEFORE.map((item) => (
@@ -370,16 +371,16 @@ export default function Header() {
             </Link>
           ))}
         </nav>
-        <div className="hidden min-[1400px]:flex items-center gap-3">
+        <div className="hidden items-center gap-3 xl:flex">
           <LanguageSwitcher />
           <Link
             href="/free-trial"
-            className="rounded-full bg-gold px-4 py-2.5 text-sm font-bold text-brand-deep shadow-sm transition hover:bg-gold-dark hover:text-white"
+            className="hidden rounded-full bg-gold px-4 py-2.5 text-sm font-bold text-brand-deep shadow-sm transition hover:bg-gold-dark hover:text-white min-[1400px]:inline-flex"
           >
             {t.bookFreeTrial}
           </Link>
         </div>
-        <div className="flex items-center gap-3 min-[1400px]:hidden">
+        <div className="flex items-center gap-3 xl:hidden">
           <LanguageSwitcher />
           <button
             type="button"
@@ -405,7 +406,7 @@ export default function Header() {
       </div>
       {open && (
         <nav
-          className="border-t border-brand/10 bg-white px-4 pb-6 pt-2 min-[1400px]:hidden"
+          className="border-t border-brand/10 bg-white px-4 pb-6 pt-2 xl:hidden"
           aria-label="Mobile"
         >
           {NAV_BEFORE.map((item) => (
