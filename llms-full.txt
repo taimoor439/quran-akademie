@@ -23,6 +23,10 @@
 - [Online Quran Classes in Germany](https://onlinekoran.de/online-quran-classes-germany): Germany hub — CET/CEST scheduling, German school hours and Bundesländer holidays, Ganztagsschule fit, Islamunterricht context, DITIB/mosque-school landscape, EUR/SEPA payments, cities served.
 - [Quran Classes for Kids](https://onlinekoran.de/quran-classes-for-kids): Kids pillar — starting ages, lesson length by age, curriculum path (Qaida → Tajweed → Hifz), female teachers, progress reports, safeguarding.
 - [Online Quran Classes in Berlin](https://onlinekoran.de/online-quran-classes-berlin): Berlin page — district-level context for Neukölln, Kreuzberg, Wedding, Moabit and Spandau.
+- [Online Quran Classes in Hamburg](https://onlinekoran.de/online-quran-classes-hamburg): Hamburg page — district-level context for Altona, Wilhelmsburg, Harburg and St. Georg.
+- [Online Quran Classes in Munich](https://onlinekoran.de/online-quran-classes-munich): Munich page — district-level context for Sendling, Neuperlach and Hasenbergl.
+- [Online Quran Classes in Cologne](https://onlinekoran.de/online-quran-classes-cologne): Cologne page — district-level context for Ehrenfeld, Kalk and Mülheim.
+- [Online Quran Classes in Frankfurt](https://onlinekoran.de/online-quran-classes-frankfurt): Frankfurt page — district-level context for Gallus, Höchst and Nordweststadt.
 - [Courses](https://onlinekoran.de/courses): All 5 courses at a glance.
 - [Pricing](https://onlinekoran.de/pricing): Basic $35, Standard $59, Hifz Intensive $99 per month; sibling discount; USD with EUR equivalent at checkout.
 - [Teachers](https://onlinekoran.de/teachers): Sample tutor profiles (placeholders until launch).
