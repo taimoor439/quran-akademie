@@ -84,17 +84,26 @@ export default function MyPage() {
 - Verified 200 on 2026-11-12 (use these first):
   - Open Quran (hero): `https://images.unsplash.com/photo-1585036156171-384164a8c675?auto=format&fit=crop&w=1600&q=80`
   - Quran on rehal: `https://images.unsplash.com/photo-1609599006353-e629aaabfeae?auto=format&fit=crop&w=1200&q=80`
-  - Quran (Pexels): `https://images.pexels.com/photos/372326/pexels-photo-372326.jpeg?auto=compress&cs=tinysrgb&w=1200`
   - Mosque: `https://images.unsplash.com/photo-1542816417-0983c9c9ad53?auto=format&fit=crop&w=1200&q=80`
   - Mosque silhouette: `https://images.unsplash.com/photo-1512632578888-169bbbc64f33?auto=format&fit=crop&w=1200&q=80`
   - Mosque interior: `https://images.unsplash.com/photo-1564769625905-50e93615e769?auto=format&fit=crop&w=1200&q=80`
   - Mosque dome: `https://images.unsplash.com/photo-1519817650390-64a93db51149?auto=format&fit=crop&w=1200&q=80`
   - Mosque arches: `https://images.unsplash.com/photo-1591604129939-f1efa4d9f7fa?auto=format&fit=crop&w=1200&q=80`
-  - Child studying: `https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=1200&q=80`
-  - Classroom: `https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1200&q=80`
-  - Online learning (laptop): `https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1200&q=80`
-  - Students learning: `https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1200&q=80`
-  - Kids classroom: `https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&w=1200&q=80`
+  - Bearded teacher on laptop (Pexels 6937687): `https://images.pexels.com/photos/6937687/pexels-photo-6937687.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1`
+  - Boy in cap holding Quran (Pexels 7155575): `https://images.pexels.com/photos/7155575/pexels-photo-7155575.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1`
+  - Open Quran (Pexels 5801003): `https://images.pexels.com/photos/5801003/pexels-photo-5801003.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1`
+  - Open Quran close-up (Pexels 16111758): `https://images.pexels.com/photos/16111758/pexels-photo-16111758.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1`
+  - Ornate Quran (Pexels 18387340): `https://images.pexels.com/photos/18387340/pexels-photo-18387340.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1`
+  - Boy reading Quran in mosque (Pexels 11929254): `https://images.pexels.com/photos/11929254/pexels-photo-11929254.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1`
+  - Boy reading indoors (Pexels 33451745): `https://images.pexels.com/photos/33451745/pexels-photo-33451745.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1`
+  - Berlin TV tower at sunset (Pexels 18909754): `https://images.pexels.com/photos/18909754/pexels-photo-18909754.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1`
+  - Noorani Qaida book cover (bookstore product photo — no free-stock photo of the book exists): `https://www.barakahislamicstore.com/cdn/shop/files/Noorani-Qaeda1_grande_33b8a558-42bc-4bdd-8e32-e9171343fa01.png?v=1706029182`
+- ⛔ BANNED — never use these again (removed in the 2026-11-12 fix round):
+  - Pexels 372326 — a BIBLE photo ("HOLY BIBLE"), wrongly used as the Hifz image
+  - Unsplash photo-1503676260728 — ABC/books photo (was the Qaida image)
+  - Unsplash photo-1522202176988 — cafe group with laptops (was the why-us image)
+  - Unsplash photo-1577896851231 — generic classroom (was the Islamic Studies image)
+  - Unsplash photo-1523240795612 — students in a library (was the Arabic course image)
 - If you need another image, pick a different Unsplash/Pexels photo ID and
   verify it returns HTTP 200 first:
   `curl -s -o /dev/null -w "%{http_code}" "<url>"`. Never use an unverified URL.

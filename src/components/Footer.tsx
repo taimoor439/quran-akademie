@@ -32,6 +32,8 @@ export default function Footer() {
               </h3>
               <ul className="mt-4 space-y-2.5 text-sm text-white/75">
                 <li><Link className="hover:text-white" href="/about">{t.navAbout}</Link></li>
+                <li><Link className="hover:text-white" href="/online-quran-classes-germany">{locale === "de" ? "Koranunterricht in Deutschland" : "Quran Classes in Germany"}</Link></li>
+                <li><Link className="hover:text-white" href="/quran-classes-for-kids">{locale === "de" ? "Koranunterricht für Kinder" : "Quran Classes for Kids"}</Link></li>
                 <li><Link className="hover:text-white" href="/teachers">{t.navTeachers}</Link></li>
                 <li><Link className="hover:text-white" href="/testimonials">{t.navTestimonials}</Link></li>
                 <li><Link className="hover:text-white" href="/pricing">{t.navPricing}</Link></li>
