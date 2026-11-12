@@ -37,3 +37,5 @@ Allow: /
 
 User-agent: Bingbot
 Allow: /
+
+Sitemap: https://onlinekoran.de/sitemap.xml
