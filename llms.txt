@@ -1,0 +1,47 @@
+# Quran Akademie
+
+
+> Quran Akademie offers live 1-on-1 online Quran classes for children and adults in Germany, in English and German. Certified tutors (male and female teachers available), lessons scheduled in Germany time (CET/CEST, after-school and evening slots), and a free trial class with no payment details required. Courses: Noorani Qaida, Quran Reading with Tajweed, Hifz-ul-Quran, Tafseer & Understanding, and Islamic Studies for Kids. Plans: Basic $35/month (4 classes/week, 25 min), Standard $59/month (5/week, 30 min), Hifz Intensive $99/month (5/week, 45 min).
+
+## Main pages
+
+- [Home](https://onlinekoran.de/): Live 1-to-1 Quran classes online for families in Germany — courses, pricing, teachers, free trial.
+- [About](https://onlinekoran.de/about): Who Quran Akademie is, how live 1-on-1 lessons work, and the teaching approach.
+- [Online Quran Classes in Germany](https://onlinekoran.de/online-quran-classes-germany): Germany hub — CET/CEST scheduling, German school hours and holidays, mosque-school context, cities served.
+- [Quran Classes for Kids](https://onlinekoran.de/quran-classes-for-kids): Kids pillar — ages, lesson length by age, curriculum path, female teachers, safeguarding.
+- [Online Quran Classes in Berlin](https://onlinekoran.de/online-quran-classes-berlin): Berlin page — Neukölln, Kreuzberg, Wedding, Moabit, Spandau.
+- [Courses](https://onlinekoran.de/courses): All 5 courses at a glance.
+- [Pricing](https://onlinekoran.de/pricing): Basic $35, Standard $59, Hifz Intensive $99 per month.
+- [Teachers](https://onlinekoran.de/teachers): Sample tutor profiles (placeholders until launch).
+- [Free trial class](https://onlinekoran.de/free-trial): Book a free 30-minute trial lesson.
+- [Reviews](https://onlinekoran.de/testimonials): Sample parent reviews (placeholders until launch).
+- [FAQ](https://onlinekoran.de/faq): Answers about lessons, scheduling, teachers and safeguarding.
+- [Safeguarding](https://onlinekoran.de/safeguarding): Child-safety policy — vetting, parent-present rule, no private contact.
+- [Contact](https://onlinekoran.de/contact): Contact form and email.
+
+## Courses
+
+- [Noorani Qaida](https://onlinekoran.de/courses/noorani-qaida): First steps in reading Arabic — letters, sounds and joining, for complete beginners (ages 4+).
+- [Quran Reading with Tajweed](https://onlinekoran.de/courses/tajweed): Fluent, beautiful recitation with correct pronunciation and the rules of Tajweed.
+- [Hifz-ul-Quran](https://onlinekoran.de/courses/hifz): Structured memorisation with revision cycles, guided by an experienced Hafiz or Hafiza.
+- [Tafseer & Understanding](https://onlinekoran.de/courses/tafseer): Meanings, context and lessons from the Quran, in plain language (teens & adults).
+- [Islamic Studies for Kids](https://onlinekoran.de/courses/kids-islamic-studies): Salah, duas, seerah stories and good manners for children ages 5–12.
+
+## Guides (blog)
+
+- [How Much Do Online Quran Classes Cost?](https://onlinekoran.de/blog/how-much-do-online-quran-classes-cost): Pricing guide with plan table and market comparison.
+- [What Age Should a Child Start Learning Quran?](https://onlinekoran.de/blog/what-age-should-a-child-start-learning-quran): Starting ages, readiness signs, age-band table.
+- [How Long Does It Take to Learn to Read the Quran?](https://onlinekoran.de/blog/how-long-does-it-take-to-learn-quran): Timeline table — Qaida 3–6 months, kids' fluency 12–18 months, adults 6–12 months, Hifz 3–6 years.
+- [What Is Tajweed?](https://onlinekoran.de/blog/what-is-tajweed): Definition and rule families — makhraj, Noon Sakinah, ghunnah, qalqalah, madd, waqf.
+- [Noorani Qaida Explained](https://onlinekoran.de/blog/noorani-qaida-explained): What the Qaida covers, its stages, and how long it takes.
+- [Online vs In-Person Quran Classes](https://onlinekoran.de/blog/online-vs-in-person-quran-classes): Honest comparison — online 1-on-1 vs mosque school vs in-person tutor.
+- [How to Choose an Online Quran Teacher: 12 Questions](https://onlinekoran.de/blog/how-to-choose-an-online-quran-teacher): 12 questions to ask — Ijazah, safeguarding, trial class, pricing.
+- [How to Memorize the Quran](https://onlinekoran.de/blog/how-to-memorize-quran): Beginner's Hifz guide — sabaq/sabqi/manzil, revision, pace table.
+- [How Online Quran Classes Work](https://onlinekoran.de/blog/how-online-quran-classes-work): Step-by-step — free trial, level check, personal plan, live lessons.
+- [Teaching Your Child the Quran in Germany](https://onlinekoran.de/blog/teaching-kids-quran-germany): Starting early and building a routine around German school days.
+- [How to Choose an Online Quran Tutor](https://onlinekoran.de/blog/choosing-quran-tutor): Ijazah, Tajweed, safeguarding checks and the trial class.
+- [Tajweed Basics for Beginners](https://onlinekoran.de/blog/tajweed-basics): What Tajweed is, makhraj, and common beginner mistakes.
+
+## Optional
+
+- [Full llms.txt](https://onlinekoran.de/llms-full.txt): Extended version of this file with page summaries and key facts.
