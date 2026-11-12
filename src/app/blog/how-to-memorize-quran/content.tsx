@@ -5,8 +5,7 @@ import Link from "next/link";
 import { useLocale } from "@/lib/i18n";
 import { CtaBand } from "@/components/Shared";
 
-// TODO: update base URL at launch to the real domain
-const BASE_URL = "https://taimoor439.github.io/quran-akademie";
+const BASE_URL = "https://onlinekoran.de";
 const SLUG = "/blog/how-to-memorize-quran";
 // Cover image assigned for this guide (curl-verified HTTP 200): an open Quran.
 const COVER =

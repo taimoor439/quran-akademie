@@ -6,8 +6,7 @@ import { useLocale } from "@/lib/i18n";
 import { plans } from "@/lib/plans";
 import { SectionHeading, CtaBand } from "@/components/Shared";
 
-// TODO: update base URL at launch to the real domain
-const BASE_URL = "https://taimoor439.github.io/quran-akademie";
+const BASE_URL = "https://onlinekoran.de";
 const PAGE_PATH = "/online-quran-classes-berlin";
 
 const EN_META = {

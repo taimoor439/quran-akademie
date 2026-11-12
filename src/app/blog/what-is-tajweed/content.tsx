@@ -5,8 +5,7 @@ import Link from "next/link";
 import { useLocale, type Locale } from "@/lib/i18n";
 import { CtaBand } from "@/components/Shared";
 
-// TODO: update base URL at launch to the real domain.
-const BASE_URL = "https://taimoor439.github.io/quran-akademie";
+const BASE_URL = "https://onlinekoran.de";
 const SLUG = "/blog/what-is-tajweed";
 
 // Cover image: close-up of open Quran pages. Verified HTTP 200 on 2026-11-12.
