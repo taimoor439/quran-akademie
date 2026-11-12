@@ -237,7 +237,7 @@ const content: { en: LocaleContent; de: LocaleContent } = {
     heroNote: "Keine Zahlung für die Probestunde nötig · 30 Minuten · Zoom oder Google Meet",
     heroAlt: "Moscheekuppel und Minarette vor dem Himmel",
     intro:
-      "Ja — in Deutschland kann man den Koran online mit einer live zugeschalteten, zertifizierten Lehrkraft lernen, im Einzelunterricht und zu Zeiten, die zum deutschen Schulalltag passen. Die Quran Akademie unterrichtet Kinder und Erwachsene in ganz Deutschland auf Englisch oder Deutsch, nachmittags und abends nach MEZ/MESZ, mit kostenloser 30-minütiger Probestunde und ohne Mindestlaufzeit.",
+      "Ja — in Deutschland kann man den Koran online mit einer live zugeschalteten, zertifizierten Lehrkraft lernen, im Einzelunterricht und zu Zeiten, die zum deutschen Schulalltag passen. Die Online Quran unterrichtet Kinder und Erwachsene in ganz Deutschland auf Englisch oder Deutsch, nachmittags und abends nach MEZ/MESZ, mit kostenloser 30-minütiger Probestunde und ohne Mindestlaufzeit.",
     factsTitle: "Deutschland im Überblick",
     facts: [
       "6,6–7,0 Millionen Musliminnen und Muslime lebten 2025 in Deutschland — 8,0–8,5 % der Bevölkerung. (BAMF Forschungsbericht 55)",
@@ -396,12 +396,12 @@ export default function GermanyContent() {
         inLanguage: locale,
         datePublished: "2026-11-12",
         dateModified: "2026-11-12",
-        author: { "@type": "Organization", name: "Quran Akademie" },
+        author: { "@type": "Organization", name: "Online Quran" },
       },
       {
         "@type": "BreadcrumbList",
         itemListElement: [
-          { "@type": "ListItem", position: 1, name: "Quran Akademie", item: BASE_URL },
+          { "@type": "ListItem", position: 1, name: "Online Quran", item: BASE_URL },
           { "@type": "ListItem", position: 2, name: t.jsonLdName, item: pageUrl },
         ],
       },
@@ -411,7 +411,8 @@ export default function GermanyContent() {
         description: t.jsonLdDescription,
         provider: {
           "@type": "Organization",
-          name: "Quran Akademie",
+          name: "Online Quran",
+          logo: "https://onlinekoran.de/logo-horizontal.svg",
           url: BASE_URL,
         },
         offers: plans.map((plan) => ({

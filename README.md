@@ -1,4 +1,4 @@
-# Quran Akademie
+# Online Quran
 
 Online Quran academy targeting Germany — live 1-to-1 Quran classes for kids and adults, taught by Pakistan-based tutors in Germany-friendly time slots.
 
@@ -26,4 +26,4 @@ Add an empty `out/.nojekyll` after every build. The `gh-pages` branch holds the 
 
 ## Before launch
 
-Replace the placeholder content: teacher profiles (`src/lib/teachers.ts`), testimonials (`src/lib/testimonials.ts`), contact details (`hello@quranakademie.de`, WhatsApp link), Impressum business details, and have the privacy/terms pages reviewed by a German lawyer. Wire the trial/contact forms to email/CRM and add payments (Stripe / PayPal / SEPA).
+Replace the placeholder content: teacher profiles (`src/lib/teachers.ts`), testimonials (`src/lib/testimonials.ts`), contact details (WhatsApp link), Impressum business details, and have the privacy/terms pages reviewed by a German lawyer. Wire the trial/contact forms to email/CRM and add payments (Stripe / PayPal / SEPA).

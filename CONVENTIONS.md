@@ -1,4 +1,4 @@
-# Quran Akademie — Build Conventions
+# Online Quran — Build Conventions
 
 Read this file before writing any page. The scaffold (config, layout, header,
 footer, i18n, shared components, shared data) is already in place.

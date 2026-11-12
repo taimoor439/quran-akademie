@@ -9,7 +9,7 @@ const content = {
     eyebrow: "Testimonials",
     title: "What families say about us",
     subtitle:
-      "From a first alphabet lesson to finishing Hifz — here is what parents and adult students tell us about learning with Quran Akademie.",
+      "From a first alphabet lesson to finishing Hifz — here is what parents and adult students tell us about learning with Online Quran.",
     inviteTitle: "Share your experience",
     inviteBody:
       "Are you learning with us? We would love to hear how it is going. After launch, parents and students can share their experience with us — and help other families find the right tutor.",
@@ -18,7 +18,7 @@ const content = {
     eyebrow: "Erfahrungsberichte",
     title: "Was Familien über uns sagen",
     subtitle:
-      "Von der ersten Alphabetstunde bis zum Abschluss des Hifz — hier berichten Eltern und erwachsene Schüler vom Lernen mit der Quran Akademie.",
+      "Von der ersten Alphabetstunde bis zum Abschluss des Hifz — hier berichten Eltern und erwachsene Schüler vom Lernen mit der Online Quran.",
     inviteTitle: "Teilen Sie Ihre Erfahrung",
     inviteBody:
       "Lernen Sie bei uns? Wir freuen uns zu hören, wie es läuft. Nach dem Start können Eltern und Schüler ihre Erfahrung mit uns teilen — und anderen Familien helfen, den passenden Lehrer zu finden.",

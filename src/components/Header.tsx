@@ -153,7 +153,7 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-50 border-b border-brand/10 bg-white/95 backdrop-blur">
       <div className="mx-auto flex h-[72px] max-w-7xl items-center justify-between gap-4 px-4 sm:px-6 lg:px-8">
-        <Logo />
+        <Logo height={44} />
         <nav className="hidden items-center gap-1 lg:flex" aria-label="Main">
           {NAV_ITEMS.map((item) =>
             item.href === "/courses" ? (

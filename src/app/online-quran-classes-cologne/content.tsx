@@ -91,13 +91,13 @@ const content: { en: LocaleContent; de: LocaleContent } = {
     heroNote: "No payment needed for the trial · 30 minutes · Zoom or Google Meet",
     heroAlt: "Cologne Cathedral and Hohenzollern Bridge over the Rhine",
     intro:
-      "Families in Cologne can learn the Quran online with a live, certified tutor — one-to-one, after school, in Cologne time (CET/CEST). Quran Akademie teaches children and adults across the Rhine city, from Ehrenfeld on the left bank to Kalk and Mülheim on the right, starting with a free 30-minute trial class.",
+      "Families in Cologne can learn the Quran online with a live, certified tutor — one-to-one, after school, in Cologne time (CET/CEST). Online Quran teaches children and adults across the Rhine city, from Ehrenfeld on the left bank to Kalk and Mülheim on the right, starting with a free 30-minute trial class.",
     whyHeading: "Why do Cologne families choose online Quran classes?",
     whyDirect:
       "Because the Rhine runs through the middle of Cologne, and a weekend class on the other bank — or a long tram ride with children — eats the afternoon. Online 1-on-1 lessons happen at home, after school, at a fixed time. No travel, no waiting list, and a tutor who teaches only your child.",
     whyParagraphs: [
       "Cologne is spread along both banks of the Rhine, and crossing the river for a weekend class — from Kalk or Mülheim on the right bank to a class in Ehrenfeld or the old town — means a long journey there and back, with children in tow. Online lessons give that time back to your family: the tutor appears on your screen at the agreed time, and the lesson starts.",
-      "There is also no waiting list. Places at popular mosque schools can be limited, and waiting lists are common. At Quran Akademie, your child's first lesson is the free trial class — usually in the same week you book — and the same tutor teaches every lesson after that.",
+      "There is also no waiting list. Places at popular mosque schools can be limited, and waiting lists are common. At Online Quran, your child's first lesson is the free trial class — usually in the same week you book — and the same tutor teaches every lesson after that.",
     ],
     districtsEyebrow: "Cologne districts",
     districtsTitle: "Which Cologne districts do we teach in?",
@@ -185,13 +185,13 @@ const content: { en: LocaleContent; de: LocaleContent } = {
     heroNote: "Keine Zahlung für die Probestunde nötig · 30 Minuten · Zoom oder Google Meet",
     heroAlt: "Kölner Dom und Hohenzollernbrücke über dem Rhein",
     intro:
-      "Familien in Köln können den Koran online lernen, mit einer live zugeschalteten, zertifizierten Lehrkraft — 1-zu-1, nach der Schule, zur Kölner Zeit (MEZ/MESZ). Die Quran Akademie unterrichtet Kinder und Erwachsene in der Rheinstadt, von Ehrenfeld auf der linken Rheinseite bis Kalk und Mülheim auf der rechten — beginnend mit einer kostenlosen 30-minütigen Probestunde.",
+      "Familien in Köln können den Koran online lernen, mit einer live zugeschalteten, zertifizierten Lehrkraft — 1-zu-1, nach der Schule, zur Kölner Zeit (MEZ/MESZ). Die Online Quran unterrichtet Kinder und Erwachsene in der Rheinstadt, von Ehrenfeld auf der linken Rheinseite bis Kalk und Mülheim auf der rechten — beginnend mit einer kostenlosen 30-minütigen Probestunde.",
     whyHeading: "Warum wählen Kölner Familien Online-Koranunterricht?",
     whyDirect:
       "Weil der Rhein mitten durch Köln fließt und ein Wochenendkurs auf der anderen Rheinseite — oder eine lange Straßenbahnfahrt mit Kindern — den ganzen Nachmittag kostet. Online-Einzelunterricht findet zu Hause statt, nach der Schule, zu einer festen Zeit. Keine Fahrt, keine Warteliste und eine Lehrkraft, die nur Ihr Kind unterrichtet.",
     whyParagraphs: [
       "Köln erstreckt sich entlang beider Rheinufer, und die Fahrt über den Fluss für einen Wochenendkurs — von Kalk oder Mülheim auf der rechten Rheinseite zu einem Kurs in Ehrenfeld oder der Altstadt — bedeutet eine lange Reise hin und zurück, mit Kindern im Schlepptau. Online-Unterricht gibt Ihrer Familie diese Zeit zurück: Die Lehrkraft erscheint zur vereinbarten Zeit auf Ihrem Bildschirm, und die Stunde beginnt.",
-      "Es gibt auch keine Warteliste. Plätze an beliebten Koranschulen können begrenzt sein, und Wartelisten sind üblich. Bei der Quran Akademie ist die erste Stunde Ihres Kindes die kostenlose Probestunde — meist in derselben Woche, in der Sie buchen — und danach unterrichtet dieselbe Lehrkraft jede Stunde.",
+      "Es gibt auch keine Warteliste. Plätze an beliebten Koranschulen können begrenzt sein, und Wartelisten sind üblich. Bei der Online Quran ist die erste Stunde Ihres Kindes die kostenlose Probestunde — meist in derselben Woche, in der Sie buchen — und danach unterrichtet dieselbe Lehrkraft jede Stunde.",
     ],
     districtsEyebrow: "Kölner Stadtbezirke",
     districtsTitle: "In welchen Kölner Stadtbezirken unterrichten wir?",
@@ -296,12 +296,12 @@ export default function CologneContent() {
         inLanguage: locale,
         datePublished: "2026-11-12",
         dateModified: "2026-11-12",
-        author: { "@type": "Organization", name: "Quran Akademie" },
+        author: { "@type": "Organization", name: "Online Quran" },
       },
       {
         "@type": "BreadcrumbList",
         itemListElement: [
-          { "@type": "ListItem", position: 1, name: "Quran Akademie", item: BASE_URL },
+          { "@type": "ListItem", position: 1, name: "Online Quran", item: BASE_URL },
           {
             "@type": "ListItem",
             position: 2,

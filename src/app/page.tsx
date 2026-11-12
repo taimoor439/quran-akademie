@@ -54,7 +54,7 @@ const content = {
     coursesTitle: "A course for every age and every level",
     coursesSub:
       "From a child's first Arabic letters to Hifz and Tafseer for adults — every course is taught live, 1-to-1, by a certified tutor.",
-    whyEyebrow: "Why Quran Akademie",
+    whyEyebrow: "Why Online Quran",
     whyTitle: "Why families in Germany choose us",
     whyPoints: [
       {
@@ -131,7 +131,7 @@ const content = {
     coursesTitle: "Ein Kurs für jedes Alter und jedes Niveau",
     coursesSub:
       "Von den ersten arabischen Buchstaben eines Kindes bis zu Hifz und Tafsir für Erwachsene — jeder Kurs wird live und 1-zu-1 von einer zertifizierten Lehrkraft unterrichtet.",
-    whyEyebrow: "Warum Quran Akademie",
+    whyEyebrow: "Warum Online Quran",
     whyTitle: "Warum Familien in Deutschland uns wählen",
     whyPoints: [
       {

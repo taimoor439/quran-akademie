@@ -74,7 +74,7 @@ const content: { en: LocaleContent; de: LocaleContent } = {
     intro:
       "To memorize the Quran, start with Juz Amma, learn a small new portion (sabaq) each day, and revise yesterday's and older portions every day — most students who memorise half a page a day finish in about 3.3 years. This guide explains the sabaq–sabqi–manzil method, realistic timelines, and a daily revision system that keeps what you learn.",
     coverAlt: "An open Quran ready for memorisation",
-    author: "By the Quran Akademie teaching team",
+    author: "By the Online Quran teaching team",
     updated: "Last updated: 12 November 2026",
     sections: [
       {
@@ -157,7 +157,7 @@ const content: { en: LocaleContent; de: LocaleContent } = {
         ],
       },
       {
-        heading: "What does a Hifz lesson look like at Quran Akademie?",
+        heading: "What does a Hifz lesson look like at Online Quran?",
         paragraphs: [
           "Every Hifz lesson follows the sabaq–sabqi–manzil structure: your tutor listens to yesterday's new lesson, checks your recent revision, hears a portion of your manzil, and then teaches today's new verses line by line, correcting your Tajweed as you go. You leave each lesson with a clear plan for the week — what to learn, what to revise, and what to recite in salah.",
           "Hifz students usually take the Hifz Intensive plan — 5 classes a week, 45 minutes each, for $99 a month — with a dedicated Hifz tutor who is a Hafiz or Hafiza, a weekly memorisation and revision plan, and a monthly progress report for parents. Lessons run in Germany time (CET/CEST), after school and in the evening, and every plan starts with a free 30-minute trial class.",
@@ -218,7 +218,7 @@ const content: { en: LocaleContent; de: LocaleContent } = {
     intro:
       "Um den Koran auswendig zu lernen, beginnt man mit Dschuz Amma, lernt jeden Tag einen kleinen neuen Abschnitt (Sabaq) und wiederholt täglich die gestrigen und älteren Abschnitte — wer eine halbe Seite am Tag lernt, ist in etwa 3,3 Jahren fertig. Dieser Leitfaden erklärt die Sabaq–Sabqi–Manzil-Methode, realistische Zeitpläne und ein tägliches Wiederholungssystem, das Gelerntes festhält.",
     coverAlt: "Ein aufgeschlagener Koran zum Auswendiglernen",
-    author: "Vom Lehrteam der Quran Akademie",
+    author: "Vom Lehrteam der Online Quran",
     updated: "Zuletzt aktualisiert: 12. November 2026",
     sections: [
       {
@@ -301,7 +301,7 @@ const content: { en: LocaleContent; de: LocaleContent } = {
         ],
       },
       {
-        heading: "Wie sieht eine Hifz-Stunde bei der Quran Akademie aus?",
+        heading: "Wie sieht eine Hifz-Stunde bei der Online Quran aus?",
         paragraphs: [
           "Jede Hifz-Stunde folgt der Sabaq–Sabqi–Manzil-Struktur: Ihre Lehrkraft hört die gestrige neue Lektion ab, prüft die aktuelle Wiederholung, hört einen Teil Ihres Manzil und lehrt dann die heutigen neuen Verse Zeile für Zeile, wobei sie Ihren Tadschwied korrigiert. Sie verlassen jede Stunde mit einem klaren Wochenplan — was zu lernen, was zu wiederholen und was im Gebet zu rezitieren ist.",
           "Hifz-Schüler nehmen meist den Tarif Hifz Intensiv — 5 Stunden pro Woche zu je 45 Minuten für 99 $ im Monat — mit einer persönlichen Hifz-Lehrkraft, die Hafiz oder Hafiza ist, einem wöchentlichen Lern- und Wiederholungsplan und einem monatlichen Fortschrittsbericht für Eltern. Die Stunden laufen nach deutscher Zeit (MEZ/MESZ), nachmittags und abends, und jeder Tarif beginnt mit einer kostenlosen 30-minütigen Probestunde.",
@@ -380,10 +380,11 @@ export default function GuideContent() {
         headline: t.title,
         description: meta.description,
         image: COVER,
-        author: { "@type": "Organization", name: "Quran Akademie" },
+        author: { "@type": "Organization", name: "Online Quran" },
         publisher: {
           "@type": "Organization",
-          name: "Quran Akademie",
+          name: "Online Quran",
+          logo: "https://onlinekoran.de/logo-horizontal.svg",
           url: BASE_URL,
         },
         datePublished: "2026-11-12",

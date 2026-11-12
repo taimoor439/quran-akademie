@@ -2,9 +2,8 @@
 import { useLocale } from "@/lib/i18n";
 import { CtaBand, PageHero } from "@/components/Shared";
 
-// Safeguarding / child protection policy. The reporting email below is a
-// PLACEHOLDER (hello@quranakademie.de) — confirm the real safeguarding
-// contact before launch.
+// Safeguarding / child protection policy. Concerns are reported to the
+// safeguarding contact at contact@onlinekoran.de.
 
 const content = {
   en: {
@@ -16,13 +15,13 @@ const content = {
     },
     lastUpdated: "Last updated: [to be completed]",
     intro:
-      "Quran Akademie teaches many children, and we take that responsibility seriously. This policy explains how we protect children in our care, what we expect from our tutors, and how to raise a concern. It applies to all tutors, staff and anyone working with us.",
+      "Online Quran teaches many children, and we take that responsibility seriously. This policy explains how we protect children in our care, what we expect from our tutors, and how to raise a concern. It applies to all tutors, staff and anyone working with us.",
     sections: [
       {
         heading: "1. Our commitment",
         paragraphs: [
           "Every child has the right to learn in a safe, respectful and caring environment. We are committed to safeguarding children from harm, abuse and neglect, and to creating a culture where concerns are listened to and acted on promptly.",
-          "Safeguarding is everyone's responsibility at Quran Akademie. If something does not feel right, we expect it to be reported — and we will act on it.",
+          "Safeguarding is everyone's responsibility at Online Quran. If something does not feel right, we expect it to be reported — and we will act on it.",
         ],
       },
       {
@@ -59,7 +58,7 @@ const content = {
       {
         heading: "5. Reporting concerns",
         paragraphs: [
-          "If you have any concern about a child's safety or about a tutor's conduct, please tell us straight away. You can report a concern by emailing hello@quranakademie.de [placeholder email — to be confirmed] or by contacting us through the contact page.",
+          "If you have any concern about a child's safety or about a tutor's conduct, please tell us straight away. You can report a concern by emailing contact@onlinekoran.de or by contacting us through the contact page.",
           "We will acknowledge your concern promptly, treat it confidentially, and look into it fairly. Where a concern suggests a child may be at risk, we will act immediately — including, where appropriate, contacting the relevant authorities. We will never penalise anyone for raising a genuine concern in good faith.",
         ],
       },
@@ -80,13 +79,13 @@ const content = {
     },
     lastUpdated: "Zuletzt aktualisiert: [noch zu ergänzen]",
     intro:
-      "Die Quran Akademie unterrichtet viele Kinder, und wir nehmen diese Verantwortung ernst. Diese Richtlinie erklärt, wie wir die uns anvertrauten Kinder schützen, was wir von unseren Lehrkräften erwarten und wie Sie ein Anliegen melden können. Sie gilt für alle Lehrkräfte, Mitarbeitenden und alle, die mit uns arbeiten.",
+      "Die Online Quran unterrichtet viele Kinder, und wir nehmen diese Verantwortung ernst. Diese Richtlinie erklärt, wie wir die uns anvertrauten Kinder schützen, was wir von unseren Lehrkräften erwarten und wie Sie ein Anliegen melden können. Sie gilt für alle Lehrkräfte, Mitarbeitenden und alle, die mit uns arbeiten.",
     sections: [
       {
         heading: "1. Unser Bekenntnis",
         paragraphs: [
           "Jedes Kind hat das Recht, in einer sicheren, respektvollen und fürsorglichen Umgebung zu lernen. Wir verpflichten uns, Kinder vor Schaden, Missbrauch und Vernachlässigung zu schützen und eine Kultur zu schaffen, in der Anliegen gehört und zügig bearbeitet werden.",
-          "Kinderschutz ist bei der Quran Akademie die Verantwortung aller. Wenn etwas nicht richtig erscheint, erwarten wir, dass es gemeldet wird — und wir werden darauf reagieren.",
+          "Kinderschutz ist bei der Online Quran die Verantwortung aller. Wenn etwas nicht richtig erscheint, erwarten wir, dass es gemeldet wird — und wir werden darauf reagieren.",
         ],
       },
       {
@@ -123,7 +122,7 @@ const content = {
       {
         heading: "5. Anliegen melden",
         paragraphs: [
-          "Wenn Sie ein Anliegen zur Sicherheit eines Kindes oder zum Verhalten einer Lehrkraft haben, teilen Sie es uns bitte umgehend mit. Sie können ein Anliegen per E-Mail an hello@quranakademie.de [Platzhalter-E-Mail — noch zu bestätigen] melden oder uns über die Kontaktseite erreichen.",
+          "Wenn Sie ein Anliegen zur Sicherheit eines Kindes oder zum Verhalten einer Lehrkraft haben, teilen Sie es uns bitte umgehend mit. Sie können ein Anliegen per E-Mail an contact@onlinekoran.de melden oder uns über die Kontaktseite erreichen.",
           "Wir bestätigen Ihr Anliegen zügig, behandeln es vertraulich und prüfen es fair. Wenn ein Anliegen darauf hindeutet, dass ein Kind gefährdet sein könnte, handeln wir sofort — gegebenenfalls auch durch Kontaktaufnahme mit den zuständigen Behörden. Niemand wird dafür benachteiligt, ein berechtigtes Anliegen in gutem Glauben zu melden.",
         ],
       },

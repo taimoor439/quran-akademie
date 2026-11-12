@@ -1,4 +1,5 @@
 import "./globals.css";
+import { assetPath } from "@/lib/asset";
 import { LocaleProvider } from "@/lib/i18n";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -6,7 +7,7 @@ import WhatsAppButton from "@/components/WhatsAppButton";
 import CookieBanner from "@/components/CookieBanner";
 
 export const metadata = {
-  title: "Quran Akademie — Online Quran Classes for Families in Germany",
+  title: "Online Quran — Online Quran Classes for Families in Germany",
   description:
     "Live 1-to-1 Quran classes online for kids and adults in Germany. Certified tutors, female teachers available, after-school slots in Germany time. Book a free trial class.",
 };
@@ -19,6 +20,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        <link rel="icon" type="image/svg+xml" href={assetPath("/icon.svg")} />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
           rel="preconnect"

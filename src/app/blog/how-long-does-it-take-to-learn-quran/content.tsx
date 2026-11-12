@@ -69,7 +69,7 @@ const content: { en: GuideContent; de: GuideContent } = {
     category: "Learning",
     readTime: "8 min read",
     title: "How Long Does It Take to Learn the Quran?",
-    author: "By the Quran Akademie teaching team",
+    author: "By the Online Quran teaching team",
     updated: "Last updated: 12 November 2026",
     intro:
       "Most children starting from scratch at age 5–7 reach basic Quran reading fluency in 12–18 months with regular lessons and 15–30 minutes of daily practice. Adults starting from scratch typically take 6–12 months. Tajweed accuracy takes a further 6–12 months, and full memorisation (Hifz) is a 3–6 year journey.",
@@ -224,7 +224,7 @@ const content: { en: GuideContent; de: GuideContent } = {
     category: "Lernen",
     readTime: "8 Min. Lesezeit",
     title: "Wie lange dauert es, den Koran lesen zu lernen?",
-    author: "Vom Lehrteam der Quran Akademie",
+    author: "Vom Lehrteam der Online Quran",
     updated: "Zuletzt aktualisiert: 12. November 2026",
     intro:
       "Die meisten Kinder, die mit 5–7 Jahren von vorn anfangen, lesen den Koran nach 12–18 Monaten flüssig — bei regelmäßigem Unterricht und 15–30 Minuten täglichem Üben. Erwachsene, die von vorn anfangen, brauchen in der Regel 6–12 Monate. Tadschwied-Genauigkeit dauert weitere 6–12 Monate, und das vollständige Auswendiglernen (Hifz) ist eine Reise von 3–6 Jahren.",
@@ -403,12 +403,14 @@ export default function TimelineGuideContent() {
       image: COVER,
       author: {
         "@type": "Organization",
-        name: "Quran Akademie",
+        name: "Online Quran",
+        logo: "https://onlinekoran.de/logo-horizontal.svg",
         url: BASE_URL,
       },
       publisher: {
         "@type": "Organization",
-        name: "Quran Akademie",
+        name: "Online Quran",
+        logo: "https://onlinekoran.de/logo-horizontal.svg",
         url: BASE_URL,
       },
       datePublished: "2026-11-12",

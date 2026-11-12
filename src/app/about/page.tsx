@@ -2,13 +2,13 @@
 import { useLocale } from "@/lib/i18n";
 import { CtaBand, PageHero, SectionHeading } from "@/components/Shared";
 
-// About page — Quran Akademie. No invented founding dates, founder names,
+// About page — Online Quran. No invented founding dates, founder names,
 // student counts or statistics. All claims are generic and honest.
 
 const content = {
   en: {
     hero: {
-      eyebrow: "About Quran Akademie",
+      eyebrow: "About Online Quran",
       title: "Quality Quran education, taught live and one-to-one",
       subtitle:
         "We help Muslim families in Germany learn the Quran with confidence — live lessons, caring certified tutors, and a structured path from the first letter to confident recitation.",
@@ -19,7 +19,7 @@ const content = {
       title: "Quran learning that fits real family life in Germany",
       paragraphs: [
         "Many Muslim families in Germany want their children to learn the Quran properly — with correct pronunciation, real understanding, and a love for the words of Allah. But finding a qualified teacher who fits around school, work and family life is not always easy.",
-        "Quran Akademie exists to solve that. Our lessons are taught live, one-to-one, online — so your child learns from a certified tutor in the comfort of your home, at a time that suits your family, in Germany time. Every lesson is personal: the tutor knows your child's level, pace and goals, and every class builds on the last.",
+        "Online Quran exists to solve that. Our lessons are taught live, one-to-one, online — so your child learns from a certified tutor in the comfort of your home, at a time that suits your family, in Germany time. Every lesson is personal: the tutor knows your child's level, pace and goals, and every class builds on the last.",
         "Whether your child is taking their first steps with the Arabic alphabet or working towards Hifz, our aim is the same: steady progress, correct Tajweed, and a warm connection with the Quran that lasts a lifetime.",
       ],
       imageAlt: "A mosque at dusk",
@@ -101,7 +101,7 @@ const content = {
   },
   de: {
     hero: {
-      eyebrow: "Über die Quran Akademie",
+      eyebrow: "Über die Online Quran",
       title: "Hochwertiger Quran-Unterricht, live und im Einzelunterricht",
       subtitle:
         "Wir helfen muslimischen Familien in Deutschland, den Quran mit Selbstvertrauen zu lernen — Live-Unterricht, fürsorgliche zertifizierte Lehrer und ein strukturierter Weg vom ersten Buchstaben bis zur sicheren Rezitation.",
@@ -112,7 +112,7 @@ const content = {
       title: "Quran-Lernen, das zum Familienalltag in Deutschland passt",
       paragraphs: [
         "Viele muslimische Familien in Deutschland möchten, dass ihre Kinder den Quran richtig lernen — mit korrekter Aussprache, echtem Verständnis und Liebe zu den Worten Allahs. Doch eine qualifizierte Lehrkraft zu finden, die zu Schule, Beruf und Familienleben passt, ist nicht immer einfach.",
-        "Die Quran Akademie wurde gegründet, um genau das zu ändern. Unser Unterricht findet live statt, im Einzelunterricht, online — Ihr Kind lernt also bequem von zu Hause bei einer zertifizierten Lehrkraft, zu einer Zeit, die zu Ihrer Familie passt, in deutscher Zeit. Jede Stunde ist persönlich: Die Lehrkraft kennt das Niveau, das Tempo und die Ziele Ihres Kindes, und jede Stunde baut auf der vorherigen auf.",
+        "Die Online Quran wurde gegründet, um genau das zu ändern. Unser Unterricht findet live statt, im Einzelunterricht, online — Ihr Kind lernt also bequem von zu Hause bei einer zertifizierten Lehrkraft, zu einer Zeit, die zu Ihrer Familie passt, in deutscher Zeit. Jede Stunde ist persönlich: Die Lehrkraft kennt das Niveau, das Tempo und die Ziele Ihres Kindes, und jede Stunde baut auf der vorherigen auf.",
         "Ob Ihr Kind die ersten Schritte mit dem arabischen Alphabet macht oder auf Hifz hinarbeitet — unser Ziel bleibt dasselbe: stetiger Fortschritt, korrektes Tajweed und eine warme Verbindung zum Quran, die ein Leben lang hält.",
       ],
       imageAlt: "Eine Moschee in der Abenddämmerung",

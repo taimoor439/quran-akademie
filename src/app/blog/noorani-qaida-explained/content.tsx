@@ -63,7 +63,7 @@ const content: Record<Locale, LocaleContent> = {
     intro:
       "Noorani Qaida is the beginner's primer for reading the Quran: a short book that teaches the Arabic alphabet, vowels and joining rules step by step, so a complete beginner can read Arabic words — and then the Quran itself. Most learners finish it in 3–6 months with regular lessons and a little daily practice.",
     coverAlt: "Noorani Qaida book cover",
-    author: "By the Quran Akademie teaching team",
+    author: "By the Online Quran teaching team",
     updated: "Last updated: 12 November 2026",
     sections: [
       {
@@ -211,7 +211,7 @@ const content: Record<Locale, LocaleContent> = {
     intro:
       "Die Noorani Qaida ist das Anfänger-Lehrbuch zum Koranlesen: ein kurzes Buch, das Schritt für Schritt das arabische Alphabet, die Vokale und die Verbindungsregeln lehrt, sodass ein absoluter Anfänger arabische Wörter lesen kann — und dann den Koran selbst. Die meisten Lernenden beenden sie in 3–6 Monaten mit regelmäßigem Unterricht und kurzer täglicher Übung.",
     coverAlt: "Buchcover der Noorani Qaida",
-    author: "Vom Lehrteam der Quran Akademie",
+    author: "Vom Lehrteam der Online Quran",
     updated: "Zuletzt aktualisiert: 12. November 2026",
     sections: [
       {
@@ -378,12 +378,14 @@ export default function NooraniQaidaExplainedContent() {
         image: COVER,
         author: {
           "@type": "Organization",
-          name: "Quran Akademie",
+          name: "Online Quran",
+          logo: "https://onlinekoran.de/logo-horizontal.svg",
           url: BASE_URL,
         },
         publisher: {
           "@type": "Organization",
-          name: "Quran Akademie",
+          name: "Online Quran",
+          logo: "https://onlinekoran.de/logo-horizontal.svg",
           url: BASE_URL,
         },
         datePublished: "2026-11-12",

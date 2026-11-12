@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useLocale } from "@/lib/i18n";
 import { courses } from "@/lib/courses";
 import { saveTrialRequest } from "@/lib/trial-request";
+import { assetPath } from "@/lib/asset";
 import { PageHero, CtaBand } from "@/components/Shared";
 
 // Stock photo (verified 200 on 2026-11-12, see CONVENTIONS.md).
@@ -49,7 +50,7 @@ const content = {
       arabic: "خَيْرُكُمْ مَنْ تَعَلَّمَ الْقُرْآنَ وَعَلَّمَهُ",
     },
     demoNote:
-      "Demo form: this preview form saves your request in your browser only. At launch it will be connected to our email and CRM.",
+      "Your request is sent directly to our team — we usually reply within one working day.",
     formTitle: "Tell us about your child",
     formSubtitle:
       "Fill in the form and we will contact you within 24 hours to confirm your free trial class.",
@@ -93,6 +94,7 @@ const content = {
       age: "Please enter an age between 3 and 18.",
     },
     submit: "Book My Free Trial Class",
+    emailAlt: "or email us at",
     success: {
       title: "Thank you — your trial is requested!",
       body: "We have received your request for a free trial class.",
@@ -101,6 +103,8 @@ const content = {
       at: "at your preferred time",
       bookAnother: "Book another trial class",
     },
+    sendFailed:
+      "We couldn't send your request online — please email us directly at",
     side: {
       imageAlt: "Mosque at dusk",
       stepsTitle: "What happens next?",
@@ -139,7 +143,7 @@ const content = {
       arabic: "خَيْرُكُمْ مَنْ تَعَلَّمَ الْقُرْآنَ وَعَلَّمَهُ",
     },
     demoNote:
-      "Demo-Formular: Dieses Vorschau-Formular speichert Ihre Anfrage nur in Ihrem Browser. Zum Start wird es mit unserer E-Mail und unserem CRM verbunden.",
+      "Ihre Anfrage geht direkt an unser Team — wir antworten in der Regel innerhalb eines Werktages.",
     formTitle: "Erzählen Sie uns von Ihrem Kind",
     formSubtitle:
       "Füllen Sie das Formular aus — wir melden uns innerhalb von 24 Stunden, um Ihre kostenlose Probestunde zu bestätigen.",
@@ -183,6 +187,7 @@ const content = {
       age: "Bitte geben Sie ein Alter zwischen 3 und 18 Jahren ein.",
     },
     submit: "Kostenlose Probestunde buchen",
+    emailAlt: "oder schreiben Sie uns an",
     success: {
       title: "Vielen Dank — Ihre Probestunde ist angefragt!",
       body: "Wir haben Ihre Anfrage für eine kostenlose Probestunde erhalten.",
@@ -191,6 +196,8 @@ const content = {
       at: "zu Ihrer Wunschzeit",
       bookAnother: "Weitere Probestunde buchen",
     },
+    sendFailed:
+      "Ihre Anfrage konnte online nicht gesendet werden — bitte schreiben Sie uns direkt an",
     side: {
       imageAlt: "Moschee in der Abenddämmerung",
       stepsTitle: "Wie geht es weiter?",
@@ -238,6 +245,9 @@ export default function FreeTrialPage() {
   const [form, setForm] = useState<TrialForm>(emptyForm);
   const [errors, setErrors] = useState<FormErrors>({});
   const [submitted, setSubmitted] = useState(false);
+  const [sendFailed, setSendFailed] = useState(false);
+  // Honeypot: stays empty for real users; bots fill it and get silently dropped.
+  const [honeypot, setHoneypot] = useState("");
 
   const setField = (field: keyof TrialForm, value: string) => {
     setForm((prev) => ({ ...prev, [field]: value }));
@@ -264,13 +274,58 @@ export default function FreeTrialPage() {
     return Object.keys(next).length === 0;
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!validate()) return;
-    // Demo only: persist the request in the browser via the shared helper
-    // (same localStorage key as the hero form). At launch this will be
-    // replaced by a real submission to email/CRM.
+    const courseName =
+      form.course === "not-sure"
+        ? t.notSure
+        : (courses.find((c) => c.slug === form.course)?.name[locale] ??
+          form.course);
+    const slotLabel =
+      t.timeSlotLabels[
+        TIME_SLOT_VALUES.indexOf(form.timeSlot as (typeof TIME_SLOT_VALUES)[number])
+      ] ?? form.timeSlot;
+    const languageLabel =
+      t.languageLabels[
+        LANGUAGE_VALUES.indexOf(form.language as (typeof LANGUAGE_VALUES)[number])
+      ] ?? form.language;
+    // Send to the PHP mail handler on the live site. On the GitHub Pages
+    // preview PHP cannot run (the .php file is served as plain text), so the
+    // POST fails there — expected; the local save + email fallback below
+    // covers it.
+    let sent = false;
+    try {
+      const res = await fetch(assetPath("/send-mail.php"), {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          form: "trial",
+          name: form.parentName,
+          email: form.email,
+          phone: form.whatsapp,
+          course: courseName,
+          slot: slotLabel,
+          childName: form.childName,
+          childAge: form.childAge,
+          language: languageLabel,
+          message: form.message,
+          website: honeypot,
+        }),
+      });
+      if (res.ok) {
+        const data = (await res
+          .json()
+          .catch(() => null)) as { ok?: boolean } | null;
+        sent = data?.ok === true;
+      }
+    } catch {
+      sent = false;
+    }
+    // Keep the local record as a fallback either way (same localStorage key
+    // as the hero form).
     saveTrialRequest({ ...form });
+    setSendFailed(!sent);
     setSubmitted(true);
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
@@ -279,6 +334,8 @@ export default function FreeTrialPage() {
     setForm(emptyForm);
     setErrors({});
     setSubmitted(false);
+    setSendFailed(false);
+    setHoneypot("");
   };
 
   const selectedCourseName =
@@ -336,6 +393,17 @@ export default function FreeTrialPage() {
                     <p className="mx-auto mt-4 max-w-md leading-relaxed text-ink/70">
                       {t.success.note}
                     </p>
+                    {sendFailed && (
+                      <p className="mx-auto mt-4 max-w-md rounded-xl bg-gold-soft px-4 py-3 text-sm font-semibold leading-relaxed text-ink/80">
+                        {t.sendFailed}{" "}
+                        <a
+                          href="mailto:contact@onlinekoran.de"
+                          className="font-bold text-brand underline"
+                        >
+                          contact@onlinekoran.de
+                        </a>
+                      </p>
+                    )}
                     <button
                       type="button"
                       onClick={handleBookAnother}
@@ -351,6 +419,22 @@ export default function FreeTrialPage() {
                     </h2>
                     <p className="mt-2 leading-relaxed text-ink/70">{t.formSubtitle}</p>
                     <form onSubmit={handleSubmit} noValidate className="mt-8 space-y-5">
+                      {/* Honeypot: bots fill it, humans never see it. */}
+                      <div
+                        aria-hidden="true"
+                        className="absolute -left-[9999px] top-0 h-0 overflow-hidden"
+                      >
+                        <label htmlFor="trial-website">Website</label>
+                        <input
+                          id="trial-website"
+                          name="website"
+                          type="text"
+                          value={honeypot}
+                          onChange={(e) => setHoneypot(e.target.value)}
+                          autoComplete="off"
+                          tabIndex={-1}
+                        />
+                      </div>
                       <div className="grid gap-5 sm:grid-cols-2">
                         <div>
                           <label htmlFor="parentName" className={labelClass}>
@@ -535,6 +619,16 @@ export default function FreeTrialPage() {
                         {t.submit}
                       </button>
                     </form>
+
+                    <p className="mt-6 text-sm leading-relaxed text-ink/70">
+                      {t.emailAlt}{" "}
+                      <a
+                        href="mailto:contact@onlinekoran.de"
+                        className="font-bold text-brand underline"
+                      >
+                        contact@onlinekoran.de
+                      </a>
+                    </p>
                   </>
                 )}
               </div>

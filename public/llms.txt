@@ -1,12 +1,12 @@
-# Quran Akademie
+# Online Quran
 
 
-> Quran Akademie offers live 1-on-1 online Quran classes for children and adults in Germany, in English and German. Certified tutors (male and female teachers available), lessons scheduled in Germany time (CET/CEST, after-school and evening slots), and a free trial class with no payment details required. Courses: Noorani Qaida, Quran Reading with Tajweed, Hifz-ul-Quran, Tafseer & Understanding, and Islamic Studies for Kids. Plans: Basic $35/month (4 classes/week, 25 min), Standard $59/month (5/week, 30 min), Hifz Intensive $99/month (5/week, 45 min).
+> Online Quran offers live 1-on-1 online Quran classes for children and adults in Germany, in English and German. Certified tutors (male and female teachers available), lessons scheduled in Germany time (CET/CEST, after-school and evening slots), and a free trial class with no payment details required. Courses: Noorani Qaida, Quran Reading with Tajweed, Hifz-ul-Quran, Tafseer & Understanding, and Islamic Studies for Kids. Plans: Basic $35/month (4 classes/week, 25 min), Standard $59/month (5/week, 30 min), Hifz Intensive $99/month (5/week, 45 min).
 
 ## Main pages
 
 - [Home](https://onlinekoran.de/): Live 1-to-1 Quran classes online for families in Germany — courses, pricing, teachers, free trial.
-- [About](https://onlinekoran.de/about): Who Quran Akademie is, how live 1-on-1 lessons work, and the teaching approach.
+- [About](https://onlinekoran.de/about): Who Online Quran is, how live 1-on-1 lessons work, and the teaching approach.
 - [Online Quran Classes in Germany](https://onlinekoran.de/online-quran-classes-germany): Germany hub — CET/CEST scheduling, German school hours and holidays, mosque-school context, cities served.
 - [Quran Classes for Kids](https://onlinekoran.de/quran-classes-for-kids): Kids pillar — ages, lesson length by age, curriculum path, female teachers, safeguarding.
 - [Online Quran Classes in Berlin](https://onlinekoran.de/online-quran-classes-berlin): Berlin page — Neukölln, Kreuzberg, Wedding, Moabit, Spandau.

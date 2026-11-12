@@ -72,9 +72,9 @@ const content: { en: LocaleContent; de: LocaleContent } = {
     readTime: "6 min read",
     title: "How Do Online Quran Classes Work? A Step-by-Step Guide",
     intro:
-      "Online Quran classes at Quran Akademie are live 1-on-1 video lessons with a certified tutor, held on Zoom or Google Meet at a time that fits the German school day. You book a free 30-minute trial class, meet your tutor, get a personal learning plan — and start learning, usually within a day or two.",
+      "Online Quran classes at Online Quran are live 1-on-1 video lessons with a certified tutor, held on Zoom or Google Meet at a time that fits the German school day. You book a free 30-minute trial class, meet your tutor, get a personal learning plan — and start learning, usually within a day or two.",
     coverAlt: "Arches inside a mosque",
-    author: "By the Quran Akademie teaching team",
+    author: "By the Online Quran teaching team",
     updated: "Last updated: 12 November 2026",
     sections: [
       {
@@ -193,9 +193,9 @@ const content: { en: LocaleContent; de: LocaleContent } = {
     readTime: "6 Min. Lesezeit",
     title: "Wie funktioniert Online-Koranunterricht? Eine Schritt-für-Schritt-Anleitung",
     intro:
-      "Online-Koranunterricht bei der Quran Akademie ist Live-Einzelunterricht per Video mit einer zertifizierten Lehrkraft — über Zoom oder Google Meet, zu einer Zeit, die in den deutschen Schulalltag passt. Sie buchen eine kostenlose 30-minütige Probestunde, lernen Ihre Lehrkraft kennen, erhalten einen persönlichen Lernplan — und fangen an, meist innerhalb von ein oder zwei Tagen.",
+      "Online-Koranunterricht bei der Online Quran ist Live-Einzelunterricht per Video mit einer zertifizierten Lehrkraft — über Zoom oder Google Meet, zu einer Zeit, die in den deutschen Schulalltag passt. Sie buchen eine kostenlose 30-minütige Probestunde, lernen Ihre Lehrkraft kennen, erhalten einen persönlichen Lernplan — und fangen an, meist innerhalb von ein oder zwei Tagen.",
     coverAlt: "Bögen im Inneren einer Moschee",
-    author: "Vom Lehrteam der Quran Akademie",
+    author: "Vom Lehrteam der Online Quran",
     updated: "Zuletzt aktualisiert: 12. November 2026",
     sections: [
       {
@@ -334,10 +334,11 @@ export default function GuideContent() {
         headline: t.title,
         description: meta.description,
         image: COVER,
-        author: { "@type": "Organization", name: "Quran Akademie" },
+        author: { "@type": "Organization", name: "Online Quran" },
         publisher: {
           "@type": "Organization",
-          name: "Quran Akademie",
+          name: "Online Quran",
+          logo: "https://onlinekoran.de/logo-horizontal.svg",
           url: BASE_URL,
         },
         datePublished: "2026-11-12",

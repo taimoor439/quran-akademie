@@ -3,14 +3,15 @@
 import { useState } from "react";
 import Link from "next/link";
 import { useLocale } from "@/lib/i18n";
+import { assetPath } from "@/lib/asset";
 import { PageHero, CtaBand } from "@/components/Shared";
 
 // Stock photo (verified 200 on 2026-11-12, see CONVENTIONS.md).
 const SIDE_IMAGE =
   "https://images.unsplash.com/photo-1591604129939-f1efa4d9f7fa?auto=format&fit=crop&w=1200&q=80";
 
-// PLACEHOLDER: replace with the real academy email address before launch.
-const CONTACT_EMAIL = "hello@quranakademie.de";
+// Academy contact email (mailbox created in Hostinger).
+const CONTACT_EMAIL = "contact@onlinekoran.de";
 
 interface ContactForm {
   name: string;
@@ -37,7 +38,7 @@ const content = {
         "Questions about a course, the trial class or pricing? Send us a message and we will get back to you within one working day.",
     },
     demoNote:
-      "Demo form: this preview form saves your message in your browser only. At launch it will be connected to our email and CRM.",
+      "Your message is sent directly to our team — we usually reply within one working day.",
     formTitle: "Send us a message",
     formSubtitle:
       "We usually reply within one working day — often much sooner.",
@@ -71,6 +72,8 @@ const content = {
       note: "In a hurry? Book a free trial class and we will contact you within 24 hours.",
       sendAnother: "Send another message",
     },
+    sendFailed:
+      "We couldn't send your request online — please email us directly at",
     info: {
       imageAlt: "Mosque arches",
       emailTitle: "Email us",
@@ -99,7 +102,7 @@ const content = {
         "Fragen zu einem Kurs, zur Probestunde oder zu den Preisen? Schreiben Sie uns — wir antworten innerhalb eines Werktages.",
     },
     demoNote:
-      "Demo-Formular: Dieses Vorschau-Formular speichert Ihre Nachricht nur in Ihrem Browser. Zum Start wird es mit unserer E-Mail und unserem CRM verbunden.",
+      "Ihre Nachricht geht direkt an unser Team — wir antworten in der Regel innerhalb eines Werktages.",
     formTitle: "Schreiben Sie uns",
     formSubtitle:
       "Wir antworten in der Regel innerhalb eines Werktages — oft deutlich schneller.",
@@ -134,6 +137,8 @@ const content = {
       note: "Es eilt? Buchen Sie eine kostenlose Probestunde — wir melden uns innerhalb von 24 Stunden.",
       sendAnother: "Weitere Nachricht senden",
     },
+    sendFailed:
+      "Ihre Anfrage konnte online nicht gesendet werden — bitte schreiben Sie uns direkt an",
     info: {
       imageAlt: "Moscheebögen",
       emailTitle: "Schreiben Sie uns eine E-Mail",
@@ -172,6 +177,9 @@ export default function ContactPage() {
   const [form, setForm] = useState<ContactForm>(emptyForm);
   const [errors, setErrors] = useState<FormErrors>({});
   const [submitted, setSubmitted] = useState(false);
+  const [sendFailed, setSendFailed] = useState(false);
+  // Honeypot: stays empty for real users; bots fill it and get silently dropped.
+  const [honeypot, setHoneypot] = useState("");
 
   const setField = (field: keyof ContactForm, value: string) => {
     setForm((prev) => ({ ...prev, [field]: value }));
@@ -191,11 +199,41 @@ export default function ContactPage() {
     return Object.keys(next).length === 0;
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!validate()) return;
-    // Demo only: persist the message in the browser. At launch this will be
-    // replaced by a real submission to email/CRM.
+    const subjectLabel =
+      t.subjectLabels[
+        SUBJECT_VALUES.indexOf(form.subject as (typeof SUBJECT_VALUES)[number])
+      ] ?? form.subject;
+    // Send to the PHP mail handler on the live site. On the GitHub Pages
+    // preview PHP cannot run (the .php file is served as plain text), so the
+    // POST fails there — expected; the local save + email fallback below
+    // covers it.
+    let sent = false;
+    try {
+      const res = await fetch(assetPath("/send-mail.php"), {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          form: "contact",
+          name: form.name,
+          email: form.email,
+          subject: subjectLabel,
+          message: form.message,
+          website: honeypot,
+        }),
+      });
+      if (res.ok) {
+        const data = (await res
+          .json()
+          .catch(() => null)) as { ok?: boolean } | null;
+        sent = data?.ok === true;
+      }
+    } catch {
+      sent = false;
+    }
+    // Keep the local record as a fallback either way.
     try {
       const stored = JSON.parse(
         window.localStorage.getItem("qa_contact_messages") || "[]"
@@ -205,6 +243,7 @@ export default function ContactPage() {
     } catch {
       // localStorage unavailable — still show the success state.
     }
+    setSendFailed(!sent);
     setSubmitted(true);
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
@@ -213,6 +252,8 @@ export default function ContactPage() {
     setForm(emptyForm);
     setErrors({});
     setSubmitted(false);
+    setSendFailed(false);
+    setHoneypot("");
   };
 
   return (
@@ -248,6 +289,17 @@ export default function ContactPage() {
                     <p className="mx-auto mt-4 max-w-md leading-relaxed text-ink/70">
                       {t.success.note}
                     </p>
+                    {sendFailed && (
+                      <p className="mx-auto mt-4 max-w-md rounded-xl bg-gold-soft px-4 py-3 text-sm font-semibold leading-relaxed text-ink/80">
+                        {t.sendFailed}{" "}
+                        <a
+                          href="mailto:contact@onlinekoran.de"
+                          className="font-bold text-brand underline"
+                        >
+                          contact@onlinekoran.de
+                        </a>
+                      </p>
+                    )}
                     <button
                       type="button"
                       onClick={handleSendAnother}
@@ -263,6 +315,22 @@ export default function ContactPage() {
                     </h2>
                     <p className="mt-2 leading-relaxed text-ink/70">{t.formSubtitle}</p>
                     <form onSubmit={handleSubmit} noValidate className="mt-8 space-y-5">
+                      {/* Honeypot: bots fill it, humans never see it. */}
+                      <div
+                        aria-hidden="true"
+                        className="absolute -left-[9999px] top-0 h-0 overflow-hidden"
+                      >
+                        <label htmlFor="contact-website">Website</label>
+                        <input
+                          id="contact-website"
+                          name="website"
+                          type="text"
+                          value={honeypot}
+                          onChange={(e) => setHoneypot(e.target.value)}
+                          autoComplete="off"
+                          tabIndex={-1}
+                        />
+                      </div>
                       <div className="grid gap-5 sm:grid-cols-2">
                         <div>
                           <label htmlFor="name" className={labelClass}>

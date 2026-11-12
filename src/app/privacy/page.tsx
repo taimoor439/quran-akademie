@@ -27,7 +27,7 @@ const content = {
           "[Business name — to be completed]",
           "[Street address — to be completed]",
           "[Postal code and city — to be completed]",
-          "Email: hello@quranakademie.de [placeholder email — to be confirmed]",
+          "Email: contact@onlinekoran.de",
         ],
         note: "The details above are placeholders and will be completed with the real business information before launch.",
       },
@@ -107,7 +107,7 @@ const content = {
       {
         heading: "9. Contact for privacy questions",
         paragraphs: [
-          "If you have any questions about this policy or about your personal data, please contact us at hello@quranakademie.de [placeholder email — to be confirmed].",
+          "If you have any questions about this policy or about your personal data, please contact us at contact@onlinekoran.de.",
         ],
       },
     ],
@@ -132,7 +132,7 @@ const content = {
           "[Firmenname — noch zu ergänzen]",
           "[Straße und Hausnummer — noch zu ergänzen]",
           "[Postleitzahl und Ort — noch zu ergänzen]",
-          "E-Mail: hello@quranakademie.de [Platzhalter-E-Mail — noch zu bestätigen]",
+          "E-Mail: contact@onlinekoran.de",
         ],
         note: "Die obigen Angaben sind Platzhalter und werden vor dem Start mit den echten Unternehmensdaten ergänzt.",
       },
@@ -212,7 +212,7 @@ const content = {
       {
         heading: "9. Kontakt bei Datenschutzfragen",
         paragraphs: [
-          "Bei Fragen zu dieser Erklärung oder zu Ihren personenbezogenen Daten kontaktieren Sie uns bitte unter hello@quranakademie.de [Platzhalter-E-Mail — noch zu bestätigen].",
+          "Bei Fragen zu dieser Erklärung oder zu Ihren personenbezogenen Daten kontaktieren Sie uns bitte unter contact@onlinekoran.de.",
         ],
       },
     ],

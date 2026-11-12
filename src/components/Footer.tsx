@@ -5,9 +5,7 @@ import { useLocale, uiDict } from "@/lib/i18n";
 import { courses } from "@/lib/courses";
 import Logo from "./Logo";
 
-// PLACEHOLDER: hello@quranakademie.de is not yet a real mailbox.
-// Replace with Rank's real academy email before launch.
-const CONTACT_EMAIL = "hello@quranakademie.de";
+const CONTACT_EMAIL = "contact@onlinekoran.de";
 
 export default function Footer() {
   const { locale } = useLocale();
@@ -20,7 +18,7 @@ export default function Footer() {
         <div className="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8">
           <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-4">
             <div>
-              <Logo dark />
+              <Logo dark height={40} />
               <p className="mt-5 max-w-xs text-sm leading-relaxed text-white/70">
                 {t.footerTagline}
               </p>
@@ -82,7 +80,7 @@ export default function Footer() {
           </div>
           <div className="mt-12 flex flex-col items-center justify-between gap-3 border-t border-white/10 pt-6 text-xs text-white/50 sm:flex-row">
             <p>
-              © {year} Quran Akademie. {t.footerRights}
+              © {year} Online Quran. {t.footerRights}
             </p>
             <p className="font-arabic text-sm text-gold-light/80" dir="rtl">
               خَيْرُكُمْ مَنْ تَعَلَّمَ الْقُرْآنَ وَعَلَّمَهُ

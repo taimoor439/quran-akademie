@@ -91,13 +91,13 @@ const content: { en: LocaleContent; de: LocaleContent } = {
     heroNote: "No payment needed for the trial · 30 minutes · Zoom or Google Meet",
     heroAlt: "Berlin TV tower at sunset",
     intro:
-      "Families in Berlin can learn the Quran online with a live, certified tutor — one-to-one, after school, in Berlin time (CET/CEST). Berlin shows the highest search interest in online Quran classes of any region in Germany (Google Trends), and Quran Akademie teaches children and adults in every Berlin district, starting with a free 30-minute trial class.",
+      "Families in Berlin can learn the Quran online with a live, certified tutor — one-to-one, after school, in Berlin time (CET/CEST). Berlin shows the highest search interest in online Quran classes of any region in Germany (Google Trends), and Online Quran teaches children and adults in every Berlin district, starting with a free 30-minute trial class.",
     whyHeading: "Why do Berlin families choose online Quran classes?",
     whyDirect:
       "Because Berlin is a big city and the weekend drive to a class — or a long U-Bahn ride with children — eats the afternoon. Online 1-on-1 lessons happen at home, after school, at a fixed time. No travel, no waiting list, and a tutor who teaches only your child.",
     whyParagraphs: [
       "Berlin stretches a long way from Spandau in the west to Marzahn in the east, and a weekend class in another district can mean an hour on public transport — each way, with children in tow. Online lessons give that time back to your family: the tutor appears on your screen at the agreed time, and the lesson starts.",
-      "There is also no waiting list. Places at popular mosque schools can be limited, and waiting lists are common. At Quran Akademie, your child's first lesson is the free trial class — usually in the same week you book — and the same tutor teaches every lesson after that.",
+      "There is also no waiting list. Places at popular mosque schools can be limited, and waiting lists are common. At Online Quran, your child's first lesson is the free trial class — usually in the same week you book — and the same tutor teaches every lesson after that.",
     ],
     districtsEyebrow: "Berlin districts",
     districtsTitle: "Which Berlin districts do we teach in?",
@@ -193,13 +193,13 @@ const content: { en: LocaleContent; de: LocaleContent } = {
     heroNote: "Keine Zahlung für die Probestunde nötig · 30 Minuten · Zoom oder Google Meet",
     heroAlt: "Berliner Fernsehturm bei Sonnenuntergang",
     intro:
-      "Familien in Berlin können den Koran online lernen, mit einer live zugeschalteten, zertifizierten Lehrkraft — 1-zu-1, nach der Schule, zur Berliner Zeit (MEZ/MESZ). Berlin zeigt das höchste Suchinteresse an Online-Koranunterricht aller Regionen Deutschlands (Google Trends), und die Quran Akademie unterrichtet Kinder und Erwachsene in allen Berliner Bezirken — beginnend mit einer kostenlosen 30-minütigen Probestunde.",
+      "Familien in Berlin können den Koran online lernen, mit einer live zugeschalteten, zertifizierten Lehrkraft — 1-zu-1, nach der Schule, zur Berliner Zeit (MEZ/MESZ). Berlin zeigt das höchste Suchinteresse an Online-Koranunterricht aller Regionen Deutschlands (Google Trends), und die Online Quran unterrichtet Kinder und Erwachsene in allen Berliner Bezirken — beginnend mit einer kostenlosen 30-minütigen Probestunde.",
     whyHeading: "Warum wählen Berliner Familien Online-Koranunterricht?",
     whyDirect:
       "Weil Berlin eine große Stadt ist und die Wochenendfahrt zum Unterricht — oder eine lange U-Bahn-Fahrt mit Kindern — den ganzen Nachmittag kostet. Online-Einzelunterricht findet zu Hause statt, nach der Schule, zu einer festen Zeit. Keine Fahrt, keine Warteliste und eine Lehrkraft, die nur Ihr Kind unterrichtet.",
     whyParagraphs: [
       "Berlin erstreckt sich weit — von Spandau im Westen bis Marzahn im Osten — und ein Wochenendkurs in einem anderen Bezirk kann eine Stunde mit öffentlichen Verkehrsmitteln bedeuten, hin und zurück, mit Kindern im Schlepptau. Online-Unterricht gibt Ihrer Familie diese Zeit zurück: Die Lehrkraft erscheint zur vereinbarten Zeit auf Ihrem Bildschirm, und die Stunde beginnt.",
-      "Es gibt auch keine Warteliste. Plätze an beliebten Koranschulen können begrenzt sein, und Wartelisten sind üblich. Bei der Quran Akademie ist die erste Stunde Ihres Kindes die kostenlose Probestunde — meist in derselben Woche, in der Sie buchen — und danach unterrichtet dieselbe Lehrkraft jede Stunde.",
+      "Es gibt auch keine Warteliste. Plätze an beliebten Koranschulen können begrenzt sein, und Wartelisten sind üblich. Bei der Online Quran ist die erste Stunde Ihres Kindes die kostenlose Probestunde — meist in derselben Woche, in der Sie buchen — und danach unterrichtet dieselbe Lehrkraft jede Stunde.",
     ],
     districtsEyebrow: "Berliner Bezirke",
     districtsTitle: "In welchen Berliner Bezirken unterrichten wir?",
@@ -312,12 +312,12 @@ export default function BerlinContent() {
         inLanguage: locale,
         datePublished: "2026-11-12",
         dateModified: "2026-11-12",
-        author: { "@type": "Organization", name: "Quran Akademie" },
+        author: { "@type": "Organization", name: "Online Quran" },
       },
       {
         "@type": "BreadcrumbList",
         itemListElement: [
-          { "@type": "ListItem", position: 1, name: "Quran Akademie", item: BASE_URL },
+          { "@type": "ListItem", position: 1, name: "Online Quran", item: BASE_URL },
           {
             "@type": "ListItem",
             position: 2,

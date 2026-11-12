@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useLocale } from "@/lib/i18n";
 import { courses } from "@/lib/courses";
 import { saveTrialRequest } from "@/lib/trial-request";
+import { assetPath } from "@/lib/asset";
 
 interface HeroTrialFormData {
   parentName: string;
@@ -62,9 +63,11 @@ const content = {
       body: "We'll contact you within 24 hours to confirm your free trial class.",
       bookAnother: "Submit another request",
     },
+    sendFailed:
+      "We couldn't send your request online — please email us directly at",
     fullForm: "Prefer the full form?",
     demoNote:
-      "Demo form: this preview form saves your request in your browser only. At launch it will be connected to our email and CRM.",
+      "Your request is sent directly to our team — we usually reply within one working day.",
   },
   de: {
     eyebrow: "Kostenlose Probestunde",
@@ -102,9 +105,11 @@ const content = {
       body: "Wir melden uns innerhalb von 24 Stunden, um Ihre kostenlose Probestunde zu bestätigen.",
       bookAnother: "Weitere Anfrage senden",
     },
+    sendFailed:
+      "Ihre Anfrage konnte online nicht gesendet werden — bitte schreiben Sie uns direkt an",
     fullForm: "Lieber das ausführliche Formular?",
     demoNote:
-      "Demo-Formular: Dieses Vorschau-Formular speichert Ihre Anfrage nur in Ihrem Browser. Zum Start wird es mit unserer E-Mail und unserem CRM verbunden.",
+      "Ihre Anfrage geht direkt an unser Team — wir antworten in der Regel innerhalb eines Werktages.",
   },
 } as const;
 
@@ -129,6 +134,9 @@ export default function HeroTrialForm() {
   const [form, setForm] = useState<HeroTrialFormData>(emptyForm);
   const [errors, setErrors] = useState<FormErrors>({});
   const [submitted, setSubmitted] = useState(false);
+  const [sendFailed, setSendFailed] = useState(false);
+  // Honeypot: stays empty for real users; bots fill it and get silently dropped.
+  const [honeypot, setHoneypot] = useState("");
 
   const setField = (field: keyof HeroTrialFormData, value: string) => {
     setForm((prev) => ({ ...prev, [field]: value }));
@@ -151,10 +159,46 @@ export default function HeroTrialForm() {
     return Object.keys(next).length === 0;
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!validate()) return;
+    const courseName =
+      courses.find((c) => c.slug === form.course)?.name[locale] ?? form.course;
+    const slotLabel =
+      t.timeSlotLabels[
+        TIME_SLOT_VALUES.indexOf(form.timeSlot as (typeof TIME_SLOT_VALUES)[number])
+      ] ?? form.timeSlot;
+    // Send to the PHP mail handler on the live site. On the GitHub Pages
+    // preview PHP cannot run (the .php file is served as plain text), so the
+    // POST fails there — expected; the local save + email fallback below
+    // covers it.
+    let sent = false;
+    try {
+      const res = await fetch(assetPath("/send-mail.php"), {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          form: "trial",
+          name: form.parentName,
+          email: form.email,
+          phone: form.whatsapp,
+          course: courseName,
+          slot: slotLabel,
+          website: honeypot,
+        }),
+      });
+      if (res.ok) {
+        const data = (await res
+          .json()
+          .catch(() => null)) as { ok?: boolean } | null;
+        sent = data?.ok === true;
+      }
+    } catch {
+      sent = false;
+    }
+    // Keep the local record as a fallback either way.
     saveTrialRequest({ ...form });
+    setSendFailed(!sent);
     setSubmitted(true);
   };
 
@@ -162,6 +206,8 @@ export default function HeroTrialForm() {
     setForm(emptyForm);
     setErrors({});
     setSubmitted(false);
+    setSendFailed(false);
+    setHoneypot("");
   };
 
   return (
@@ -180,6 +226,17 @@ export default function HeroTrialForm() {
           <p className="mx-auto mt-3 max-w-sm leading-relaxed text-ink/70">
             {t.success.body}
           </p>
+          {sendFailed && (
+            <p className="mx-auto mt-4 max-w-sm rounded-xl bg-gold-soft px-4 py-3 text-sm font-semibold leading-relaxed text-ink/80">
+              {t.sendFailed}{" "}
+              <a
+                href="mailto:contact@onlinekoran.de"
+                className="font-bold text-brand underline"
+              >
+                contact@onlinekoran.de
+              </a>
+            </p>
+          )}
           <button
             type="button"
             onClick={handleBookAnother}
@@ -198,6 +255,22 @@ export default function HeroTrialForm() {
           </h2>
           <p className="mt-2 text-sm leading-relaxed text-ink/70">{t.subtitle}</p>
           <form onSubmit={handleSubmit} noValidate className="mt-6 space-y-4">
+            {/* Honeypot: bots fill it, humans never see it. */}
+            <div
+              aria-hidden="true"
+              className="absolute -left-[9999px] top-0 h-0 overflow-hidden"
+            >
+              <label htmlFor="hero-website">Website</label>
+              <input
+                id="hero-website"
+                name="website"
+                type="text"
+                value={honeypot}
+                onChange={(e) => setHoneypot(e.target.value)}
+                autoComplete="off"
+                tabIndex={-1}
+              />
+            </div>
             <div>
               <label htmlFor="hero-parentName" className={labelClass}>
                 {t.labels.parentName} *

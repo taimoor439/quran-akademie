@@ -62,7 +62,7 @@ const content: Record<Locale, LocaleContent> = {
     intro:
       "Tajweed is the set of rules for reciting the Quran exactly as it was revealed — giving every letter its correct sound, place and length. It is not singing or decoration: it is accuracy. Because small sound differences can change a word's meaning, Tajweed protects both the words of the Quran and the beauty of reciting them.",
     coverAlt: "Close-up of open Quran pages showing Arabic script",
-    author: "By the Quran Akademie teaching team",
+    author: "By the Online Quran teaching team",
     updated: "Last updated: 12 November 2026",
     sections: [
       {
@@ -218,7 +218,7 @@ const content: Record<Locale, LocaleContent> = {
     intro:
       "Tadschwied (auch Tajweed geschrieben) ist das Regelwerk für die Rezitation des Korans, so wie er offenbart wurde — jeder Buchstabe mit seinem richtigen Klang, seiner richtigen Artikulationsstelle und seiner richtigen Länge. Es ist kein Singen und keine Dekoration, sondern Genauigkeit: Weil kleine Klangunterschiede die Bedeutung eines Wortes verändern können, schützt Tadschwied die Worte des Korans und die Schönheit der Rezitation.",
     coverAlt: "Nahaufnahme aufgeschlagener Koranseiten mit arabischer Schrift",
-    author: "Vom Lehrteam der Quran Akademie",
+    author: "Vom Lehrteam der Online Quran",
     updated: "Zuletzt aktualisiert: 12. November 2026",
     sections: [
       {
@@ -393,12 +393,14 @@ export default function WhatIsTajweedContent() {
         image: COVER,
         author: {
           "@type": "Organization",
-          name: "Quran Akademie",
+          name: "Online Quran",
+          logo: "https://onlinekoran.de/logo-horizontal.svg",
           url: BASE_URL,
         },
         publisher: {
           "@type": "Organization",
-          name: "Quran Akademie",
+          name: "Online Quran",
+          logo: "https://onlinekoran.de/logo-horizontal.svg",
           url: BASE_URL,
         },
         datePublished: "2026-11-12",

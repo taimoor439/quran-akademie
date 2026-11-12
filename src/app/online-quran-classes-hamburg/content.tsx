@@ -91,13 +91,13 @@ const content: { en: LocaleContent; de: LocaleContent } = {
     heroNote: "No payment needed for the trial · 30 minutes · Zoom or Google Meet",
     heroAlt: "Brick warehouses along a canal in Hamburg's Speicherstadt",
     intro:
-      "Families in Hamburg can learn the Quran online with a live, certified tutor — one-to-one, after school, in Hamburg time (CET/CEST). Quran Akademie teaches children and adults from Altona in the west to Harburg south of the Elbe, starting with a free 30-minute trial class.",
+      "Families in Hamburg can learn the Quran online with a live, certified tutor — one-to-one, after school, in Hamburg time (CET/CEST). Online Quran teaches children and adults from Altona in the west to Harburg south of the Elbe, starting with a free 30-minute trial class.",
     whyHeading: "Why do Hamburg families choose online Quran classes?",
     whyDirect:
       "Because Hamburg is a wide, spread-out city, and the Elbe runs right through it. A weekend class on the other side of the river — or a long S-Bahn ride with children — eats the afternoon. Online 1-on-1 lessons happen at home, after school, at a fixed time. No travel, no waiting list, and a tutor who teaches only your child.",
     whyParagraphs: [
       "Hamburg stretches from Blankenese in the west to Bergedorf in the east, and the Elbe divides the city in two. A family in Harburg or Wilhelmsburg heading to a class in Altona or St. Georg faces a long journey across the river — and back again. Online lessons give that time back to your family: the tutor appears on your screen at the agreed time, and the lesson starts.",
-      "There is also no waiting list. Places at popular mosque schools can be limited, and waiting lists are common. At Quran Akademie, your child's first lesson is the free trial class — usually in the same week you book — and the same tutor teaches every lesson after that.",
+      "There is also no waiting list. Places at popular mosque schools can be limited, and waiting lists are common. At Online Quran, your child's first lesson is the free trial class — usually in the same week you book — and the same tutor teaches every lesson after that.",
     ],
     districtsEyebrow: "Hamburg districts",
     districtsTitle: "Which Hamburg districts do we teach in?",
@@ -189,13 +189,13 @@ const content: { en: LocaleContent; de: LocaleContent } = {
     heroNote: "Keine Zahlung für die Probestunde nötig · 30 Minuten · Zoom oder Google Meet",
     heroAlt: "Backsteinhäuser an einem Kanal in der Hamburger Speicherstadt",
     intro:
-      "Familien in Hamburg können den Koran online lernen, mit einer live zugeschalteten, zertifizierten Lehrkraft — 1-zu-1, nach der Schule, zur Hamburger Zeit (MEZ/MESZ). Die Quran Akademie unterrichtet Kinder und Erwachsene von Altona im Westen bis Harburg südlich der Elbe — beginnend mit einer kostenlosen 30-minütigen Probestunde.",
+      "Familien in Hamburg können den Koran online lernen, mit einer live zugeschalteten, zertifizierten Lehrkraft — 1-zu-1, nach der Schule, zur Hamburger Zeit (MEZ/MESZ). Die Online Quran unterrichtet Kinder und Erwachsene von Altona im Westen bis Harburg südlich der Elbe — beginnend mit einer kostenlosen 30-minütigen Probestunde.",
     whyHeading: "Warum wählen Hamburger Familien Online-Koranunterricht?",
     whyDirect:
       "Weil Hamburg eine weitläufige Stadt ist und die Elbe mitten durch sie fließt. Ein Wochenendkurs auf der anderen Seite des Flusses — oder eine lange S-Bahn-Fahrt mit Kindern — kostet den ganzen Nachmittag. Online-Einzelunterricht findet zu Hause statt, nach der Schule, zu einer festen Zeit. Keine Fahrt, keine Warteliste und eine Lehrkraft, die nur Ihr Kind unterrichtet.",
     whyParagraphs: [
       "Hamburg erstreckt sich von Blankenese im Westen bis Bergedorf im Osten, und die Elbe teilt die Stadt in zwei Hälften. Eine Familie aus Harburg oder Wilhelmsburg, die zu einem Kurs in Altona oder St. Georg fährt, hat eine lange Reise über den Fluss vor sich — und zurück, mit müden Kindern. Online-Unterricht gibt Ihrer Familie diese Zeit zurück: Die Lehrkraft erscheint zur vereinbarten Zeit auf Ihrem Bildschirm, und die Stunde beginnt.",
-      "Es gibt auch keine Warteliste. Plätze an beliebten Koranschulen können begrenzt sein, und Wartelisten sind üblich. Bei der Quran Akademie ist die erste Stunde Ihres Kindes die kostenlose Probestunde — meist in derselben Woche, in der Sie buchen — und danach unterrichtet dieselbe Lehrkraft jede Stunde.",
+      "Es gibt auch keine Warteliste. Plätze an beliebten Koranschulen können begrenzt sein, und Wartelisten sind üblich. Bei der Online Quran ist die erste Stunde Ihres Kindes die kostenlose Probestunde — meist in derselben Woche, in der Sie buchen — und danach unterrichtet dieselbe Lehrkraft jede Stunde.",
     ],
     districtsEyebrow: "Hamburger Bezirke",
     districtsTitle: "In welchen Hamburger Bezirken unterrichten wir?",
@@ -304,12 +304,12 @@ export default function HamburgContent() {
         inLanguage: locale,
         datePublished: "2026-11-12",
         dateModified: "2026-11-12",
-        author: { "@type": "Organization", name: "Quran Akademie" },
+        author: { "@type": "Organization", name: "Online Quran" },
       },
       {
         "@type": "BreadcrumbList",
         itemListElement: [
-          { "@type": "ListItem", position: 1, name: "Quran Akademie", item: BASE_URL },
+          { "@type": "ListItem", position: 1, name: "Online Quran", item: BASE_URL },
           {
             "@type": "ListItem",
             position: 2,

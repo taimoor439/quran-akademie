@@ -12,16 +12,16 @@ const content = {
       eyebrow: "Terms of Service",
       title: "AGB — Terms of Service",
       subtitle:
-        "The terms that apply when you book classes with Quran Akademie. Please read them carefully before booking.",
+        "The terms that apply when you book classes with Online Quran. Please read them carefully before booking.",
     },
     lastUpdated: "Last updated: [to be completed]",
     intro:
-      "These Terms of Service (Allgemeine Geschäftsbedingungen, AGB) govern the use of this website and the booking of live online Quran classes with Quran Akademie. By booking a trial class or a plan, you agree to these terms.",
+      "These Terms of Service (Allgemeine Geschäftsbedingungen, AGB) govern the use of this website and the booking of live online Quran classes with Online Quran. By booking a trial class or a plan, you agree to these terms.",
     sections: [
       {
         heading: "1. Services",
         paragraphs: [
-          "Quran Akademie provides live online Quran classes taught one-to-one by a tutor over video call. Classes cover Quran reading, Tajweed, Hifz (memorisation) and Tafseer, and are offered for children and adults.",
+          "Online Quran provides live online Quran classes taught one-to-one by a tutor over video call. Classes cover Quran reading, Tajweed, Hifz (memorisation) and Tafseer, and are offered for children and adults.",
           "All classes are held online at the scheduled time in Germany time (CET/CEST). You are responsible for providing a suitable device, a stable internet connection and a quiet place for the lesson.",
         ],
       },
@@ -45,7 +45,7 @@ const content = {
         paragraphs: [
           "All plans are month-to-month. There is no lock-in and no minimum term. You may cancel at any time, and your plan will end at the end of the current billing month. No refund is due for a partially used month, unless we are unable to provide the classes you booked.",
           "You may pause your plan — for example, for holidays — by telling us before the next billing month begins. Paused months are not charged.",
-          "To cancel or pause, please contact us at hello@quranakademie.de [placeholder email — to be confirmed].",
+          "To cancel or pause, please contact us at contact@onlinekoran.de.",
         ],
       },
       {
@@ -78,7 +78,7 @@ const content = {
       {
         heading: "9. Contact",
         paragraphs: [
-          "Quran Akademie — [Business name — to be completed], [Street address — to be completed], [Postal code and city — to be completed]. Email: hello@quranakademie.de [placeholder email — to be confirmed].",
+          "Online Quran — [Business name — to be completed], [Street address — to be completed], [Postal code and city — to be completed]. Email: contact@onlinekoran.de.",
         ],
         note: "The business details above are placeholders and will be completed with the real business information before launch.",
       },
@@ -89,16 +89,16 @@ const content = {
       eyebrow: "Allgemeine Geschäftsbedingungen",
       title: "Allgemeine Geschäftsbedingungen (AGB)",
       subtitle:
-        "Die Bedingungen, die gelten, wenn Sie Kurse bei der Quran Akademie buchen. Bitte lesen Sie sie vor der Buchung sorgfältig durch.",
+        "Die Bedingungen, die gelten, wenn Sie Kurse bei der Online Quran buchen. Bitte lesen Sie sie vor der Buchung sorgfältig durch.",
     },
     lastUpdated: "Zuletzt aktualisiert: [noch zu ergänzen]",
     intro:
-      "Diese Allgemeinen Geschäftsbedingungen (AGB) regeln die Nutzung dieser Website und die Buchung von Live-Online-Quran-Kursen bei der Quran Akademie. Mit der Buchung einer Probestunde oder eines Tarifs stimmen Sie diesen Bedingungen zu.",
+      "Diese Allgemeinen Geschäftsbedingungen (AGB) regeln die Nutzung dieser Website und die Buchung von Live-Online-Quran-Kursen bei der Online Quran. Mit der Buchung einer Probestunde oder eines Tarifs stimmen Sie diesen Bedingungen zu.",
     sections: [
       {
         heading: "1. Leistungen",
         paragraphs: [
-          "Die Quran Akademie bietet Live-Online-Quran-Kurse an, die im Einzelunterricht per Videoanruf von einer Lehrkraft durchgeführt werden. Die Kurse umfassen Quran-Lesen, Tajweed, Hifz (Auswendiglernen) und Tafsir und richten sich an Kinder und Erwachsene.",
+          "Die Online Quran bietet Live-Online-Quran-Kurse an, die im Einzelunterricht per Videoanruf von einer Lehrkraft durchgeführt werden. Die Kurse umfassen Quran-Lesen, Tajweed, Hifz (Auswendiglernen) und Tafsir und richten sich an Kinder und Erwachsene.",
           "Alle Stunden finden online zur vereinbarten Zeit in deutscher Zeit (MEZ/MESZ) statt. Sie sind dafür verantwortlich, ein geeignetes Endgerät, eine stabile Internetverbindung und einen ruhigen Ort für die Stunde bereitzustellen.",
         ],
       },
@@ -122,7 +122,7 @@ const content = {
         paragraphs: [
           "Alle Tarife sind monatlich kündbar. Es gibt keine Mindestlaufzeit und keine Vertragsbindung. Sie können jederzeit kündigen; Ihr Tarif endet zum Ende des laufenden Abrechnungsmonats. Für einen teilweise genutzten Monat erfolgt keine Erstattung, es sei denn, wir können die gebuchten Stunden nicht erbringen.",
           "Sie können Ihren Tarif pausieren — zum Beispiel für Urlaub — indem Sie uns vor Beginn des nächsten Abrechnungsmonats informieren. Pausierte Monate werden nicht berechnet.",
-          "Zur Kündigung oder Pausierung kontaktieren Sie uns bitte unter hello@quranakademie.de [Platzhalter-E-Mail — noch zu bestätigen].",
+          "Zur Kündigung oder Pausierung kontaktieren Sie uns bitte unter contact@onlinekoran.de.",
         ],
       },
       {
@@ -155,7 +155,7 @@ const content = {
       {
         heading: "9. Kontakt",
         paragraphs: [
-          "Quran Akademie — [Firmenname — noch zu ergänzen], [Straße und Hausnummer — noch zu ergänzen], [Postleitzahl und Ort — noch zu ergänzen]. E-Mail: hello@quranakademie.de [Platzhalter-E-Mail — noch zu bestätigen].",
+          "Online Quran — [Firmenname — noch zu ergänzen], [Straße und Hausnummer — noch zu ergänzen], [Postleitzahl und Ort — noch zu ergänzen]. E-Mail: contact@onlinekoran.de.",
         ],
         note: "Die obigen Unternehmensangaben sind Platzhalter und werden vor dem Start mit den echten Unternehmensdaten ergänzt.",
       },

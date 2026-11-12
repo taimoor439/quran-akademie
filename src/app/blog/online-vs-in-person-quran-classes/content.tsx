@@ -62,7 +62,7 @@ const content: Record<Locale, LocaleContent> = {
     intro:
       "Online one-to-one Quran classes, mosque school and a home tutor all work — but they suit different families. Online lessons win on flexibility, personalisation and scheduling; mosque school wins on community and social contact; a home tutor offers face-to-face teaching at the highest cost. Many families combine online lessons with mosque school and get the best of both.",
     coverAlt: "Interior of a mosque with arches and soft light",
-    author: "By the Quran Akademie teaching team",
+    author: "By the Online Quran teaching team",
     updated: "Last updated: 12 November 2026",
     sections: [
       {
@@ -235,7 +235,7 @@ const content: Record<Locale, LocaleContent> = {
     intro:
       "Online-Einzelunterricht im Koran, Koranschule und ein Privatlehrer zu Hause funktionieren alle — aber sie passen zu unterschiedlichen Familien. Online-Unterricht gewinnt bei Flexibilität, Individualität und Terminplanung; die Koranschule gewinnt bei Gemeinschaft und sozialem Kontakt; ein Privatlehrer bietet persönlichen Unterricht zum höchsten Preis. Viele Familien kombinieren Online-Unterricht mit der Koranschule und bekommen das Beste aus beiden Welten.",
     coverAlt: "Innenraum einer Moschee mit Bögen und sanftem Licht",
-    author: "Vom Lehrteam der Quran Akademie",
+    author: "Vom Lehrteam der Online Quran",
     updated: "Zuletzt aktualisiert: 12. November 2026",
     sections: [
       {
@@ -427,12 +427,14 @@ export default function OnlineVsInPersonContent() {
         image: COVER,
         author: {
           "@type": "Organization",
-          name: "Quran Akademie",
+          name: "Online Quran",
+          logo: "https://onlinekoran.de/logo-horizontal.svg",
           url: BASE_URL,
         },
         publisher: {
           "@type": "Organization",
-          name: "Quran Akademie",
+          name: "Online Quran",
+          logo: "https://onlinekoran.de/logo-horizontal.svg",
           url: BASE_URL,
         },
         datePublished: "2026-11-12",

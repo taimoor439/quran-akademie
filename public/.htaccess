@@ -1,4 +1,4 @@
-# Quran Akademie (onlinekoran.de) — Apache / LiteSpeed rules for the static export.
+# Online Quran (onlinekoran.de) — Apache / LiteSpeed rules for the static export.
 # The Next.js static export writes courses.html, pricing.html, blog/*.html etc.
 # Apache does not map clean URLs (/courses) to those files on its own, so
 # rewrite them here. Without this file, every subpage returns 404 on Hostinger

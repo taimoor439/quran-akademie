@@ -188,9 +188,9 @@ const content: { en: LocaleContent; de: LocaleContent } = {
       {
         heading: "Are online Quran classes safe for children?",
         direct:
-          "Yes — when the academy takes safeguarding seriously. At Quran Akademie, a parent or guardian must stay nearby and be present in the home for the whole lesson, tutors never contact children privately, and every tutor is background-checked and safeguarding-trained. Read our full safeguarding policy before you book.",
+          "Yes — when the academy takes safeguarding seriously. At Online Quran, a parent or guardian must stay nearby and be present in the home for the whole lesson, tutors never contact children privately, and every tutor is background-checked and safeguarding-trained. Read our full safeguarding policy before you book.",
         paragraphs: [
-          "Every tutor at Quran Akademie is background-checked and safeguarding-trained before teaching a single lesson. Lessons take place on Zoom or Google Meet, with a parent or guardian present in the home for the whole lesson — that is a rule, not a suggestion.",
+          "Every tutor at Online Quran is background-checked and safeguarding-trained before teaching a single lesson. Lessons take place on Zoom or Google Meet, with a parent or guardian present in the home for the whole lesson — that is a rule, not a suggestion.",
           "Tutors never contact children privately: no private messages, calls or social media contact with students, ever. And lessons are recorded only with a parent's prior consent, for quality and safeguarding purposes only.",
         ],
         link: { href: "/safeguarding", label: "Read our safeguarding policy" },
@@ -344,9 +344,9 @@ const content: { en: LocaleContent; de: LocaleContent } = {
       {
         heading: "Ist Online-Koranunterricht für Kinder sicher?",
         direct:
-          "Ja — wenn die Akademie Kinderschutz ernst nimmt. Bei der Quran Akademie muss ein Elternteil oder Erziehungsberechtigter während der ganzen Stunde in der Nähe bleiben und zu Hause anwesend sein, Lehrkräfte kontaktieren Kinder niemals privat, und jede Lehrkraft ist hintergrundgeprüft und im Kinderschutz geschult. Lesen Sie vor der Buchung unsere Kinderschutzrichtlinie.",
+          "Ja — wenn die Akademie Kinderschutz ernst nimmt. Bei der Online Quran muss ein Elternteil oder Erziehungsberechtigter während der ganzen Stunde in der Nähe bleiben und zu Hause anwesend sein, Lehrkräfte kontaktieren Kinder niemals privat, und jede Lehrkraft ist hintergrundgeprüft und im Kinderschutz geschult. Lesen Sie vor der Buchung unsere Kinderschutzrichtlinie.",
         paragraphs: [
-          "Jede Lehrkraft der Quran Akademie ist hintergrundgeprüft und im Kinderschutz geschult, bevor sie eine einzige Stunde unterrichtet. Die Stunden finden über Zoom oder Google Meet statt, mit einem Elternteil oder Erziehungsberechtigten zu Hause anwesend für die ganze Stunde — das ist eine Regel, keine Empfehlung.",
+          "Jede Lehrkraft der Online Quran ist hintergrundgeprüft und im Kinderschutz geschult, bevor sie eine einzige Stunde unterrichtet. Die Stunden finden über Zoom oder Google Meet statt, mit einem Elternteil oder Erziehungsberechtigten zu Hause anwesend für die ganze Stunde — das ist eine Regel, keine Empfehlung.",
           "Lehrkräfte kontaktieren Kinder niemals privat: keine privaten Nachrichten, Anrufe oder Social-Media-Kontakte mit Schülern, niemals. Und Stunden werden nur mit vorheriger Zustimmung eines Elternteils aufgezeichnet, nur für Qualität und Kinderschutz.",
         ],
         link: { href: "/safeguarding", label: "Unsere Kinderschutzrichtlinie lesen" },
@@ -439,12 +439,12 @@ export default function KidsContent() {
         inLanguage: locale,
         datePublished: "2026-11-12",
         dateModified: "2026-11-12",
-        author: { "@type": "Organization", name: "Quran Akademie" },
+        author: { "@type": "Organization", name: "Online Quran" },
       },
       {
         "@type": "BreadcrumbList",
         itemListElement: [
-          { "@type": "ListItem", position: 1, name: "Quran Akademie", item: BASE_URL },
+          { "@type": "ListItem", position: 1, name: "Online Quran", item: BASE_URL },
           { "@type": "ListItem", position: 2, name: t.jsonLdName, item: pageUrl },
         ],
       },
@@ -454,7 +454,8 @@ export default function KidsContent() {
         description: t.jsonLdDescription,
         provider: {
           "@type": "Organization",
-          name: "Quran Akademie",
+          name: "Online Quran",
+          logo: "https://onlinekoran.de/logo-horizontal.svg",
           url: BASE_URL,
         },
         offers: plans.map((plan) => ({

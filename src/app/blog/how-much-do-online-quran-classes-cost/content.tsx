@@ -13,15 +13,15 @@ const COVER =
   "https://images.pexels.com/photos/18387340/pexels-photo-18387340.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1";
 
 const EN_META = {
-  title: "How Much Do Online Quran Classes Cost? | Quran Akademie",
+  title: "How Much Do Online Quran Classes Cost? | Online Quran",
   description:
-    "Online Quran classes cost $35–$99/month at Quran Akademie for live 1-on-1 lessons with a tutor. See our plans, what drives the price, and how we compare.",
+    "Online Quran classes cost $35–$99/month at Online Quran for live 1-on-1 lessons with a tutor. See our plans, what drives the price, and how we compare.",
 };
 
 const DE_META = {
   title: "Was kostet Online-Koranunterricht? Preise 2026",
   description:
-    "Online-Koranunterricht kostet bei der Quran Akademie 35–99 $ pro Monat für Live-Einzelunterricht. Alle Tarife, Preisfaktoren und Marktvergleich im Überblick.",
+    "Online-Koranunterricht kostet bei der Online Quran 35–99 $ pro Monat für Live-Einzelunterricht. Alle Tarife, Preisfaktoren und Marktvergleich im Überblick.",
 };
 
 interface Section {
@@ -69,16 +69,16 @@ const content: { en: GuideContent; de: GuideContent } = {
     category: "Pricing",
     readTime: "7 min read",
     title: "How Much Do Online Quran Classes Cost?",
-    author: "By the Quran Akademie teaching team",
+    author: "By the Online Quran teaching team",
     updated: "Last updated: 12 November 2026",
     intro:
-      "Online Quran classes at Quran Akademie cost $35–$99 per month for live 1-to-1 lessons with a certified tutor: Basic is $35 a month for four 25-minute classes a week, Standard is $59 for five 30-minute classes, and Hifz Intensive is $99 for five 45-minute classes. Every plan starts with a free 30-minute trial class, and there is no lock-in contract.",
+      "Online Quran classes at Online Quran cost $35–$99 per month for live 1-to-1 lessons with a certified tutor: Basic is $35 a month for four 25-minute classes a week, Standard is $59 for five 30-minute classes, and Hifz Intensive is $99 for five 45-minute classes. Every plan starts with a free 30-minute trial class, and there is no lock-in contract.",
     coverAlt: "An ornate Quran with gold decoration",
     sections: [
       {
         heading: "How much do online Quran classes cost?",
         answer:
-          "At Quran Akademie, live 1-to-1 online Quran classes cost $35–$99 per month, depending on how many classes you take each week and how long each class lasts. The Basic plan is $35 a month, the Standard plan is $59, and Hifz Intensive is $99. Prices are in USD, and the EUR equivalent is charged at checkout at the current rate.",
+          "At Online Quran, live 1-to-1 online Quran classes cost $35–$99 per month, depending on how many classes you take each week and how long each class lasts. The Basic plan is $35 a month, the Standard plan is $59, and Hifz Intensive is $99. Prices are in USD, and the EUR equivalent is charged at checkout at the current rate.",
         paragraphs: [
           "That monthly price covers everything: live lessons with a certified tutor, a monthly progress report, and flexible scheduling in Germany time (CET/CEST). There are no registration fees, no charges for learning materials, and no lock-in contract — plans are month-to-month, and you can cancel or pause at any time. Every plan starts with a free 30-minute trial class, so you can meet the tutor before paying anything.",
         ],
@@ -151,7 +151,7 @@ const content: { en: GuideContent; de: GuideContent } = {
               "Pay per session; four sessions a week works out at roughly €120–€160 a month",
             ],
             [
-              "Quran Akademie (Basic / Standard / Hifz Intensive)",
+              "Online Quran (Basic / Standard / Hifz Intensive)",
               "$35 / $59 / $99 per month",
               "Live 1-to-1, certified tutor, progress reports, free trial",
             ],
@@ -228,16 +228,16 @@ const content: { en: GuideContent; de: GuideContent } = {
     category: "Preise",
     readTime: "7 Min. Lesezeit",
     title: "Was kostet Online-Koranunterricht?",
-    author: "Vom Lehrteam der Quran Akademie",
+    author: "Vom Lehrteam der Online Quran",
     updated: "Zuletzt aktualisiert: 12. November 2026",
     intro:
-      "Online-Koranunterricht bei der Quran Akademie kostet 35–99 $ pro Monat für Live-Einzelunterricht mit einer zertifizierten Lehrkraft: Basis kostet 35 $ pro Monat für vier 25-minütige Stunden pro Woche, Standard 59 $ für fünf 30-minütige Stunden und Hifz Intensiv 99 $ für fünf 45-minütige Stunden. Jeder Tarif beginnt mit einer kostenlosen 30-minütigen Probestunde, und es gibt keine Mindestlaufzeit.",
+      "Online-Koranunterricht bei der Online Quran kostet 35–99 $ pro Monat für Live-Einzelunterricht mit einer zertifizierten Lehrkraft: Basis kostet 35 $ pro Monat für vier 25-minütige Stunden pro Woche, Standard 59 $ für fünf 30-minütige Stunden und Hifz Intensiv 99 $ für fünf 45-minütige Stunden. Jeder Tarif beginnt mit einer kostenlosen 30-minütigen Probestunde, und es gibt keine Mindestlaufzeit.",
     coverAlt: "Ein verzierter Koran mit Golddekoration",
     sections: [
       {
         heading: "Was kostet Online-Koranunterricht?",
         answer:
-          "Bei der Quran Akademie kostet Live-Einzelunterricht im Koran (Quran) 35–99 $ pro Monat — je nachdem, wie oft pro Woche Sie Unterricht nehmen und wie lang jede Stunde ist. Der Basis-Tarif kostet 35 $ pro Monat, der Standard-Tarif 59 $ und Hifz Intensiv 99 $. Die Preise sind in USD angegeben; an der Kasse wird der Euro-Gegenwert zum aktuellen Kurs berechnet.",
+          "Bei der Online Quran kostet Live-Einzelunterricht im Koran (Quran) 35–99 $ pro Monat — je nachdem, wie oft pro Woche Sie Unterricht nehmen und wie lang jede Stunde ist. Der Basis-Tarif kostet 35 $ pro Monat, der Standard-Tarif 59 $ und Hifz Intensiv 99 $. Die Preise sind in USD angegeben; an der Kasse wird der Euro-Gegenwert zum aktuellen Kurs berechnet.",
         paragraphs: [
           "Im Monatspreis ist alles enthalten: Live-Unterricht mit einer zertifizierten Lehrkraft, ein monatlicher Fortschrittsbericht und flexible Termine nach deutscher Zeit (MEZ/MESZ). Es gibt keine Anmeldegebühr, keine Kosten für Lernmaterialien und keine Mindestlaufzeit — die Tarife laufen monatlich, und Sie können jederzeit kündigen oder pausieren. Jeder Tarif beginnt mit einer kostenlosen 30-minütigen Probestunde, damit Sie die Lehrkraft kennenlernen, bevor Sie etwas zahlen.",
         ],
@@ -310,7 +310,7 @@ const content: { en: GuideContent; de: GuideContent } = {
               "Bezahlung pro Einheit; vier Einheiten pro Woche ergeben rund 120–160 € pro Monat",
             ],
             [
-              "Quran Akademie (Basis / Standard / Hifz Intensiv)",
+              "Online Quran (Basis / Standard / Hifz Intensiv)",
               "35 $ / 59 $ / 99 $ pro Monat",
               "Live-Einzelunterricht, zertifizierte Lehrkraft, Fortschrittsberichte, Probestunde",
             ],
@@ -411,12 +411,14 @@ export default function PricingGuideContent() {
       image: COVER,
       author: {
         "@type": "Organization",
-        name: "Quran Akademie",
+        name: "Online Quran",
+        logo: "https://onlinekoran.de/logo-horizontal.svg",
         url: BASE_URL,
       },
       publisher: {
         "@type": "Organization",
-        name: "Quran Akademie",
+        name: "Online Quran",
+        logo: "https://onlinekoran.de/logo-horizontal.svg",
         url: BASE_URL,
       },
       datePublished: "2026-11-12",

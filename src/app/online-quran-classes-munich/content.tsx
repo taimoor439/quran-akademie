@@ -91,13 +91,13 @@ const content: { en: LocaleContent; de: LocaleContent } = {
     heroNote: "No payment needed for the trial · 30 minutes · Zoom or Google Meet",
     heroAlt: "New Town Hall on Marienplatz in Munich at dusk",
     intro:
-      "Families in Munich can learn the Quran online with a live, certified tutor — one-to-one, after school, in Munich time (CET/CEST). Quran Akademie teaches children and adults across the Bavarian capital, from Sendling in the south to Hasenbergl in the north, starting with a free 30-minute trial class.",
+      "Families in Munich can learn the Quran online with a live, certified tutor — one-to-one, after school, in Munich time (CET/CEST). Online Quran teaches children and adults across the Bavarian capital, from Sendling in the south to Hasenbergl in the north, starting with a free 30-minute trial class.",
     whyHeading: "Why do Munich families choose online Quran classes?",
     whyDirect:
       "Because Munich is a busy, fast-moving city, and a weekend class across town — or a long U-Bahn ride with children — eats the afternoon. Online 1-on-1 lessons happen at home, after school, at a fixed time. No travel, no waiting list, and a tutor who teaches only your child.",
     whyParagraphs: [
       "Munich's families often live in the outer districts — Neuperlach in the south-east, Hasenbergl in the north — while weekend classes tend to meet near the centre. Crossing the city on a Saturday with children takes the best part of the afternoon. Online lessons give that time back to your family: the tutor appears on your screen at the agreed time, and the lesson starts.",
-      "There is also no waiting list. Places at popular mosque schools can be limited, and waiting lists are common. At Quran Akademie, your child's first lesson is the free trial class — usually in the same week you book — and the same tutor teaches every lesson after that.",
+      "There is also no waiting list. Places at popular mosque schools can be limited, and waiting lists are common. At Online Quran, your child's first lesson is the free trial class — usually in the same week you book — and the same tutor teaches every lesson after that.",
     ],
     districtsEyebrow: "Munich districts",
     districtsTitle: "Which Munich districts do we teach in?",
@@ -185,13 +185,13 @@ const content: { en: LocaleContent; de: LocaleContent } = {
     heroNote: "Keine Zahlung für die Probestunde nötig · 30 Minuten · Zoom oder Google Meet",
     heroAlt: "Neues Rathaus am Marienplatz in München in der Abenddämmerung",
     intro:
-      "Familien in München können den Koran online lernen, mit einer live zugeschalteten, zertifizierten Lehrkraft — 1-zu-1, nach der Schule, zur Münchner Zeit (MEZ/MESZ). Die Quran Akademie unterrichtet Kinder und Erwachsene in der bayerischen Landeshauptstadt, von Sendling im Süden bis Hasenbergl im Norden — beginnend mit einer kostenlosen 30-minütigen Probestunde.",
+      "Familien in München können den Koran online lernen, mit einer live zugeschalteten, zertifizierten Lehrkraft — 1-zu-1, nach der Schule, zur Münchner Zeit (MEZ/MESZ). Die Online Quran unterrichtet Kinder und Erwachsene in der bayerischen Landeshauptstadt, von Sendling im Süden bis Hasenbergl im Norden — beginnend mit einer kostenlosen 30-minütigen Probestunde.",
     whyHeading: "Warum wählen Münchner Familien Online-Koranunterricht?",
     whyDirect:
       "Weil München eine geschäftige, schnelle Stadt ist und ein Wochenendkurs quer durch die Stadt — oder eine lange U-Bahn-Fahrt mit Kindern — den ganzen Nachmittag kostet. Online-Einzelunterricht findet zu Hause statt, nach der Schule, zu einer festen Zeit. Keine Fahrt, keine Warteliste und eine Lehrkraft, die nur Ihr Kind unterrichtet.",
     whyParagraphs: [
       "Münchner Familien wohnen oft in den äußeren Stadtteilen — Neuperlach im Südosten, Hasenbergl im Norden — während Wochenendkurse meist in der Nähe der Innenstadt stattfinden. Quer durch die Stadt zu fahren, kostet am Samstag mit Kindern den halben Nachmittag. Online-Unterricht gibt Ihrer Familie diese Zeit zurück: Die Lehrkraft erscheint zur vereinbarten Zeit auf Ihrem Bildschirm, und die Stunde beginnt.",
-      "Es gibt auch keine Warteliste. Plätze an beliebten Koranschulen können begrenzt sein, und Wartelisten sind üblich. Bei der Quran Akademie ist die erste Stunde Ihres Kindes die kostenlose Probestunde — meist in derselben Woche, in der Sie buchen — und danach unterrichtet dieselbe Lehrkraft jede Stunde.",
+      "Es gibt auch keine Warteliste. Plätze an beliebten Koranschulen können begrenzt sein, und Wartelisten sind üblich. Bei der Online Quran ist die erste Stunde Ihres Kindes die kostenlose Probestunde — meist in derselben Woche, in der Sie buchen — und danach unterrichtet dieselbe Lehrkraft jede Stunde.",
     ],
     districtsEyebrow: "Münchner Stadtbezirke",
     districtsTitle: "In welchen Münchner Stadtbezirken unterrichten wir?",
@@ -296,12 +296,12 @@ export default function MunichContent() {
         inLanguage: locale,
         datePublished: "2026-11-12",
         dateModified: "2026-11-12",
-        author: { "@type": "Organization", name: "Quran Akademie" },
+        author: { "@type": "Organization", name: "Online Quran" },
       },
       {
         "@type": "BreadcrumbList",
         itemListElement: [
-          { "@type": "ListItem", position: 1, name: "Quran Akademie", item: BASE_URL },
+          { "@type": "ListItem", position: 1, name: "Online Quran", item: BASE_URL },
           {
             "@type": "ListItem",
             position: 2,

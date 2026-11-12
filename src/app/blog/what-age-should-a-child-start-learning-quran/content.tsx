@@ -69,7 +69,7 @@ const content: { en: GuideContent; de: GuideContent } = {
     category: "For Parents",
     readTime: "7 min read",
     title: "What Age Should a Child Start Learning the Quran?",
-    author: "By the Quran Akademie teaching team",
+    author: "By the Online Quran teaching team",
     updated: "Last updated: 12 November 2026",
     intro:
       "Most children can start learning the Quran at age 4–5, beginning with the sounds and letters of the Noorani Qaida, and ages 5–7 are the ideal window to start. But readiness matters more than the birthday: a child who can sit and focus for 15–20 minutes, recognise letters, and enjoys listening to short surahs is ready — whenever that happens.",
@@ -208,7 +208,7 @@ const content: { en: GuideContent; de: GuideContent } = {
     category: "Für Eltern",
     readTime: "7 Min. Lesezeit",
     title: "Ab welchem Alter sollte ein Kind den Koran lernen?",
-    author: "Vom Lehrteam der Quran Akademie",
+    author: "Vom Lehrteam der Online Quran",
     updated: "Zuletzt aktualisiert: 12. November 2026",
     intro:
       "Die meisten Kinder können mit 4–5 Jahren anfangen, den Koran zu lernen — zunächst die Laute und Buchstaben der Noorani Qaida; das ideale Startalter ist 5–7 Jahre. Wichtiger als das Alter ist aber die Bereitschaft: Ein Kind, das 15–20 Minuten sitzen und sich konzentrieren kann, Buchstaben erkennt und gerne kurze Suren hört, ist bereit — wann immer das der Fall ist.",
@@ -371,12 +371,14 @@ export default function AgeGuideContent() {
       image: COVER,
       author: {
         "@type": "Organization",
-        name: "Quran Akademie",
+        name: "Online Quran",
+        logo: "https://onlinekoran.de/logo-horizontal.svg",
         url: BASE_URL,
       },
       publisher: {
         "@type": "Organization",
-        name: "Quran Akademie",
+        name: "Online Quran",
+        logo: "https://onlinekoran.de/logo-horizontal.svg",
         url: BASE_URL,
       },
       datePublished: "2026-11-12",

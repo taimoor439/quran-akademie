@@ -74,7 +74,7 @@ const content: { en: LocaleContent; de: LocaleContent } = {
     intro:
       "Choose an online Quran teacher by checking four things first: real qualifications (an Ijazah with a sanad), experience with your age group, safeguarding for children, and a free trial class. This guide gives you twelve questions to ask any academy or tutor — and the answers you should expect — before you book a single lesson.",
     coverAlt: "A Quran teacher giving an online lesson on a laptop",
-    author: "By the Quran Akademie teaching team",
+    author: "By the Online Quran teaching team",
     updated: "Last updated: 12 November 2026",
     sections: [
       {
@@ -120,7 +120,7 @@ const content: { en: LocaleContent; de: LocaleContent } = {
           {
             heading: "5. Can I try a free trial class first?",
             paragraphs: [
-              "Never pay before a trial. A free trial class lets you hear the teacher, watch how they handle your child, and judge the connection quality and lesson style — things no website can show you. The trial should be a real lesson, not a sales call, and it should come with no obligation and no payment details taken upfront. At Quran Akademie every plan starts with a free 30-minute trial class.",
+              "Never pay before a trial. A free trial class lets you hear the teacher, watch how they handle your child, and judge the connection quality and lesson style — things no website can show you. The trial should be a real lesson, not a sales call, and it should come with no obligation and no payment details taken upfront. At Online Quran every plan starts with a free 30-minute trial class.",
             ],
           },
           {
@@ -144,7 +144,7 @@ const content: { en: LocaleContent; de: LocaleContent } = {
           {
             heading: "9. How will I know my child is progressing?",
             paragraphs: [
-              "You should never have to guess. Ask for a written progress report — what your child has covered, what they can now do, and what comes next — at least once a month, plus a chance to speak with the teacher. Quran Akademie's plans include a monthly progress report for parents, and the Standard plan adds a parent check-in. If an academy cannot show you a sample report, it probably does not produce one.",
+              "You should never have to guess. Ask for a written progress report — what your child has covered, what they can now do, and what comes next — at least once a month, plus a chance to speak with the teacher. Online Quran's plans include a monthly progress report for parents, and the Standard plan adds a parent check-in. If an academy cannot show you a sample report, it probably does not produce one.",
             ],
           },
           {
@@ -193,7 +193,7 @@ const content: { en: LocaleContent; de: LocaleContent } = {
     faqs: [
       {
         q: "Should my child have a male or female teacher?",
-        a: "Either can be excellent — what matters is qualification, experience with children, and your child's comfort. Many families prefer a female teacher for young children and for girls. Quran Akademie has male and female tutors; ask when you book your free trial class.",
+        a: "Either can be excellent — what matters is qualification, experience with children, and your child's comfort. Many families prefer a female teacher for young children and for girls. Online Quran has male and female tutors; ask when you book your free trial class.",
       },
       {
         q: "How much should online Quran classes cost?",
@@ -248,7 +248,7 @@ const content: { en: LocaleContent; de: LocaleContent } = {
     intro:
       "Einen Online-Koranlehrer wählt man zuerst nach vier Dingen aus: echten Qualifikationen (einer Idschaza mit Sanad), Erfahrung mit der eigenen Altersgruppe, Kinderschutz — und einer kostenlosen Probestunde. Dieser Leitfaden gibt Ihnen zwölf Fragen an die Hand, die Sie jeder Akademie oder Lehrkraft stellen sollten — und die Antworten, die Sie erwarten dürfen — bevor Sie eine einzige Stunde buchen.",
     coverAlt: "Ein Koranlehrer gibt Online-Unterricht am Laptop",
-    author: "Vom Lehrteam der Quran Akademie",
+    author: "Vom Lehrteam der Online Quran",
     updated: "Zuletzt aktualisiert: 12. November 2026",
     sections: [
       {
@@ -294,7 +294,7 @@ const content: { en: LocaleContent; de: LocaleContent } = {
           {
             heading: "5. Kann ich zuerst eine kostenlose Probestunde machen?",
             paragraphs: [
-              "Bezahlen Sie nie vor einer Probestunde. Eine kostenlose Probestunde lässt Sie die Lehrkraft hören, sehen, wie sie mit Ihrem Kind umgeht, und die Verbindungsqualität und den Unterrichtsstil beurteilen — Dinge, die keine Website zeigen kann. Die Probestunde sollte eine echte Stunde sein, kein Verkaufsgespräch, und ohne Verpflichtung und ohne Angabe von Zahlungsdaten auskommen. Bei der Quran Akademie beginnt jeder Tarif mit einer kostenlosen 30-minütigen Probestunde.",
+              "Bezahlen Sie nie vor einer Probestunde. Eine kostenlose Probestunde lässt Sie die Lehrkraft hören, sehen, wie sie mit Ihrem Kind umgeht, und die Verbindungsqualität und den Unterrichtsstil beurteilen — Dinge, die keine Website zeigen kann. Die Probestunde sollte eine echte Stunde sein, kein Verkaufsgespräch, und ohne Verpflichtung und ohne Angabe von Zahlungsdaten auskommen. Bei der Online Quran beginnt jeder Tarif mit einer kostenlosen 30-minütigen Probestunde.",
             ],
           },
           {
@@ -318,7 +318,7 @@ const content: { en: LocaleContent; de: LocaleContent } = {
           {
             heading: "9. Woher weiß ich, dass mein Kind Fortschritte macht?",
             paragraphs: [
-              "Sie sollten nie raten müssen. Fragen Sie nach einem schriftlichen Fortschrittsbericht — was Ihr Kind behandelt hat, was es jetzt kann und was als Nächstes kommt — mindestens einmal im Monat, plus der Möglichkeit, mit der Lehrkraft zu sprechen. Die Tarife der Quran Akademie enthalten einen monatlichen Fortschrittsbericht für Eltern, der Standard-Tarif zusätzlich ein Elterngespräch. Wenn eine Akademie Ihnen keinen Musterbericht zeigen kann, erstellt sie wahrscheinlich keinen.",
+              "Sie sollten nie raten müssen. Fragen Sie nach einem schriftlichen Fortschrittsbericht — was Ihr Kind behandelt hat, was es jetzt kann und was als Nächstes kommt — mindestens einmal im Monat, plus der Möglichkeit, mit der Lehrkraft zu sprechen. Die Tarife der Online Quran enthalten einen monatlichen Fortschrittsbericht für Eltern, der Standard-Tarif zusätzlich ein Elterngespräch. Wenn eine Akademie Ihnen keinen Musterbericht zeigen kann, erstellt sie wahrscheinlich keinen.",
             ],
           },
           {
@@ -367,7 +367,7 @@ const content: { en: LocaleContent; de: LocaleContent } = {
     faqs: [
       {
         q: "Sollte mein Kind eine Lehrerin oder einen Lehrer haben?",
-        a: "Beides kann hervorragend sein — entscheidend sind Qualifikation, Erfahrung mit Kindern und das Wohlbefinden Ihres Kindes. Viele Familien bevorzugen eine Lehrerin für kleine Kinder und für Mädchen. Die Quran Akademie hat männliche und weibliche Lehrkräfte; fragen Sie bei der Buchung Ihrer kostenlosen Probestunde danach.",
+        a: "Beides kann hervorragend sein — entscheidend sind Qualifikation, Erfahrung mit Kindern und das Wohlbefinden Ihres Kindes. Viele Familien bevorzugen eine Lehrerin für kleine Kinder und für Mädchen. Die Online Quran hat männliche und weibliche Lehrkräfte; fragen Sie bei der Buchung Ihrer kostenlosen Probestunde danach.",
       },
       {
         q: "Was sollte Online-Koranunterricht kosten?",
@@ -440,10 +440,11 @@ export default function GuideContent() {
         headline: t.title,
         description: meta.description,
         image: COVER,
-        author: { "@type": "Organization", name: "Quran Akademie" },
+        author: { "@type": "Organization", name: "Online Quran" },
         publisher: {
           "@type": "Organization",
-          name: "Quran Akademie",
+          name: "Online Quran",
+          logo: "https://onlinekoran.de/logo-horizontal.svg",
           url: BASE_URL,
         },
         datePublished: "2026-11-12",
