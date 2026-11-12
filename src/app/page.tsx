@@ -445,17 +445,33 @@ export default function HomePage() {
           <div className="mt-12 grid gap-6 sm:grid-cols-3">
             {tutors.slice(0, 3).map((tutor) => (
               <div key={tutor.firstName} className="rounded-3xl bg-cream p-8 text-center shadow-card">
-                <span className="mx-auto flex h-20 w-20 items-center justify-center rounded-full bg-brand font-display text-2xl font-bold text-gold-light">
-                  {tutor.initials}
-                </span>
+                {tutor.photo ? (
+                  <img
+                    src={tutor.photo}
+                    alt={tutor.firstName}
+                    className="mx-auto h-20 w-20 rounded-full object-cover"
+                  />
+                ) : (
+                  <span className="mx-auto flex h-20 w-20 items-center justify-center rounded-full bg-brand font-display text-2xl font-bold text-gold-light">
+                    {tutor.initials}
+                  </span>
+                )}
                 <h3 className="mt-5 font-display text-xl font-bold text-brand">{tutor.firstName}</h3>
                 <p className="mt-1 text-sm font-semibold text-gold-dark">{tutor.role[locale]}</p>
-                <p className="mt-3 text-sm leading-relaxed text-ink/70">
-                  {tutor.qualifications[locale].join(" · ")}
-                </p>
-                <p className="mt-2 text-sm text-ink/60">
-                  {tutor.experienceYears} {t.yearsExp} · {tutor.languages[locale]}
-                </p>
+                {tutor.qualifications && (
+                  <p className="mt-3 text-sm leading-relaxed text-ink/70">
+                    {tutor.qualifications[locale].join(" · ")}
+                  </p>
+                )}
+                {(tutor.experienceYears !== undefined || tutor.languages) && (
+                  <p className="mt-2 text-sm text-ink/60">
+                    {tutor.experienceYears !== undefined && (
+                      <>{tutor.experienceYears} {t.yearsExp}</>
+                    )}
+                    {tutor.experienceYears !== undefined && tutor.languages && " · "}
+                    {tutor.languages && tutor.languages[locale]}
+                  </p>
+                )}
               </div>
             ))}
           </div>

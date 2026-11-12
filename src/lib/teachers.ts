@@ -1,22 +1,39 @@
 import type { Locale } from "./i18n";
+import { MUHAMMAD_SHAHID_PHOTO } from "./tutor-photos";
 
 /**
- * SAMPLE TUTOR PROFILES — placeholders for the preview website.
- * Replace with real tutors (real first names, real qualifications, real
- * languages) before launch. No photos are used: profiles show monogram
- * avatars only, so nothing here presents a fake person as real.
+ * TUTOR PROFILES.
+ * Real tutors (e.g. Muhammad Shahid) carry real names, real subjects and a
+ * real photo. The remaining profiles are SAMPLE placeholders for the preview
+ * website — replace with real tutors (real first names, real qualifications,
+ * real languages) before launch. Sample profiles show monogram avatars only,
+ * so nothing here presents a fake person as real.
+ *
+ * qualifications / languages / experienceYears are optional: a real tutor is
+ * listed with only the facts we actually know — never invent credentials.
  */
 export interface Tutor {
   firstName: string;
   initials: string;
   female: boolean;
   role: Record<Locale, string>;
-  qualifications: Record<Locale, string[]>;
-  languages: Record<Locale, string>;
-  experienceYears: number;
+  qualifications?: Record<Locale, string[]>;
+  languages?: Record<Locale, string>;
+  experienceYears?: number;
+  photo?: string;
 }
 
 export const tutors: Tutor[] = [
+  {
+    firstName: "Muhammad Shahid",
+    initials: "MS",
+    female: false,
+    role: {
+      en: "Qaida, Nazra & Islamic Studies Tutor",
+      de: "Lehrer für Qaida, Nazra & Islamkunde",
+    },
+    photo: MUHAMMAD_SHAHID_PHOTO,
+  },
   {
     firstName: "Ahmed",
     initials: "AH",

@@ -1,16 +1,19 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, type ReactNode } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useLocale, uiDict, type Locale } from "@/lib/i18n";
 import { courses } from "@/lib/courses";
 import Logo from "./Logo";
 
-const NAV_ITEMS = [
+// Plain nav links, split around the two dropdowns (Courses, Locations).
+const NAV_BEFORE = [
   { href: "/", key: "navHome" },
   { href: "/about", key: "navAbout" },
-  { href: "/courses", key: "navCourses" },
+] as const;
+
+const NAV_AFTER = [
   { href: "/pricing", key: "navPricing" },
   { href: "/teachers", key: "navTeachers" },
   { href: "/testimonials", key: "navTestimonials" },
@@ -28,20 +31,21 @@ const CITY_LINKS = [
 ] as const;
 
 type CityKey = (typeof CITY_LINKS)[number]["key"];
+type DropdownId = "courses" | "locations";
 
 const dropdownDict: Record<
   Locale,
   {
     coursesGroup: string;
     allCourses: string;
-    locationsGroup: string;
+    allLocations: string;
     cities: Record<CityKey, string>;
   }
 > = {
   en: {
     coursesGroup: "Our courses",
     allCourses: "All courses",
-    locationsGroup: "Locations",
+    allLocations: "All locations",
     cities: {
       berlin: "Berlin",
       hamburg: "Hamburg",
@@ -53,7 +57,7 @@ const dropdownDict: Record<
   de: {
     coursesGroup: "Unsere Kurse",
     allCourses: "Alle Kurse",
-    locationsGroup: "Standorte",
+    allLocations: "Alle Standorte",
     cities: {
       berlin: "Berlin",
       hamburg: "Hamburg",
@@ -96,13 +100,98 @@ function LanguageSwitcher() {
           type="button"
           onClick={() => setLocale(l)}
           aria-pressed={locale === l}
-          className={`px-3 py-1.5 text-xs font-bold uppercase tracking-wide transition-colors ${
+          className={`px-2.5 py-1.5 text-xs font-bold uppercase tracking-wide transition-colors ${
             locale === l ? "bg-brand text-white" : "text-brand hover:bg-brand-soft"
           }`}
         >
           {l === "en" ? "EN" : "DE"}
         </button>
       ))}
+    </div>
+  );
+}
+
+/** Shared desktop dropdown: opens on hover or click, closes on mouse-leave. */
+function NavDropdown({
+  label,
+  active,
+  open,
+  onOpenChange,
+  panelWidth,
+  children,
+}: {
+  label: string;
+  active: boolean;
+  open: boolean;
+  onOpenChange: (open: boolean) => void;
+  panelWidth: string;
+  children: ReactNode;
+}) {
+  return (
+    <div
+      className="relative"
+      onMouseEnter={() => onOpenChange(true)}
+      onMouseLeave={() => onOpenChange(false)}
+    >
+      <button
+        type="button"
+        aria-expanded={open}
+        aria-haspopup="true"
+        onClick={() => onOpenChange(!open)}
+        className={`flex items-center gap-1 rounded-full px-2.5 py-2 text-sm font-semibold transition-colors ${
+          active
+            ? "bg-brand-soft text-brand"
+            : "text-ink/70 hover:bg-cream hover:text-brand"
+        }`}
+      >
+        {label}
+        <Chevron open={open} />
+      </button>
+      {open && (
+        <div
+          className={`absolute left-1/2 top-full z-50 ${panelWidth} -translate-x-1/2 pt-2`}
+        >
+          <div className="rounded-3xl border border-brand/10 bg-white p-6 shadow-lift">
+            {children}
+          </div>
+        </div>
+      )}
+    </div>
+  );
+}
+
+/** Shared mobile expandable section. */
+function MobileDropdown({
+  label,
+  active,
+  open,
+  onToggle,
+  children,
+}: {
+  label: string;
+  active: boolean;
+  open: boolean;
+  onToggle: () => void;
+  children: ReactNode;
+}) {
+  return (
+    <div>
+      <button
+        type="button"
+        onClick={onToggle}
+        aria-expanded={open}
+        className={`flex w-full items-center justify-between rounded-xl px-3 py-3 text-base font-semibold ${
+          active ? "bg-brand-soft text-brand" : "text-ink/80"
+        }`}
+      >
+        {label}
+        <Chevron open={open} />
+      </button>
+      {open && (
+        <div className="mb-2 ml-3 border-l-2 border-brand/10 pl-4">
+          {children}
+        </div>
+      )}
     </div>
   );
 }
@@ -117,22 +206,22 @@ export default function Header() {
   const pathname =
     rawPathname?.replace(/^\/quran-akademie(?=\/|$)/, "") || "/";
   const [open, setOpen] = useState(false);
-  const [coursesOpen, setCoursesOpen] = useState(false);
-  const [mobileCoursesOpen, setMobileCoursesOpen] = useState(false);
-  const dropdownRef = useRef<HTMLDivElement>(null);
+  const [openDropdown, setOpenDropdown] = useState<DropdownId | null>(null);
+  const [mobileDropdown, setMobileDropdown] = useState<DropdownId | null>(null);
+  const navRef = useRef<HTMLElement>(null);
 
-  // Close the desktop Courses dropdown on Escape or outside click.
+  // Close the open desktop dropdown on Escape or outside click.
   useEffect(() => {
-    if (!coursesOpen) return;
+    if (!openDropdown) return;
     const onKey = (e: KeyboardEvent) => {
-      if (e.key === "Escape") setCoursesOpen(false);
+      if (e.key === "Escape") setOpenDropdown(null);
     };
     const onClick = (e: MouseEvent) => {
       if (
-        dropdownRef.current &&
-        !dropdownRef.current.contains(e.target as Node)
+        navRef.current &&
+        !navRef.current.contains(e.target as Node)
       ) {
-        setCoursesOpen(false);
+        setOpenDropdown(null);
       }
     };
     document.addEventListener("keydown", onKey);
@@ -141,126 +230,162 @@ export default function Header() {
       document.removeEventListener("keydown", onKey);
       document.removeEventListener("mousedown", onClick);
     };
-  }, [coursesOpen]);
+  }, [openDropdown]);
 
   const isActive = (href: string) =>
     href === "/" ? pathname === "/" : pathname?.startsWith(href);
 
-  const isCoursesActive =
-    pathname?.startsWith("/courses") ||
-    CITY_LINKS.some((city) => pathname === city.href);
+  const isCoursesActive = pathname?.startsWith("/courses");
+  const isLocationsActive = CITY_LINKS.some(
+    (city) => pathname === city.href
+  );
+
+  const closeMobile = () => {
+    setOpen(false);
+    setMobileDropdown(null);
+  };
+
+  const toggleMobile = (id: DropdownId) =>
+    setMobileDropdown((v) => (v === id ? null : id));
+
+  const setDropdown = (id: DropdownId) => (v: boolean) =>
+    setOpenDropdown(v ? id : null);
+
+  const linkClass = (active: boolean) =>
+    `rounded-full px-2.5 py-2 text-sm font-semibold transition-colors ${
+      active
+        ? "bg-brand-soft text-brand"
+        : "text-ink/70 hover:bg-cream hover:text-brand"
+    }`;
+
+  const panelLinkClass =
+    "block rounded-xl px-3 py-2 text-sm font-semibold text-ink/80 transition-colors hover:bg-brand-soft hover:text-brand";
+
+  const coursesPanel = (
+    <>
+      <p className="text-xs font-bold uppercase tracking-[0.2em] text-gold-dark">
+        {dd.coursesGroup}
+      </p>
+      <ul className="mt-4 space-y-1">
+        {courses.map((course) => (
+          <li key={course.slug}>
+            <Link
+              href={`/courses/${course.slug}`}
+              onClick={() => setOpenDropdown(null)}
+              className={panelLinkClass}
+            >
+              {course.name[locale]}
+            </Link>
+          </li>
+        ))}
+        <li>
+          <Link
+            href="/courses"
+            onClick={() => setOpenDropdown(null)}
+            className="block rounded-xl px-3 py-2 text-sm font-bold text-brand transition-colors hover:bg-brand-soft"
+          >
+            {dd.allCourses} →
+          </Link>
+        </li>
+      </ul>
+    </>
+  );
+
+  const locationsPanel = (
+    <>
+      <p className="text-xs font-bold uppercase tracking-[0.2em] text-gold-dark">
+        {t.navLocations}
+      </p>
+      <ul className="mt-4 space-y-1">
+        {CITY_LINKS.map((city) => (
+          <li key={city.key}>
+            <Link
+              href={city.href}
+              onClick={() => setOpenDropdown(null)}
+              className={panelLinkClass}
+            >
+              {dd.cities[city.key]}
+            </Link>
+          </li>
+        ))}
+        <li>
+          <Link
+            href="/online-quran-classes-germany"
+            onClick={() => setOpenDropdown(null)}
+            className="block rounded-xl px-3 py-2 text-sm font-bold text-brand transition-colors hover:bg-brand-soft"
+          >
+            {dd.allLocations} →
+          </Link>
+        </li>
+      </ul>
+    </>
+  );
 
   return (
     <header className="sticky top-0 z-50 border-b border-brand/10 bg-white/95 backdrop-blur">
-      <div className="mx-auto flex h-[72px] max-w-7xl items-center justify-between gap-4 px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto flex h-[72px] max-w-[1440px] items-center justify-between gap-3 px-4 sm:px-6 lg:px-8">
         <Logo height={44} />
-        <nav className="hidden items-center gap-1 lg:flex" aria-label="Main">
-          {NAV_ITEMS.map((item) =>
-            item.href === "/courses" ? (
-              <div
-                key={item.href}
-                className="relative"
-                ref={dropdownRef}
-                onMouseEnter={() => setCoursesOpen(true)}
-                onMouseLeave={() => setCoursesOpen(false)}
-              >
-                <button
-                  type="button"
-                  aria-expanded={coursesOpen}
-                  aria-haspopup="true"
-                  onClick={() => setCoursesOpen((v) => !v)}
-                  className={`flex items-center gap-1 rounded-full px-3 py-2 text-sm font-semibold transition-colors ${
-                    isCoursesActive
-                      ? "bg-brand-soft text-brand"
-                      : "text-ink/70 hover:bg-cream hover:text-brand"
-                  }`}
-                >
-                  {t[item.key]}
-                  <Chevron open={coursesOpen} />
-                </button>
-                {coursesOpen && (
-                  <div className="absolute left-1/2 top-full z-50 w-[560px] -translate-x-1/2 pt-2">
-                    <div className="grid grid-cols-2 gap-8 rounded-3xl border border-brand/10 bg-white p-6 shadow-lift">
-                      <div>
-                        <p className="text-xs font-bold uppercase tracking-[0.2em] text-gold-dark">
-                          {dd.coursesGroup}
-                        </p>
-                        <ul className="mt-4 space-y-1">
-                          {courses.map((course) => (
-                            <li key={course.slug}>
-                              <Link
-                                href={`/courses/${course.slug}`}
-                                onClick={() => setCoursesOpen(false)}
-                                className="block rounded-xl px-3 py-2 text-sm font-semibold text-ink/80 transition-colors hover:bg-brand-soft hover:text-brand"
-                              >
-                                {course.name[locale]}
-                              </Link>
-                            </li>
-                          ))}
-                          <li>
-                            <Link
-                              href="/courses"
-                              onClick={() => setCoursesOpen(false)}
-                              className="block rounded-xl px-3 py-2 text-sm font-bold text-brand transition-colors hover:bg-brand-soft"
-                            >
-                              {dd.allCourses} →
-                            </Link>
-                          </li>
-                        </ul>
-                      </div>
-                      <div>
-                        <p className="text-xs font-bold uppercase tracking-[0.2em] text-gold-dark">
-                          {dd.locationsGroup}
-                        </p>
-                        <ul className="mt-4 space-y-1">
-                          {CITY_LINKS.map((city) => (
-                            <li key={city.key}>
-                              <Link
-                                href={city.href}
-                                onClick={() => setCoursesOpen(false)}
-                                className="block rounded-xl px-3 py-2 text-sm font-semibold text-ink/80 transition-colors hover:bg-brand-soft hover:text-brand"
-                              >
-                                {dd.cities[city.key]}
-                              </Link>
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                )}
-              </div>
-            ) : (
-              <Link
-                key={item.href}
-                href={item.href}
-                className={`rounded-full px-3 py-2 text-sm font-semibold transition-colors ${
-                  isActive(item.href)
-                    ? "bg-brand-soft text-brand"
-                    : "text-ink/70 hover:bg-cream hover:text-brand"
-                }`}
-              >
-                {t[item.key]}
-              </Link>
-            )
-          )}
+        {/* Desktop nav shows from 1400px up: with 10 items + switcher + CTA
+            (and longer German labels) there is no room for a clean row below
+            that, so narrower viewports get the hamburger menu instead. */}
+        <nav
+          ref={navRef}
+          className="hidden min-[1400px]:flex items-center gap-1"
+          aria-label="Main"
+        >
+          {NAV_BEFORE.map((item) => (
+            <Link
+              key={item.href}
+              href={item.href}
+              className={linkClass(isActive(item.href))}
+            >
+              {t[item.key]}
+            </Link>
+          ))}
+          <NavDropdown
+            label={t.navCourses}
+            active={isCoursesActive}
+            open={openDropdown === "courses"}
+            onOpenChange={setDropdown("courses")}
+            panelWidth="w-[320px]"
+          >
+            {coursesPanel}
+          </NavDropdown>
+          <NavDropdown
+            label={t.navLocations}
+            active={isLocationsActive}
+            open={openDropdown === "locations"}
+            onOpenChange={setDropdown("locations")}
+            panelWidth="w-[300px]"
+          >
+            {locationsPanel}
+          </NavDropdown>
+          {NAV_AFTER.map((item) => (
+            <Link
+              key={item.href}
+              href={item.href}
+              className={linkClass(isActive(item.href))}
+            >
+              {t[item.key]}
+            </Link>
+          ))}
         </nav>
-        <div className="hidden items-center gap-3 lg:flex">
+        <div className="hidden min-[1400px]:flex items-center gap-3">
           <LanguageSwitcher />
           <Link
             href="/free-trial"
-            className="rounded-full bg-gold px-5 py-2.5 text-sm font-bold text-brand-deep shadow-sm transition hover:bg-gold-dark hover:text-white"
+            className="rounded-full bg-gold px-4 py-2.5 text-sm font-bold text-brand-deep shadow-sm transition hover:bg-gold-dark hover:text-white"
           >
             {t.bookFreeTrial}
           </Link>
         </div>
-        <div className="flex items-center gap-3 lg:hidden">
+        <div className="flex items-center gap-3 min-[1400px]:hidden">
           <LanguageSwitcher />
           <button
             type="button"
             onClick={() => {
               setOpen((v) => !v);
-              setMobileCoursesOpen(false);
+              setMobileDropdown(null);
             }}
             aria-expanded={open}
             aria-label={open ? t.close : t.menu}
@@ -280,77 +405,90 @@ export default function Header() {
       </div>
       {open && (
         <nav
-          className="border-t border-brand/10 bg-white px-4 pb-6 pt-2 lg:hidden"
+          className="border-t border-brand/10 bg-white px-4 pb-6 pt-2 min-[1400px]:hidden"
           aria-label="Mobile"
         >
-          {NAV_ITEMS.map((item) =>
-            item.href === "/courses" ? (
-              <div key={item.href}>
-                <button
-                  type="button"
-                  onClick={() => setMobileCoursesOpen((v) => !v)}
-                  aria-expanded={mobileCoursesOpen}
-                  className={`flex w-full items-center justify-between rounded-xl px-3 py-3 text-base font-semibold ${
-                    isCoursesActive ? "bg-brand-soft text-brand" : "text-ink/80"
-                  }`}
-                >
-                  {t[item.key]}
-                  <Chevron open={mobileCoursesOpen} />
-                </button>
-                {mobileCoursesOpen && (
-                  <div className="mb-2 ml-3 border-l-2 border-brand/10 pl-4">
-                    <p className="pt-3 text-xs font-bold uppercase tracking-[0.2em] text-gold-dark">
-                      {dd.coursesGroup}
-                    </p>
-                    {courses.map((course) => (
-                      <Link
-                        key={course.slug}
-                        href={`/courses/${course.slug}`}
-                        onClick={() => setOpen(false)}
-                        className="block rounded-xl px-3 py-2.5 text-base font-semibold text-ink/70"
-                      >
-                        {course.name[locale]}
-                      </Link>
-                    ))}
-                    <Link
-                      href="/courses"
-                      onClick={() => setOpen(false)}
-                      className="block rounded-xl px-3 py-2.5 text-base font-bold text-brand"
-                    >
-                      {dd.allCourses} →
-                    </Link>
-                    <p className="pt-4 text-xs font-bold uppercase tracking-[0.2em] text-gold-dark">
-                      {dd.locationsGroup}
-                    </p>
-                    {CITY_LINKS.map((city) => (
-                      <Link
-                        key={city.key}
-                        href={city.href}
-                        onClick={() => setOpen(false)}
-                        className="block rounded-xl px-3 py-2.5 text-base font-semibold text-ink/70"
-                      >
-                        {dd.cities[city.key]}
-                      </Link>
-                    ))}
-                  </div>
-                )}
-              </div>
-            ) : (
+          {NAV_BEFORE.map((item) => (
+            <Link
+              key={item.href}
+              href={item.href}
+              onClick={closeMobile}
+              className={`block rounded-xl px-3 py-3 text-base font-semibold ${
+                isActive(item.href) ? "bg-brand-soft text-brand" : "text-ink/80"
+              }`}
+            >
+              {t[item.key]}
+            </Link>
+          ))}
+          <MobileDropdown
+            label={t.navCourses}
+            active={isCoursesActive}
+            open={mobileDropdown === "courses"}
+            onToggle={() => toggleMobile("courses")}
+          >
+            <p className="pt-3 text-xs font-bold uppercase tracking-[0.2em] text-gold-dark">
+              {dd.coursesGroup}
+            </p>
+            {courses.map((course) => (
               <Link
-                key={item.href}
-                href={item.href}
-                onClick={() => setOpen(false)}
-                className={`block rounded-xl px-3 py-3 text-base font-semibold ${
-                  isActive(item.href) ? "bg-brand-soft text-brand" : "text-ink/80"
-                }`}
+                key={course.slug}
+                href={`/courses/${course.slug}`}
+                onClick={closeMobile}
+                className="block rounded-xl px-3 py-2.5 text-base font-semibold text-ink/70"
               >
-                {t[item.key]}
+                {course.name[locale]}
               </Link>
-            )
-          )}
+            ))}
+            <Link
+              href="/courses"
+              onClick={closeMobile}
+              className="block rounded-xl px-3 py-2.5 text-base font-bold text-brand"
+            >
+              {dd.allCourses} →
+            </Link>
+          </MobileDropdown>
+          <MobileDropdown
+            label={t.navLocations}
+            active={isLocationsActive}
+            open={mobileDropdown === "locations"}
+            onToggle={() => toggleMobile("locations")}
+          >
+            <p className="pt-3 text-xs font-bold uppercase tracking-[0.2em] text-gold-dark">
+              {t.navLocations}
+            </p>
+            {CITY_LINKS.map((city) => (
+              <Link
+                key={city.key}
+                href={city.href}
+                onClick={closeMobile}
+                className="block rounded-xl px-3 py-2.5 text-base font-semibold text-ink/70"
+              >
+                {dd.cities[city.key]}
+              </Link>
+            ))}
+            <Link
+              href="/online-quran-classes-germany"
+              onClick={closeMobile}
+              className="block rounded-xl px-3 py-2.5 text-base font-bold text-brand"
+            >
+              {dd.allLocations} →
+            </Link>
+          </MobileDropdown>
+          {NAV_AFTER.map((item) => (
+            <Link
+              key={item.href}
+              href={item.href}
+              onClick={closeMobile}
+              className={`block rounded-xl px-3 py-3 text-base font-semibold ${
+                isActive(item.href) ? "bg-brand-soft text-brand" : "text-ink/80"
+              }`}
+            >
+              {t[item.key]}
+            </Link>
+          ))}
           <Link
             href="/free-trial"
-            onClick={() => setOpen(false)}
+            onClick={closeMobile}
             className="mt-3 block rounded-full bg-gold px-5 py-3 text-center text-base font-bold text-brand-deep"
           >
             {t.bookFreeTrial}

@@ -48,7 +48,7 @@ export default function TeachersPage() {
     <main>
       <PageHero eyebrow={t.eyebrow} title={t.title} subtitle={t.subtitle} />
 
-      {/* TUTOR GRID — monogram avatars only, never photos of named people */}
+      {/* TUTOR GRID — real tutors show their real photo; sample profiles show monogram avatars */}
       <section className="bg-white">
         <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-20">
           <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
@@ -57,30 +57,46 @@ export default function TeachersPage() {
                 key={tutor.firstName}
                 className="flex flex-col rounded-3xl bg-cream p-8 text-center shadow-card transition hover:shadow-lift"
               >
-                <span className="mx-auto flex h-24 w-24 items-center justify-center rounded-full bg-brand font-display text-3xl font-bold text-gold-light ring-4 ring-gold-soft">
-                  {tutor.initials}
-                </span>
+                {tutor.photo ? (
+                  <img
+                    src={tutor.photo}
+                    alt={tutor.firstName}
+                    className="mx-auto h-24 w-24 rounded-full object-cover ring-4 ring-gold-soft"
+                  />
+                ) : (
+                  <span className="mx-auto flex h-24 w-24 items-center justify-center rounded-full bg-brand font-display text-3xl font-bold text-gold-light ring-4 ring-gold-soft">
+                    {tutor.initials}
+                  </span>
+                )}
                 <h2 className="mt-5 font-display text-2xl font-bold text-brand">
                   {tutor.firstName}
                 </h2>
                 <p className="mt-1 text-sm font-semibold text-gold-dark">
                   {tutor.role[locale]}
                 </p>
-                <ul className="mt-5 flex-1 space-y-2">
-                  {tutor.qualifications[locale].map((qual) => (
-                    <li key={qual} className="text-sm leading-relaxed text-ink/75">
-                      {qual}
-                    </li>
-                  ))}
-                </ul>
-                <div className="mt-6 border-t border-brand/10 pt-5">
-                  <p className="text-sm font-semibold text-brand">
-                    {tutor.experienceYears} {t.yearsExp}
-                  </p>
-                  <p className="mt-1 text-sm text-ink/60">
-                    {tutor.languages[locale]}
-                  </p>
-                </div>
+                {tutor.qualifications && (
+                  <ul className="mt-5 flex-1 space-y-2">
+                    {tutor.qualifications[locale].map((qual) => (
+                      <li key={qual} className="text-sm leading-relaxed text-ink/75">
+                        {qual}
+                      </li>
+                    ))}
+                  </ul>
+                )}
+                {(tutor.experienceYears !== undefined || tutor.languages) && (
+                  <div className="mt-6 border-t border-brand/10 pt-5">
+                    {tutor.experienceYears !== undefined && (
+                      <p className="text-sm font-semibold text-brand">
+                        {tutor.experienceYears} {t.yearsExp}
+                      </p>
+                    )}
+                    {tutor.languages && (
+                      <p className="mt-1 text-sm text-ink/60">
+                        {tutor.languages[locale]}
+                      </p>
+                    )}
+                  </div>
+                )}
               </div>
             ))}
           </div>
