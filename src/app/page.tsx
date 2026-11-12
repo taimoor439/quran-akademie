@@ -449,10 +449,10 @@ export default function HomePage() {
                   <img
                     src={tutor.photo}
                     alt={tutor.firstName}
-                    className="mx-auto h-20 w-20 rounded-full object-cover"
+                    className="mx-auto h-24 w-24 rounded-full object-cover ring-4 ring-gold-soft"
                   />
                 ) : (
-                  <span className="mx-auto flex h-20 w-20 items-center justify-center rounded-full bg-brand font-display text-2xl font-bold text-gold-light">
+                  <span className="mx-auto flex h-24 w-24 items-center justify-center rounded-full bg-brand font-display text-2xl font-bold text-gold-light ring-4 ring-gold-soft">
                     {tutor.initials}
                   </span>
                 )}

@@ -61,10 +61,10 @@ export default function TeachersPage() {
                   <img
                     src={tutor.photo}
                     alt={tutor.firstName}
-                    className="mx-auto h-24 w-24 rounded-full object-cover ring-4 ring-gold-soft"
+                    className="mx-auto h-28 w-28 rounded-full object-cover ring-4 ring-gold-soft"
                   />
                 ) : (
-                  <span className="mx-auto flex h-24 w-24 items-center justify-center rounded-full bg-brand font-display text-3xl font-bold text-gold-light ring-4 ring-gold-soft">
+                  <span className="mx-auto flex h-28 w-28 items-center justify-center rounded-full bg-brand font-display text-3xl font-bold text-gold-light ring-4 ring-gold-soft">
                     {tutor.initials}
                   </span>
                 )}
