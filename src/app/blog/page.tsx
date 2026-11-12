@@ -244,7 +244,7 @@ export default function BlogPage() {
                   <p className="text-xs font-bold uppercase tracking-[0.2em] text-gold-dark">
                     {post.category[locale]} · {post.readTime[locale]}
                   </p>
-                  <h2 className="mt-3 font-serif text-2xl font-bold leading-snug text-brand">
+                  <h2 className="mt-3 font-display text-2xl font-bold leading-snug text-brand">
                     <Link
                       href={`/blog/${post.slug}`}
                       className="transition hover:text-brand-light"

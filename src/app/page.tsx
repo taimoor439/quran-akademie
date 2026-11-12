@@ -9,6 +9,7 @@ import { testimonials } from "@/lib/testimonials";
 import { faqs } from "@/lib/faqs";
 import { SectionHeading, CtaBand } from "@/components/Shared";
 import HeroTrialForm from "@/components/HeroTrialForm";
+import Reveal from "@/components/Reveal";
 
 const HERO_IMAGE =
   "https://images.unsplash.com/photo-1585036156171-384164a8c675?auto=format&fit=crop&w=1600&q=80";
@@ -194,7 +195,7 @@ export default function HomePage() {
             <p className="text-xs font-bold uppercase tracking-[0.25em] text-gold-dark">
               {t.heroEyebrow}
             </p>
-            <h1 className="mt-4 font-serif text-4xl font-bold leading-[1.1] text-brand sm:text-5xl lg:text-[3.4rem]">
+            <h1 className="mt-4 font-display text-4xl font-bold leading-[1.1] text-brand sm:text-5xl lg:text-[3.4rem]">
               {t.heroTitle}
             </h1>
             <p className="mt-6 text-lg leading-relaxed text-ink/70">{t.heroSub}</p>
@@ -237,10 +238,10 @@ export default function HomePage() {
           <div className="mt-12 grid gap-6 md:grid-cols-3">
             {t.steps.map((step, i) => (
               <div key={step.title} className="rounded-3xl bg-cream p-8 shadow-card">
-                <span className="flex h-12 w-12 items-center justify-center rounded-full bg-gold font-serif text-xl font-bold text-brand-deep">
+                <span className="flex h-12 w-12 items-center justify-center rounded-full bg-gold font-display text-xl font-bold text-brand-deep">
                   {i + 1}
                 </span>
-                <h3 className="mt-5 font-serif text-xl font-bold text-brand">{step.title}</h3>
+                <h3 className="mt-5 font-display text-xl font-bold text-brand">{step.title}</h3>
                 <p className="mt-2 leading-relaxed text-ink/70">{step.body}</p>
               </div>
             ))}
@@ -257,12 +258,12 @@ export default function HomePage() {
             subtitle={t.coursesSub}
           />
           <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {courses.map((course) => (
-              <Link
-                key={course.slug}
-                href={`/courses/${course.slug}`}
-                className="group overflow-hidden rounded-3xl bg-white shadow-card transition hover:shadow-lift"
-              >
+            {courses.map((course, i) => (
+              <Reveal key={course.slug} delay={i * 80} className="h-full">
+                <Link
+                  href={`/courses/${course.slug}`}
+                  className="group block h-full overflow-hidden rounded-3xl bg-white shadow-card transition hover:shadow-lift"
+                >
                 <div className="relative">
                   <img
                     src={course.image}
@@ -275,7 +276,7 @@ export default function HomePage() {
                   </span>
                 </div>
                 <div className="p-6">
-                  <h3 className="font-serif text-xl font-bold text-brand">
+                  <h3 className="font-display text-xl font-bold text-brand">
                     {course.name[locale]}
                   </h3>
                   <p className="mt-2 min-h-[3.5rem] leading-relaxed text-ink/70">
@@ -288,7 +289,8 @@ export default function HomePage() {
                     {ui.learnMore} →
                   </span>
                 </div>
-              </Link>
+                </Link>
+              </Reveal>
             ))}
           </div>
         </div>
@@ -301,13 +303,19 @@ export default function HomePage() {
         <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-20">
           <div className="relative">
             <div className="absolute -left-3 -top-3 h-full w-full rounded-[2rem] border-2 border-gold/60" aria-hidden="true" />
-            <img
-              src={HERO_IMAGE}
-              alt={locale === "de" ? "Aufgeschlagener Koran" : "Open Quran"}
-              loading="lazy"
-              className="relative aspect-[16/9] w-full rounded-[2rem] object-cover shadow-lift"
-            />
-            <div className="absolute -bottom-6 left-4 right-4 rounded-2xl bg-brand p-5 text-white shadow-lift sm:left-8 sm:right-auto sm:max-w-sm">
+            <div className="relative overflow-hidden rounded-[2rem] shadow-lift">
+              <img
+                src={HERO_IMAGE}
+                alt={locale === "de" ? "Aufgeschlagener Koran" : "Open Quran"}
+                loading="lazy"
+                className="ken-burns aspect-[16/9] w-full object-cover"
+              />
+            </div>
+            <Reveal
+              variant="left"
+              delay={200}
+              className="absolute -bottom-6 left-4 right-4 rounded-2xl bg-brand p-5 text-white shadow-lift sm:left-8 sm:right-auto sm:max-w-sm"
+            >
               <p className="font-arabic text-xl leading-relaxed text-gold-light" dir="rtl">
                 خَيْرُكُمْ مَنْ تَعَلَّمَ الْقُرْآنَ وَعَلَّمَهُ
               </p>
@@ -317,7 +325,7 @@ export default function HomePage() {
               <p className="mt-1 text-xs font-semibold uppercase tracking-wider text-gold-light">
                 {t.heroCardSub}
               </p>
-            </div>
+            </Reveal>
           </div>
         </div>
       </section>
@@ -325,32 +333,34 @@ export default function HomePage() {
       {/* WHY CHOOSE US */}
       <section className="bg-white">
         <div className="mx-auto grid max-w-7xl items-center gap-12 px-4 py-16 sm:px-6 lg:grid-cols-2 lg:px-8 lg:py-20">
-          <div className="order-2 lg:order-1">
+          <Reveal variant="zoom" className="order-2 lg:order-1">
             <img
               src={WHY_IMAGE}
               alt={locale === "de" ? "Koranlehrer im Live-Online-Unterricht" : "Quran tutor teaching a live online lesson"}
               loading="lazy"
-              className="aspect-[4/3] w-full rounded-[2rem] object-cover shadow-lift"
+              className="gentle-float aspect-[4/3] w-full rounded-[2rem] object-cover shadow-lift"
             />
-          </div>
+          </Reveal>
           <div className="order-1 lg:order-2">
             <p className="text-xs font-bold uppercase tracking-[0.25em] text-gold-dark">
               {t.whyEyebrow}
             </p>
-            <h2 className="mt-3 font-serif text-3xl font-bold leading-tight text-brand sm:text-4xl">
+            <h2 className="mt-3 font-display text-3xl font-bold leading-tight text-brand sm:text-4xl">
               {t.whyTitle}
             </h2>
             <div className="mt-8 space-y-6">
-              {t.whyPoints.map((point) => (
-                <div key={point.title} className="flex gap-4">
-                  <span className="mt-0.5">
-                    <CheckIcon />
-                  </span>
-                  <div>
-                    <h3 className="font-serif text-lg font-bold text-brand">{point.title}</h3>
-                    <p className="mt-1 leading-relaxed text-ink/70">{point.body}</p>
+              {t.whyPoints.map((point, i) => (
+                <Reveal key={point.title} variant="left" delay={i * 80}>
+                  <div className="flex gap-4">
+                    <span className="mt-0.5">
+                      <CheckIcon />
+                    </span>
+                    <div>
+                      <h3 className="font-display text-lg font-bold text-brand">{point.title}</h3>
+                      <p className="mt-1 leading-relaxed text-ink/70">{point.body}</p>
+                    </div>
                   </div>
-                </div>
+                </Reveal>
               ))}
             </div>
           </div>
@@ -366,23 +376,25 @@ export default function HomePage() {
             subtitle={t.pricingSub}
           />
           <div className="mt-12 grid gap-6 md:grid-cols-3">
-            {plans.map((plan) => (
-              <div
-                key={plan.id}
-                className={`relative rounded-3xl p-8 shadow-card ${
-                  plan.popular ? "bg-brand text-white ring-4 ring-gold" : "bg-white"
-                }`}
-              >
+            {plans.map((plan, i) => (
+              <Reveal key={plan.id} delay={i * 90} className="h-full">
+                <div
+                  className={`relative h-full rounded-3xl p-8 shadow-card transition hover:-translate-y-1 hover:shadow-lift ${
+                    plan.popular
+                      ? "popular-glow bg-brand text-white ring-4 ring-gold"
+                      : "bg-white"
+                  }`}
+                >
                 {plan.popular && (
                   <span className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-gold px-4 py-1 text-xs font-bold uppercase tracking-wide text-brand-deep">
                     {t.popular}
                   </span>
                 )}
-                <h3 className={`font-serif text-xl font-bold ${plan.popular ? "text-white" : "text-brand"}`}>
+                <h3 className={`font-display text-xl font-bold ${plan.popular ? "text-white" : "text-brand"}`}>
                   {plan.name[locale]}
                 </h3>
                 <p className="mt-4">
-                  <span className={`font-serif text-5xl font-bold ${plan.popular ? "text-white" : "text-brand"}`}>
+                  <span className={`font-display text-5xl font-bold ${plan.popular ? "text-white" : "text-brand"}`}>
                     ${plan.priceUsd}
                   </span>
                   <span className={`ml-2 text-sm font-semibold ${plan.popular ? "text-white/70" : "text-ink/60"}`}>
@@ -410,7 +422,8 @@ export default function HomePage() {
                 >
                   {t.heroCta1}
                 </Link>
-              </div>
+                </div>
+              </Reveal>
             ))}
           </div>
         </div>
@@ -427,10 +440,10 @@ export default function HomePage() {
           <div className="mt-12 grid gap-6 sm:grid-cols-3">
             {tutors.slice(0, 3).map((tutor) => (
               <div key={tutor.firstName} className="rounded-3xl bg-cream p-8 text-center shadow-card">
-                <span className="mx-auto flex h-20 w-20 items-center justify-center rounded-full bg-brand font-serif text-2xl font-bold text-gold-light">
+                <span className="mx-auto flex h-20 w-20 items-center justify-center rounded-full bg-brand font-display text-2xl font-bold text-gold-light">
                   {tutor.initials}
                 </span>
-                <h3 className="mt-5 font-serif text-xl font-bold text-brand">{tutor.firstName}</h3>
+                <h3 className="mt-5 font-display text-xl font-bold text-brand">{tutor.firstName}</h3>
                 <p className="mt-1 text-sm font-semibold text-gold-dark">{tutor.role[locale]}</p>
                 <p className="mt-3 text-sm leading-relaxed text-ink/70">
                   {tutor.qualifications[locale].join(" · ")}
@@ -459,7 +472,7 @@ export default function HomePage() {
           <div className="mt-12 grid gap-6 md:grid-cols-2">
             {testimonials.slice(0, 2).map((item) => (
               <figure key={item.name.en} className="rounded-3xl bg-white p-8 shadow-card">
-                <span className="font-serif text-5xl leading-none text-gold" aria-hidden="true">
+                <span className="font-display text-5xl leading-none text-gold" aria-hidden="true">
                   &ldquo;
                 </span>
                 <blockquote className="mt-2 text-lg leading-relaxed text-ink/80">
@@ -490,7 +503,7 @@ export default function HomePage() {
           <div className="mt-12 space-y-4">
             {faqs.slice(0, 3).map((faq) => (
               <div key={faq.q.en} className="rounded-2xl bg-cream p-6">
-                <h3 className="font-serif text-lg font-bold text-brand">{faq.q[locale]}</h3>
+                <h3 className="font-display text-lg font-bold text-brand">{faq.q[locale]}</h3>
                 <p className="mt-2 leading-relaxed text-ink/70">{faq.a[locale]}</p>
               </div>
             ))}

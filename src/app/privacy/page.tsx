@@ -238,7 +238,7 @@ export default function PrivacyPage() {
           <p className="mt-6 leading-relaxed text-ink/75">{t.intro}</p>
           {t.sections.map((section) => (
             <div key={section.heading} className="mt-10">
-              <h2 className="font-serif text-2xl font-bold text-brand">
+              <h2 className="font-display text-2xl font-bold text-brand">
                 {section.heading}
               </h2>
               {section.paragraphs.map((p) => (

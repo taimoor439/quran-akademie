@@ -214,7 +214,7 @@ export default function AboutPage() {
             <p className="text-xs font-bold uppercase tracking-[0.25em] text-gold-dark">
               {t.mission.eyebrow}
             </p>
-            <h2 className="mt-3 font-serif text-3xl font-bold leading-tight text-brand sm:text-4xl">
+            <h2 className="mt-3 font-display text-3xl font-bold leading-tight text-brand sm:text-4xl">
               {t.mission.title}
             </h2>
             <div className="gold-rule mt-5" />
@@ -247,14 +247,14 @@ export default function AboutPage() {
             {t.method.steps.map((step, i) => (
               <div key={step.title} className="rounded-3xl bg-white p-6 shadow-card">
                 <div className="flex items-center justify-between">
-                  <span className="flex h-10 w-10 items-center justify-center rounded-full bg-brand font-serif text-lg font-bold text-white">
+                  <span className="flex h-10 w-10 items-center justify-center rounded-full bg-brand font-display text-lg font-bold text-white">
                     {i + 1}
                   </span>
                   <span className="rounded-full bg-gold-soft px-3 py-1 text-xs font-bold text-gold-dark">
                     {step.time}
                   </span>
                 </div>
-                <h3 className="mt-4 font-serif text-xl font-bold text-brand">
+                <h3 className="mt-4 font-display text-xl font-bold text-brand">
                   {step.title}
                 </h3>
                 <p className="mt-2 text-sm leading-relaxed text-ink/70">{step.body}</p>
@@ -282,7 +282,7 @@ export default function AboutPage() {
             <p className="text-xs font-bold uppercase tracking-[0.25em] text-gold-dark">
               {t.different.eyebrow}
             </p>
-            <h2 className="mt-3 font-serif text-3xl font-bold leading-tight text-brand sm:text-4xl">
+            <h2 className="mt-3 font-display text-3xl font-bold leading-tight text-brand sm:text-4xl">
               {t.different.title}
             </h2>
             <div className="gold-rule mt-5" />
@@ -293,7 +293,7 @@ export default function AboutPage() {
                     ✓
                   </span>
                   <div>
-                    <h3 className="font-serif text-lg font-bold text-brand">
+                    <h3 className="font-display text-lg font-bold text-brand">
                       {point.title}
                     </h3>
                     <p className="mt-1 text-sm leading-relaxed text-ink/70">
@@ -315,7 +315,7 @@ export default function AboutPage() {
               <p className="text-xs font-bold uppercase tracking-[0.25em] text-gold-light">
                 {t.values.eyebrow}
               </p>
-              <h2 className="mx-auto mt-3 max-w-2xl font-serif text-3xl font-bold leading-tight text-white sm:text-4xl">
+              <h2 className="mx-auto mt-3 max-w-2xl font-display text-3xl font-bold leading-tight text-white sm:text-4xl">
                 {t.values.title}
               </h2>
               <div className="gold-rule mt-5" />
@@ -326,7 +326,7 @@ export default function AboutPage() {
                   key={item.title}
                   className="rounded-3xl border border-white/15 bg-white/5 p-6"
                 >
-                  <h3 className="font-serif text-xl font-bold text-white">
+                  <h3 className="font-display text-xl font-bold text-white">
                     {item.title}
                   </h3>
                   <p className="mt-2 text-sm leading-relaxed text-white/75">

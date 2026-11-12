@@ -139,7 +139,7 @@ export default function CoursesPage() {
                   <p className="text-right font-arabic text-xl text-gold-dark" dir="rtl">
                     {course.arabic}
                   </p>
-                  <h3 className="mt-2 font-serif text-2xl font-bold text-brand">
+                  <h3 className="mt-2 font-display text-2xl font-bold text-brand">
                     {course.name[locale]}
                   </h3>
                   <p className="mt-2 leading-relaxed text-ink/70">{course.tagline[locale]}</p>
@@ -182,7 +182,7 @@ export default function CoursesPage() {
                     {icons[i]}
                   </svg>
                 </div>
-                <h3 className="mt-4 font-serif text-xl font-bold text-brand">
+                <h3 className="mt-4 font-display text-xl font-bold text-brand">
                   {item.title}
                 </h3>
                 <p className="mt-2 leading-relaxed text-ink/70">{item.body}</p>

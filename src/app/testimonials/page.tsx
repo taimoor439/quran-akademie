@@ -43,12 +43,12 @@ export default function TestimonialsPage() {
                 className="flex flex-col rounded-3xl bg-cream p-8 shadow-card transition hover:shadow-lift sm:p-10"
               >
                 <span
-                  className="font-serif text-6xl leading-none text-gold"
+                  className="font-display text-6xl leading-none text-gold"
                   aria-hidden="true"
                 >
                   &ldquo;
                 </span>
-                <blockquote className="mt-2 flex-1 font-serif text-xl leading-relaxed text-brand sm:text-2xl">
+                <blockquote className="mt-2 flex-1 font-display text-xl leading-relaxed text-brand sm:text-2xl">
                   {review.quote[locale]}
                 </blockquote>
                 <figcaption className="mt-8 border-t border-brand/10 pt-6">
@@ -80,7 +80,7 @@ export default function TestimonialsPage() {
       {/* INVITE TO SHARE */}
       <section className="bg-cream">
         <div className="mx-auto max-w-4xl px-4 py-16 text-center sm:px-6 lg:px-8">
-          <h2 className="font-serif text-3xl font-bold text-brand sm:text-4xl">
+          <h2 className="font-display text-3xl font-bold text-brand sm:text-4xl">
             {t.inviteTitle}
           </h2>
           <div className="gold-rule mt-5" />

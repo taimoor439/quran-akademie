@@ -190,7 +190,7 @@ export default function BlogPostPage() {
           <p className="mt-8 text-xs font-bold uppercase tracking-[0.25em] text-gold-dark">
             {t.category} · {t.readTime}
           </p>
-          <h1 className="mt-3 font-serif text-4xl font-bold leading-tight text-brand sm:text-5xl">
+          <h1 className="mt-3 font-display text-4xl font-bold leading-tight text-brand sm:text-5xl">
             {t.title}
           </h1>
           <p className="mt-5 text-lg leading-relaxed text-ink/70">{t.intro}</p>
@@ -207,7 +207,7 @@ export default function BlogPostPage() {
         <div className="mx-auto max-w-3xl px-4 pb-16 sm:px-6">
           {t.sections.map((section) => (
             <section key={section.heading} className="mt-12 first:mt-4">
-              <h2 className="font-serif text-2xl font-bold text-brand sm:text-3xl">
+              <h2 className="font-display text-2xl font-bold text-brand sm:text-3xl">
                 {section.heading}
               </h2>
               <div className="mt-4 h-1 w-16 rounded-full bg-gold" />

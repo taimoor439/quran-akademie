@@ -57,7 +57,7 @@ export default function FaqPage() {
                     aria-expanded={open}
                     className="flex w-full items-center justify-between gap-4 px-6 py-5 text-left sm:px-8"
                   >
-                    <span className="font-serif text-lg font-bold text-brand sm:text-xl">
+                    <span className="font-display text-lg font-bold text-brand sm:text-xl">
                       {faq.q[locale]}
                     </span>
                     <span
@@ -81,7 +81,7 @@ export default function FaqPage() {
 
           {/* STILL HAVE QUESTIONS */}
           <div className="mt-12 rounded-3xl bg-brand p-8 text-center shadow-card sm:p-10">
-            <h2 className="font-serif text-2xl font-bold text-white sm:text-3xl">
+            <h2 className="font-display text-2xl font-bold text-white sm:text-3xl">
               {t.stillTitle}
             </h2>
             <p className="mx-auto mt-3 max-w-xl leading-relaxed text-white/80">

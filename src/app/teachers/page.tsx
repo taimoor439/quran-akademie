@@ -57,10 +57,10 @@ export default function TeachersPage() {
                 key={tutor.firstName}
                 className="flex flex-col rounded-3xl bg-cream p-8 text-center shadow-card transition hover:shadow-lift"
               >
-                <span className="mx-auto flex h-24 w-24 items-center justify-center rounded-full bg-brand font-serif text-3xl font-bold text-gold-light ring-4 ring-gold-soft">
+                <span className="mx-auto flex h-24 w-24 items-center justify-center rounded-full bg-brand font-display text-3xl font-bold text-gold-light ring-4 ring-gold-soft">
                   {tutor.initials}
                 </span>
-                <h2 className="mt-5 font-serif text-2xl font-bold text-brand">
+                <h2 className="mt-5 font-display text-2xl font-bold text-brand">
                   {tutor.firstName}
                 </h2>
                 <p className="mt-1 text-sm font-semibold text-gold-dark">
@@ -111,7 +111,7 @@ export default function TeachersPage() {
               <p className="text-xs font-bold uppercase tracking-[0.25em] text-gold-light">
                 {t.femaleEyebrow}
               </p>
-              <h2 className="mx-auto mt-3 max-w-2xl font-serif text-3xl font-bold leading-tight text-white sm:text-4xl">
+              <h2 className="mx-auto mt-3 max-w-2xl font-display text-3xl font-bold leading-tight text-white sm:text-4xl">
                 {t.femaleTitle}
               </h2>
               <p className="mx-auto mt-5 max-w-2xl text-lg leading-relaxed text-white/80">

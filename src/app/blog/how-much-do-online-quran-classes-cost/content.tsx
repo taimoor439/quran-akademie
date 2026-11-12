@@ -474,7 +474,7 @@ export default function PricingGuideContent() {
           <p className="mt-8 text-xs font-bold uppercase tracking-[0.25em] text-gold-dark">
             {t.category} · {t.readTime}
           </p>
-          <h1 className="mt-3 font-serif text-4xl font-bold leading-tight text-brand sm:text-5xl">
+          <h1 className="mt-3 font-display text-4xl font-bold leading-tight text-brand sm:text-5xl">
             {t.title}
           </h1>
           <p className="mt-4 text-sm font-semibold text-ink/60">
@@ -494,7 +494,7 @@ export default function PricingGuideContent() {
         <div className="mx-auto max-w-3xl px-4 pb-16 sm:px-6">
           {t.sections.map((section) => (
             <section key={section.heading} className="mt-12 first:mt-4">
-              <h2 className="font-serif text-2xl font-bold text-brand sm:text-3xl">
+              <h2 className="font-display text-2xl font-bold text-brand sm:text-3xl">
                 {section.heading}
               </h2>
               <div className="mt-4 h-1 w-16 rounded-full bg-gold" />
@@ -585,14 +585,14 @@ export default function PricingGuideContent() {
           ))}
 
           <section className="mt-14">
-            <h2 className="font-serif text-2xl font-bold text-brand sm:text-3xl">
+            <h2 className="font-display text-2xl font-bold text-brand sm:text-3xl">
               {t.faqHeading}
             </h2>
             <div className="mt-4 h-1 w-16 rounded-full bg-gold" />
             <div className="mt-6 space-y-5">
               {t.faqs.map((faq) => (
                 <div key={faq.q} className="rounded-3xl bg-cream p-6">
-                  <h3 className="font-serif text-lg font-bold text-brand">
+                  <h3 className="font-display text-lg font-bold text-brand">
                     {faq.q}
                   </h3>
                   <p className="mt-2 leading-relaxed text-ink/70">{faq.a}</p>
@@ -602,7 +602,7 @@ export default function PricingGuideContent() {
           </section>
 
           <section className="mt-14">
-            <h2 className="font-serif text-2xl font-bold text-brand sm:text-3xl">
+            <h2 className="font-display text-2xl font-bold text-brand sm:text-3xl">
               {t.relatedHeading}
             </h2>
             <div className="mt-4 h-1 w-16 rounded-full bg-gold" />
@@ -621,7 +621,7 @@ export default function PricingGuideContent() {
           </section>
 
           <section className="mt-14 rounded-3xl bg-brand p-8 text-white shadow-card sm:p-10">
-            <h2 className="font-serif text-2xl font-bold sm:text-3xl">
+            <h2 className="font-display text-2xl font-bold sm:text-3xl">
               {t.ctaTitle}
             </h2>
             <p className="mt-3 leading-relaxed text-white/85">{t.ctaText}</p>

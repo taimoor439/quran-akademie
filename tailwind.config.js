@@ -21,8 +21,14 @@ module.exports = {
         ink: "#1A2B25",
       },
       fontFamily: {
-        sans: ["Manrope", "ui-sans-serif", "system-ui", "sans-serif"],
-        serif: ["Fraunces", "Georgia", "serif"],
+        sans: ["Inter", "ui-sans-serif", "system-ui", "sans-serif"],
+        display: [
+          "Plus Jakarta Sans",
+          "Inter",
+          "ui-sans-serif",
+          "system-ui",
+          "sans-serif",
+        ],
         arabic: ["Amiri", "serif"],
       },
       boxShadow: {

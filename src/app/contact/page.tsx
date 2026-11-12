@@ -239,7 +239,7 @@ export default function ContactPage() {
                     <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-brand text-3xl text-white">
                       ✓
                     </div>
-                    <h2 className="mt-6 font-serif text-3xl font-bold text-brand">
+                    <h2 className="mt-6 font-display text-3xl font-bold text-brand">
                       {t.success.title}
                     </h2>
                     <p className="mx-auto mt-3 max-w-md leading-relaxed text-ink/70">
@@ -258,7 +258,7 @@ export default function ContactPage() {
                   </div>
                 ) : (
                   <>
-                    <h2 className="font-serif text-2xl font-bold text-brand sm:text-3xl">
+                    <h2 className="font-display text-2xl font-bold text-brand sm:text-3xl">
                       {t.formTitle}
                     </h2>
                     <p className="mt-2 leading-relaxed text-ink/70">{t.formSubtitle}</p>
@@ -360,7 +360,7 @@ export default function ContactPage() {
                 />
 
                 <div className="rounded-3xl bg-white p-6 shadow-card">
-                  <h3 className="font-serif text-2xl font-bold text-brand">
+                  <h3 className="font-display text-2xl font-bold text-brand">
                     {t.info.emailTitle}
                   </h3>
                   <a
@@ -375,7 +375,7 @@ export default function ContactPage() {
                 </div>
 
                 <div className="rounded-3xl bg-white p-6 shadow-card">
-                  <h3 className="font-serif text-2xl font-bold text-brand">
+                  <h3 className="font-display text-2xl font-bold text-brand">
                     {t.info.hoursTitle}
                   </h3>
                   <dl className="mt-5 space-y-3">
@@ -395,7 +395,7 @@ export default function ContactPage() {
                 </div>
 
                 <div className="rounded-3xl bg-brand p-6 text-white shadow-card">
-                  <h3 className="font-serif text-2xl font-bold">
+                  <h3 className="font-display text-2xl font-bold">
                     {t.info.whatsappTitle}
                   </h3>
                   <p className="mt-3 text-sm leading-relaxed text-white/80">
@@ -410,7 +410,7 @@ export default function ContactPage() {
                 </div>
 
                 <div className="rounded-3xl bg-gold-soft p-6">
-                  <h3 className="font-serif text-xl font-bold text-brand">
+                  <h3 className="font-display text-xl font-bold text-brand">
                     {t.info.trialTitle}
                   </h3>
                   <p className="mt-2 text-sm leading-relaxed text-ink/70">

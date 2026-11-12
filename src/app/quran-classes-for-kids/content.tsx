@@ -482,7 +482,7 @@ export default function KidsContent() {
             <p className="text-xs font-bold uppercase tracking-[0.25em] text-gold-dark">
               {t.heroEyebrow}
             </p>
-            <h1 className="mt-4 font-serif text-4xl font-bold leading-[1.1] text-brand sm:text-5xl lg:text-[3.4rem]">
+            <h1 className="mt-4 font-display text-4xl font-bold leading-[1.1] text-brand sm:text-5xl lg:text-[3.4rem]">
               {t.heroTitle}
             </h1>
             <p className="mt-6 text-lg leading-relaxed text-ink/70">{t.heroSubtitle}</p>
@@ -526,7 +526,7 @@ export default function KidsContent() {
       {/* AGES + LESSON LENGTH TABLE */}
       <section className="bg-cream">
         <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 lg:px-8">
-          <h2 className="font-serif text-3xl font-bold leading-tight text-brand sm:text-4xl">
+          <h2 className="font-display text-3xl font-bold leading-tight text-brand sm:text-4xl">
             {t.ageHeading}
           </h2>
           <div className="mt-4 h-1 w-16 rounded-full bg-gold" />
@@ -564,7 +564,7 @@ export default function KidsContent() {
       {/* CURRICULUM PATH */}
       <section className="bg-white">
         <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 lg:px-8">
-          <h2 className="font-serif text-3xl font-bold leading-tight text-brand sm:text-4xl">
+          <h2 className="font-display text-3xl font-bold leading-tight text-brand sm:text-4xl">
             {t.pathHeading}
           </h2>
           <div className="mt-4 h-1 w-16 rounded-full bg-gold" />
@@ -574,12 +574,12 @@ export default function KidsContent() {
           <ol className="mt-10 space-y-6">
             {t.pathSteps.map((step, i) => (
               <li key={step.title} className="flex gap-5 rounded-3xl bg-cream p-6 shadow-card sm:p-8">
-                <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-gold font-serif text-xl font-bold text-brand-deep">
+                <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-gold font-display text-xl font-bold text-brand-deep">
                   {i + 1}
                 </span>
                 <div>
                   <div className="flex flex-wrap items-baseline gap-x-3">
-                    <h3 className="font-serif text-xl font-bold text-brand">{step.title}</h3>
+                    <h3 className="font-display text-xl font-bold text-brand">{step.title}</h3>
                     <span className="text-sm font-bold text-gold-dark">{step.duration}</span>
                   </div>
                   <p className="mt-2 leading-relaxed text-ink/70">{step.body}</p>
@@ -611,7 +611,7 @@ export default function KidsContent() {
       {t.sections.map((section, i) => (
         <section key={section.heading} className={i % 2 === 0 ? "bg-cream" : "bg-white"}>
           <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 lg:px-8">
-            <h2 className="font-serif text-3xl font-bold leading-tight text-brand sm:text-4xl">
+            <h2 className="font-display text-3xl font-bold leading-tight text-brand sm:text-4xl">
               {section.heading}
             </h2>
             <div className="mt-4 h-1 w-16 rounded-full bg-gold" />
@@ -639,7 +639,7 @@ export default function KidsContent() {
       <section className="bg-cream">
         <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-20">
           <div className="mx-auto max-w-4xl">
-            <h2 className="font-serif text-3xl font-bold leading-tight text-brand sm:text-4xl">
+            <h2 className="font-display text-3xl font-bold leading-tight text-brand sm:text-4xl">
               {t.lessonHeading}
             </h2>
             <div className="mt-4 h-1 w-16 rounded-full bg-gold" />
@@ -650,10 +650,10 @@ export default function KidsContent() {
           <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
             {t.lessonSteps.map((step, i) => (
               <div key={step.title} className="rounded-3xl bg-white p-8 shadow-card">
-                <span className="flex h-12 w-12 items-center justify-center rounded-full bg-gold font-serif text-xl font-bold text-brand-deep">
+                <span className="flex h-12 w-12 items-center justify-center rounded-full bg-gold font-display text-xl font-bold text-brand-deep">
                   {i + 1}
                 </span>
-                <h3 className="mt-5 font-serif text-xl font-bold text-brand">{step.title}</h3>
+                <h3 className="mt-5 font-display text-xl font-bold text-brand">{step.title}</h3>
                 <p className="mt-2 leading-relaxed text-ink/70">{step.body}</p>
               </div>
             ))}
@@ -683,7 +683,7 @@ export default function KidsContent() {
                   </span>
                 )}
                 <h3
-                  className={`font-serif text-xl font-bold ${
+                  className={`font-display text-xl font-bold ${
                     plan.popular ? "text-white" : "text-brand"
                   }`}
                 >
@@ -691,7 +691,7 @@ export default function KidsContent() {
                 </h3>
                 <p className="mt-4">
                   <span
-                    className={`font-serif text-5xl font-bold ${
+                    className={`font-display text-5xl font-bold ${
                       plan.popular ? "text-white" : "text-brand"
                     }`}
                   >
@@ -755,7 +755,7 @@ export default function KidsContent() {
           <div className="mt-12 space-y-6">
             {t.faqs.map((faq) => (
               <div key={faq.q} className="rounded-3xl bg-white p-8 shadow-card">
-                <h3 className="font-serif text-xl font-bold text-brand">{faq.q}</h3>
+                <h3 className="font-display text-xl font-bold text-brand">{faq.q}</h3>
                 <p className="mt-3 leading-relaxed text-ink/70">{faq.a}</p>
                 {faq.link && (
                   <Link

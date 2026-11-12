@@ -65,7 +65,7 @@ export default function MyPage() {
 - Colors: `brand` (#0B3D2E), `brand-dark`, `brand-deep`, `brand-light`,
   `brand-soft` (#E7F0EB); `gold` (#C9A227), `gold-dark`, `gold-light`,
   `gold-soft`; `cream` (#FAF6EE); `ink` (#1A2B25).
-- Fonts: `font-serif` (Fraunces, display headings), `font-sans` (Manrope, UI),
+- Fonts: `font-display` (Plus Jakarta Sans, display headings), `font-sans` (Inter, UI),
   `font-arabic` (Amiri, Arabic strings — always with `dir="rtl"`).
 - Cards: `rounded-3xl bg-white shadow-card`, hover `shadow-lift`.
 - Pattern accents: `pattern-star` (gold on light) and `pattern-star-light`

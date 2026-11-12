@@ -174,7 +174,7 @@ export default function HeroTrialForm() {
           <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-brand text-3xl text-white">
             ✓
           </div>
-          <h2 className="mt-6 font-serif text-2xl font-bold text-brand sm:text-3xl">
+          <h2 className="mt-6 font-display text-2xl font-bold text-brand sm:text-3xl">
             {t.success.title}
           </h2>
           <p className="mx-auto mt-3 max-w-sm leading-relaxed text-ink/70">
@@ -193,7 +193,7 @@ export default function HeroTrialForm() {
           <p className="text-xs font-bold uppercase tracking-[0.25em] text-gold-dark">
             {t.eyebrow}
           </p>
-          <h2 className="mt-2 font-serif text-2xl font-bold leading-tight text-brand">
+          <h2 className="mt-2 font-display text-2xl font-bold leading-tight text-brand">
             {t.title}
           </h2>
           <p className="mt-2 text-sm leading-relaxed text-ink/70">{t.subtitle}</p>

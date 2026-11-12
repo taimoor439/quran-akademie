@@ -347,7 +347,7 @@ export default function BerlinContent() {
             <p className="text-xs font-bold uppercase tracking-[0.25em] text-gold-dark">
               {t.heroEyebrow}
             </p>
-            <h1 className="mt-4 font-serif text-4xl font-bold leading-[1.1] text-brand sm:text-5xl lg:text-[3.4rem]">
+            <h1 className="mt-4 font-display text-4xl font-bold leading-[1.1] text-brand sm:text-5xl lg:text-[3.4rem]">
               {t.heroTitle}
             </h1>
             <p className="mt-6 text-lg leading-relaxed text-ink/70">{t.heroSubtitle}</p>
@@ -391,7 +391,7 @@ export default function BerlinContent() {
       {/* WHY BERLIN */}
       <section className="bg-cream">
         <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 lg:px-8">
-          <h2 className="font-serif text-3xl font-bold leading-tight text-brand sm:text-4xl">
+          <h2 className="font-display text-3xl font-bold leading-tight text-brand sm:text-4xl">
             {t.whyHeading}
           </h2>
           <div className="mt-4 h-1 w-16 rounded-full bg-gold" />
@@ -417,13 +417,13 @@ export default function BerlinContent() {
           <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {t.districts.map((district) => (
               <div key={district.name} className="rounded-3xl bg-cream p-8 shadow-card">
-                <h3 className="font-serif text-2xl font-bold text-brand">{district.name}</h3>
+                <h3 className="font-display text-2xl font-bold text-brand">{district.name}</h3>
                 <div className="mt-3 h-1 w-10 rounded-full bg-gold" />
                 <p className="mt-4 leading-relaxed text-ink/70">{district.body}</p>
               </div>
             ))}
             <div className="flex flex-col justify-center rounded-3xl bg-brand p-8 text-white shadow-card">
-              <h3 className="font-serif text-2xl font-bold">
+              <h3 className="font-display text-2xl font-bold">
                 {locale === "de" ? "Ihr Bezirk ist dabei" : "Your district is covered"}
               </h3>
               <p className="mt-4 leading-relaxed text-white/85">{t.districtsAlso}</p>
@@ -441,7 +441,7 @@ export default function BerlinContent() {
       {/* SCHOOL DAY */}
       <section className="bg-cream">
         <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 lg:px-8">
-          <h2 className="font-serif text-3xl font-bold leading-tight text-brand sm:text-4xl">
+          <h2 className="font-display text-3xl font-bold leading-tight text-brand sm:text-4xl">
             {t.schoolSection.heading}
           </h2>
           <div className="mt-4 h-1 w-16 rounded-full bg-gold" />
@@ -459,7 +459,7 @@ export default function BerlinContent() {
       {/* WHAT YOU LEARN + HUB LINKS */}
       <section className="bg-white">
         <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 lg:px-8">
-          <h2 className="font-serif text-3xl font-bold leading-tight text-brand sm:text-4xl">
+          <h2 className="font-display text-3xl font-bold leading-tight text-brand sm:text-4xl">
             {t.learnSection.heading}
           </h2>
           <div className="mt-4 h-1 w-16 rounded-full bg-gold" />
@@ -509,7 +509,7 @@ export default function BerlinContent() {
                   </span>
                 )}
                 <h3
-                  className={`font-serif text-xl font-bold ${
+                  className={`font-display text-xl font-bold ${
                     plan.popular ? "text-white" : "text-brand"
                   }`}
                 >
@@ -517,7 +517,7 @@ export default function BerlinContent() {
                 </h3>
                 <p className="mt-4">
                   <span
-                    className={`font-serif text-5xl font-bold ${
+                    className={`font-display text-5xl font-bold ${
                       plan.popular ? "text-white" : "text-brand"
                     }`}
                   >
@@ -581,7 +581,7 @@ export default function BerlinContent() {
           <div className="mt-12 space-y-6">
             {t.faqs.map((faq) => (
               <div key={faq.q} className="rounded-3xl bg-cream p-8 shadow-card">
-                <h3 className="font-serif text-xl font-bold text-brand">{faq.q}</h3>
+                <h3 className="font-display text-xl font-bold text-brand">{faq.q}</h3>
                 <p className="mt-3 leading-relaxed text-ink/70">{faq.a}</p>
                 {faq.link && (
                   <Link

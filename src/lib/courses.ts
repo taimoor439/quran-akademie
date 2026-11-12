@@ -20,7 +20,7 @@ export const courses: CourseMeta[] = [
       de: "Erste Schritte im arabischen Lesen — Buchstaben, Laute und Verbinden, für absolute Anfänger.",
     },
     arabic: "القاعدة النورانية",
-    ages: { en: "Ages 4+ · Beginners", de: "Ab 4 Jahren · Anfänger" },
+    ages: { en: "Ages 4+", de: "Ab 4 Jahren" },
     level: { en: "Beginner", de: "Anfänger" },
     image:
       "https://www.barakahislamicstore.com/cdn/shop/files/Noorani-Qaeda1_grande_33b8a558-42bc-4bdd-8e32-e9171343fa01.png?v=1706029182",
@@ -33,7 +33,7 @@ export const courses: CourseMeta[] = [
       de: "Flüssiges, schönes Rezitieren mit korrekter Aussprache und den Regeln des Tadschwid.",
     },
     arabic: "التجويد",
-    ages: { en: "Ages 6+ · All levels", de: "Ab 6 Jahren · Alle Stufen" },
+    ages: { en: "Ages 6+", de: "Ab 6 Jahren" },
     level: { en: "All levels", de: "Alle Stufen" },
     image:
       "https://images.unsplash.com/photo-1609599006353-e629aaabfeae?auto=format&fit=crop&w=1200&q=80",

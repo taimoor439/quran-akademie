@@ -26,7 +26,7 @@ export function PageHero({
         <p className="text-xs font-bold uppercase tracking-[0.25em] text-gold-dark">
           {eyebrow}
         </p>
-        <h1 className="mx-auto mt-3 max-w-3xl font-serif text-4xl font-bold leading-tight text-brand sm:text-5xl">
+        <h1 className="mx-auto mt-3 max-w-3xl font-display text-4xl font-bold leading-tight text-brand sm:text-5xl">
           {title}
         </h1>
         <p className="mx-auto mt-5 max-w-2xl text-lg leading-relaxed text-ink/70">
@@ -52,7 +52,7 @@ export function SectionHeading({
       <p className="text-xs font-bold uppercase tracking-[0.25em] text-gold-dark">
         {eyebrow}
       </p>
-      <h2 className="mx-auto mt-3 max-w-2xl font-serif text-3xl font-bold leading-tight text-brand sm:text-4xl">
+      <h2 className="mx-auto mt-3 max-w-2xl font-display text-3xl font-bold leading-tight text-brand sm:text-4xl">
         {title}
       </h2>
       <div className="gold-rule mt-5" />
@@ -88,7 +88,7 @@ export function CtaBand() {
     <section className="bg-brand-deep">
       <div className="pattern-star-light">
         <div className="mx-auto max-w-7xl px-4 py-16 text-center sm:px-6 lg:px-8">
-          <h2 className="mx-auto max-w-2xl font-serif text-3xl font-bold leading-tight text-white sm:text-4xl">
+          <h2 className="mx-auto max-w-2xl font-display text-3xl font-bold leading-tight text-white sm:text-4xl">
             {t.title}
           </h2>
           <p className="mx-auto mt-4 max-w-xl text-lg leading-relaxed text-white/75">

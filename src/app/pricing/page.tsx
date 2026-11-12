@@ -5,6 +5,7 @@ import { useLocale } from "@/lib/i18n";
 import { plans } from "@/lib/plans";
 import { faqs } from "@/lib/faqs";
 import { PageHero, SectionHeading, CtaBand } from "@/components/Shared";
+import Reveal from "@/components/Reveal";
 
 // Pricing FAQ strip reuses the payment / cancellation entries from faqs.ts:
 // trial class (3), how to pay (6), cancel or pause (7).
@@ -75,22 +76,22 @@ export default function PricingPage() {
       <section className="bg-white">
         <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-20">
           <div className="grid gap-8 lg:grid-cols-3 lg:items-stretch">
-            {plans.map((plan) => (
-              <div
-                key={plan.id}
-                className={`relative flex flex-col rounded-3xl p-8 shadow-card transition hover:shadow-lift ${
-                  plan.popular
-                    ? "border-2 border-gold bg-brand text-white"
-                    : "bg-cream"
-                }`}
-              >
+            {plans.map((plan, i) => (
+              <Reveal key={plan.id} delay={i * 90} className="h-full">
+                <div
+                  className={`relative flex h-full flex-col rounded-3xl p-8 shadow-card transition hover:-translate-y-1 hover:shadow-lift ${
+                    plan.popular
+                      ? "popular-glow border-2 border-gold bg-brand text-white"
+                      : "bg-cream"
+                  }`}
+                >
                 {plan.popular && (
                   <span className="absolute -top-4 left-1/2 -translate-x-1/2 rounded-full bg-gold px-4 py-1.5 text-xs font-bold uppercase tracking-wider text-brand-deep shadow">
                     {t.mostPopular}
                   </span>
                 )}
                 <h2
-                  className={`font-serif text-2xl font-bold ${
+                  className={`font-display text-2xl font-bold ${
                     plan.popular ? "text-white" : "text-brand"
                   }`}
                 >
@@ -104,7 +105,7 @@ export default function PricingPage() {
                   {t.classesPerWeek(plan.classesPerWeek)}
                 </p>
                 <p className="mt-6">
-                  <span className="font-serif text-5xl font-bold">
+                  <span className="font-display text-5xl font-bold">
                     ${plan.priceUsd}
                   </span>
                   <span
@@ -151,7 +152,8 @@ export default function PricingPage() {
                 >
                   {t.choosePlan}
                 </Link>
-              </div>
+                </div>
+              </Reveal>
             ))}
           </div>
         </div>
@@ -163,10 +165,10 @@ export default function PricingPage() {
           <SectionHeading eyebrow={t.notesEyebrow} title={t.notesTitle} />
           <div className="mt-12 grid gap-6 md:grid-cols-3">
             <div className="rounded-3xl bg-white p-8 shadow-card">
-              <span className="flex h-12 w-12 items-center justify-center rounded-full bg-brand-soft font-serif text-xl font-bold text-brand">
+              <span className="flex h-12 w-12 items-center justify-center rounded-full bg-brand-soft font-display text-xl font-bold text-brand">
                 %
               </span>
-              <h3 className="mt-5 font-serif text-xl font-bold text-brand">
+              <h3 className="mt-5 font-display text-xl font-bold text-brand">
                 {t.siblingTitle}
               </h3>
               <p className="mt-3 text-sm leading-relaxed text-ink/70">
@@ -174,10 +176,10 @@ export default function PricingPage() {
               </p>
             </div>
             <div className="rounded-3xl bg-white p-8 shadow-card">
-              <span className="flex h-12 w-12 items-center justify-center rounded-full bg-brand-soft font-serif text-xl font-bold text-brand">
+              <span className="flex h-12 w-12 items-center justify-center rounded-full bg-brand-soft font-display text-xl font-bold text-brand">
                 €
               </span>
-              <h3 className="mt-5 font-serif text-xl font-bold text-brand">
+              <h3 className="mt-5 font-display text-xl font-bold text-brand">
                 {t.currencyTitle}
               </h3>
               <p className="mt-3 text-sm leading-relaxed text-ink/70">
@@ -185,10 +187,10 @@ export default function PricingPage() {
               </p>
             </div>
             <div className="rounded-3xl bg-white p-8 shadow-card">
-              <span className="flex h-12 w-12 items-center justify-center rounded-full bg-brand-soft font-serif text-xl font-bold text-brand">
+              <span className="flex h-12 w-12 items-center justify-center rounded-full bg-brand-soft font-display text-xl font-bold text-brand">
                 ★
               </span>
-              <h3 className="mt-5 font-serif text-xl font-bold text-brand">
+              <h3 className="mt-5 font-display text-xl font-bold text-brand">
                 {t.trialTitle}
               </h3>
               <p className="mt-3 text-sm leading-relaxed text-ink/70">
@@ -206,7 +208,7 @@ export default function PricingPage() {
           <div className="mt-12 space-y-6">
             {pricingFaqs.map((faq) => (
               <div key={faq.q.en} className="rounded-3xl bg-cream p-8 shadow-card">
-                <h3 className="font-serif text-xl font-bold text-brand">
+                <h3 className="font-display text-xl font-bold text-brand">
                   {faq.q[locale]}
                 </h3>
                 <p className="mt-3 leading-relaxed text-ink/70">{faq.a[locale]}</p>

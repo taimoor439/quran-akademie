@@ -39,7 +39,7 @@ export default function Logo({
       </span>
       <span className="leading-none">
         <span
-          className={`block font-serif text-[1.35rem] font-bold tracking-tight ${
+          className={`block font-display text-[1.35rem] font-bold tracking-tight ${
             dark ? "text-white" : "text-brand"
           }`}
         >

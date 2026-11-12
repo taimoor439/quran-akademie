@@ -155,7 +155,7 @@ export default function NooraniQaidaPage() {
       <section className="bg-white py-16">
         <div className="mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 lg:grid-cols-3 lg:px-8">
           <div className="lg:col-span-2">
-            <h2 className="font-serif text-3xl font-bold text-brand">{t.overviewHeading}</h2>
+            <h2 className="font-display text-3xl font-bold text-brand">{t.overviewHeading}</h2>
             <div className="gold-rule mt-4" />
             {t.overview.map((para) => (
               <p key={para.slice(0, 24)} className="mt-5 text-lg leading-relaxed text-ink/75">
@@ -163,7 +163,7 @@ export default function NooraniQaidaPage() {
               </p>
             ))}
 
-            <h2 className="mt-12 font-serif text-3xl font-bold text-brand">{t.learnHeading}</h2>
+            <h2 className="mt-12 font-display text-3xl font-bold text-brand">{t.learnHeading}</h2>
             <div className="gold-rule mt-4" />
             <ul className="mt-6 space-y-3">
               {t.learn.map((item) => (
@@ -186,7 +186,7 @@ export default function NooraniQaidaPage() {
               ))}
             </ul>
 
-            <h2 className="mt-12 font-serif text-3xl font-bold text-brand">{t.whoHeading}</h2>
+            <h2 className="mt-12 font-display text-3xl font-bold text-brand">{t.whoHeading}</h2>
             <div className="gold-rule mt-4" />
             <p className="mt-5 text-lg leading-relaxed text-ink/75">{t.whoIntro}</p>
             <ul className="mt-6 space-y-3">
@@ -201,8 +201,8 @@ export default function NooraniQaidaPage() {
 
           {/* Sidebar */}
           <aside className="space-y-6">
-            <div className="rounded-3xl bg-brand p-6 text-white shadow-card lg:sticky lg:top-24">
-              <h3 className="font-serif text-2xl font-bold">{t.formatHeading}</h3>
+            <div className="rounded-3xl bg-brand p-6 text-white shadow-card">
+              <h3 className="font-display text-2xl font-bold">{t.formatHeading}</h3>
               <ul className="mt-5 space-y-4">
                 {t.format.map((item) => (
                   <li key={item} className="flex items-start gap-3">
@@ -229,7 +229,7 @@ export default function NooraniQaidaPage() {
             </div>
 
             <div className="rounded-3xl bg-cream p-6 shadow-card">
-              <h3 className="font-serif text-2xl font-bold text-brand">{t.pricingHeading}</h3>
+              <h3 className="font-display text-2xl font-bold text-brand">{t.pricingHeading}</h3>
               <p className="mt-3 leading-relaxed text-ink/70">{t.pricingBody}</p>
               <div className="mt-5 flex flex-col gap-3">
                 <Link
@@ -260,7 +260,7 @@ export default function NooraniQaidaPage() {
                 key={faq.q}
                 className="group rounded-3xl bg-white p-6 shadow-card"
               >
-                <summary className="cursor-pointer list-none font-serif text-xl font-bold text-brand">
+                <summary className="cursor-pointer list-none font-display text-xl font-bold text-brand">
                   <span className="flex items-start justify-between gap-4">
                     {faq.q}
                     <span className="mt-1 shrink-0 text-gold-dark transition group-open:rotate-45">
@@ -296,7 +296,7 @@ export default function NooraniQaidaPage() {
                   <p className="text-right font-arabic text-lg text-gold-dark" dir="rtl">
                     {rel.arabic}
                   </p>
-                  <h3 className="mt-1 font-serif text-2xl font-bold text-brand">
+                  <h3 className="mt-1 font-display text-2xl font-bold text-brand">
                     {rel.name[locale]}
                   </h3>
                   <p className="mt-2 leading-relaxed text-ink/70">{rel.tagline[locale]}</p>

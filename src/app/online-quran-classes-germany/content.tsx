@@ -9,6 +9,15 @@ import { SectionHeading, CtaBand } from "@/components/Shared";
 const BASE_URL = "https://onlinekoran.de";
 const PAGE_PATH = "/online-quran-classes-germany";
 
+/** Cities with a dedicated city page — shown as links in the hub's city list. */
+const CITY_PAGE_LINKS: Record<string, string> = {
+  Berlin: "/online-quran-classes-berlin",
+  Hamburg: "/online-quran-classes-hamburg",
+  München: "/online-quran-classes-munich",
+  Köln: "/online-quran-classes-cologne",
+  "Frankfurt am Main": "/online-quran-classes-frankfurt",
+};
+
 const EN_META = {
   title: "Online Quran Classes in Germany — 1-on-1 Live Lessons",
   description:
@@ -430,7 +439,7 @@ export default function GermanyContent() {
             <p className="text-xs font-bold uppercase tracking-[0.25em] text-gold-dark">
               {t.heroEyebrow}
             </p>
-            <h1 className="mt-4 font-serif text-4xl font-bold leading-[1.1] text-brand sm:text-5xl lg:text-[3.4rem]">
+            <h1 className="mt-4 font-display text-4xl font-bold leading-[1.1] text-brand sm:text-5xl lg:text-[3.4rem]">
               {t.heroTitle}
             </h1>
             <p className="mt-6 text-lg leading-relaxed text-ink/70">{t.heroSubtitle}</p>
@@ -469,7 +478,7 @@ export default function GermanyContent() {
         <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 lg:px-8">
           <p className="text-xl font-semibold leading-relaxed text-brand">{t.intro}</p>
           <div className="mt-10 rounded-3xl bg-cream p-8 shadow-card">
-            <h2 className="font-serif text-2xl font-bold text-brand">{t.factsTitle}</h2>
+            <h2 className="font-display text-2xl font-bold text-brand">{t.factsTitle}</h2>
             <ul className="mt-5 space-y-3">
               {t.facts.map((fact) => (
                 <li key={fact} className="flex gap-3 leading-relaxed text-ink/80">
@@ -488,7 +497,7 @@ export default function GermanyContent() {
       {t.sections.map((section, i) => (
         <section key={section.heading} className={i % 2 === 0 ? "bg-cream" : "bg-white"}>
           <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 lg:px-8">
-            <h2 className="font-serif text-3xl font-bold leading-tight text-brand sm:text-4xl">
+            <h2 className="font-display text-3xl font-bold leading-tight text-brand sm:text-4xl">
               {section.heading}
             </h2>
             <div className="mt-4 h-1 w-16 rounded-full bg-gold" />
@@ -533,11 +542,12 @@ export default function GermanyContent() {
             subtitle={t.citiesBody}
           />
           <div className="mt-12 flex flex-wrap justify-center gap-3">
-            {t.cities.map((city) =>
-              city === "Berlin" ? (
+            {t.cities.map((city) => {
+              const cityHref = CITY_PAGE_LINKS[city];
+              return cityHref ? (
                 <Link
                   key={city}
-                  href="/online-quran-classes-berlin"
+                  href={cityHref}
                   className="rounded-full bg-brand px-6 py-3 text-base font-bold text-white shadow-card transition hover:bg-brand-light"
                 >
                   {city} →
@@ -549,8 +559,8 @@ export default function GermanyContent() {
                 >
                   {city}
                 </span>
-              )
-            )}
+              );
+            })}
           </div>
           <p className="mt-10 text-center leading-relaxed text-ink/70">
             {t.berlinNote}{" "}
@@ -586,7 +596,7 @@ export default function GermanyContent() {
                   </span>
                 )}
                 <h3
-                  className={`font-serif text-xl font-bold ${
+                  className={`font-display text-xl font-bold ${
                     plan.popular ? "text-white" : "text-brand"
                   }`}
                 >
@@ -594,7 +604,7 @@ export default function GermanyContent() {
                 </h3>
                 <p className="mt-4">
                   <span
-                    className={`font-serif text-5xl font-bold ${
+                    className={`font-display text-5xl font-bold ${
                       plan.popular ? "text-white" : "text-brand"
                     }`}
                   >
@@ -658,7 +668,7 @@ export default function GermanyContent() {
           <div className="mt-12 space-y-6">
             {t.faqs.map((faq) => (
               <div key={faq.q} className="rounded-3xl bg-cream p-8 shadow-card">
-                <h3 className="font-serif text-xl font-bold text-brand">{faq.q}</h3>
+                <h3 className="font-display text-xl font-bold text-brand">{faq.q}</h3>
                 <p className="mt-3 leading-relaxed text-ink/70">{faq.a}</p>
               </div>
             ))}
