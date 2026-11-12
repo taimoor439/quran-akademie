@@ -1,0 +1,26 @@
+# Quran Akademie (onlinekoran.de) — Apache / LiteSpeed rules for the static export.
+# The Next.js static export writes courses.html, pricing.html, blog/*.html etc.
+# Apache does not map clean URLs (/courses) to those files on its own, so
+# rewrite them here. Without this file, every subpage returns 404 on Hostinger
+# (GitHub Pages does this mapping automatically, which is why the preview works
+# without it).
+
+RewriteEngine On
+
+# Force HTTPS (Lifetime SSL is installed for onlinekoran.de).
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Trailing-slash URLs whose base name has an .html file (e.g. /courses/ -> courses.html).
+RewriteCond %{REQUEST_URI} ^/(.+)/$
+RewriteCond %{DOCUMENT_ROOT}/%1.html -f
+RewriteRule ^(.+)/$ /$1.html [L]
+
+# Extensionless URLs (e.g. /pricing -> pricing.html, /blog/what-is-tajweed -> blog/what-is-tajweed.html).
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^(.*)$ $1.html [L]
+
+# Never list directory contents.
+Options -Indexes
