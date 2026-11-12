@@ -8,7 +8,7 @@ import {
   type ReactNode,
 } from "react";
 
-type RevealVariant = "up" | "left" | "right" | "zoom" | "fade";
+type RevealVariant = "up" | "left" | "right" | "zoom" | "fade" | "rise";
 
 type RevealProps = {
   children: ReactNode;

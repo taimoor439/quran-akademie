@@ -237,13 +237,18 @@ export default function HomePage() {
           <SectionHeading eyebrow={t.howEyebrow} title={t.howTitle} />
           <div className="mt-12 grid gap-6 md:grid-cols-3">
             {t.steps.map((step, i) => (
-              <div key={step.title} className="rounded-3xl bg-cream p-8 shadow-card">
-                <span className="flex h-12 w-12 items-center justify-center rounded-full bg-gold font-display text-xl font-bold text-brand-deep">
-                  {i + 1}
-                </span>
-                <h3 className="mt-5 font-display text-xl font-bold text-brand">{step.title}</h3>
-                <p className="mt-2 leading-relaxed text-ink/70">{step.body}</p>
-              </div>
+              <Reveal key={step.title} delay={i * 120} threshold={0.3} className="h-full">
+                <div className="h-full rounded-3xl bg-cream p-8 shadow-card transition duration-300 hover:-translate-y-1 hover:shadow-lift">
+                  <span
+                    className="step-bob flex h-12 w-12 items-center justify-center rounded-full bg-gold font-display text-xl font-bold text-brand-deep"
+                    style={{ animationDelay: `${i * 0.5}s` }}
+                  >
+                    {i + 1}
+                  </span>
+                  <h3 className="mt-5 font-display text-xl font-bold text-brand">{step.title}</h3>
+                  <p className="mt-2 leading-relaxed text-ink/70">{step.body}</p>
+                </div>
+              </Reveal>
             ))}
           </div>
         </div>
@@ -259,17 +264,17 @@ export default function HomePage() {
           />
           <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {courses.map((course, i) => (
-              <Reveal key={course.slug} delay={i * 80} className="h-full">
+              <Reveal key={course.slug} variant="rise" delay={i * 100} threshold={0.3} className="h-full">
                 <Link
                   href={`/courses/${course.slug}`}
-                  className="group block h-full overflow-hidden rounded-3xl bg-white shadow-card transition hover:shadow-lift"
+                  className="group block h-full overflow-hidden rounded-3xl bg-white shadow-card transition duration-300 hover:-translate-y-1 hover:shadow-lift"
                 >
-                <div className="relative">
+                <div className="relative overflow-hidden">
                   <img
                     src={course.image}
                     alt={course.name[locale]}
                     loading="lazy"
-                    className="aspect-[16/10] w-full object-cover transition duration-300 group-hover:scale-[1.03]"
+                    className="aspect-[16/10] w-full object-cover transition duration-500 group-hover:scale-[1.06]"
                   />
                   <span className="absolute right-4 top-4 rounded-full bg-brand/90 px-3 py-1 font-arabic text-sm text-gold-light">
                     {course.arabic}
