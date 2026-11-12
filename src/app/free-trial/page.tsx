@@ -4,6 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { useLocale } from "@/lib/i18n";
 import { courses } from "@/lib/courses";
+import { saveTrialRequest } from "@/lib/trial-request";
 import { PageHero, CtaBand } from "@/components/Shared";
 
 // Stock photo (verified 200 on 2026-11-12, see CONVENTIONS.md).
@@ -266,17 +267,10 @@ export default function FreeTrialPage() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (!validate()) return;
-    // Demo only: persist the request in the browser. At launch this will be
+    // Demo only: persist the request in the browser via the shared helper
+    // (same localStorage key as the hero form). At launch this will be
     // replaced by a real submission to email/CRM.
-    try {
-      const stored = JSON.parse(
-        window.localStorage.getItem("qa_trial_requests") || "[]"
-      ) as unknown[];
-      stored.push({ ...form, submittedAt: new Date().toISOString() });
-      window.localStorage.setItem("qa_trial_requests", JSON.stringify(stored));
-    } catch {
-      // localStorage unavailable — still show the success state.
-    }
+    saveTrialRequest({ ...form });
     setSubmitted(true);
     window.scrollTo({ top: 0, behavior: "smooth" });
   };

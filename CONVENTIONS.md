@@ -82,7 +82,8 @@ export default function MyPage() {
 - Teacher profiles are the ONE exception: monogram/initial avatars, NO photos
   — those cards present specific named people, so stock portraits are banned.
 - Verified 200 on 2026-11-12 (use these first):
-  - Open Quran (hero): `https://images.unsplash.com/photo-1585036156171-384164a8c675?auto=format&fit=crop&w=1600&q=80`
+  - Open Quran (home image band, after courses preview; was the hero image
+    until 2026-11-12, when the hero became the trial form): `https://images.unsplash.com/photo-1585036156171-384164a8c675?auto=format&fit=crop&w=1600&q=80`
   - Quran on rehal: `https://images.unsplash.com/photo-1609599006353-e629aaabfeae?auto=format&fit=crop&w=1200&q=80`
   - Mosque: `https://images.unsplash.com/photo-1542816417-0983c9c9ad53?auto=format&fit=crop&w=1200&q=80`
   - Mosque silhouette: `https://images.unsplash.com/photo-1512632578888-169bbbc64f33?auto=format&fit=crop&w=1200&q=80`

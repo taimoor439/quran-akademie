@@ -8,6 +8,7 @@ import { tutors } from "@/lib/teachers";
 import { testimonials } from "@/lib/testimonials";
 import { faqs } from "@/lib/faqs";
 import { SectionHeading, CtaBand } from "@/components/Shared";
+import HeroTrialForm from "@/components/HeroTrialForm";
 
 const HERO_IMAGE =
   "https://images.unsplash.com/photo-1585036156171-384164a8c675?auto=format&fit=crop&w=1600&q=80";
@@ -199,7 +200,7 @@ export default function HomePage() {
             <p className="mt-6 text-lg leading-relaxed text-ink/70">{t.heroSub}</p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <Link
-                href="/free-trial"
+                href="#trial-form"
                 className="rounded-full bg-brand px-8 py-3.5 text-center text-base font-bold text-white shadow-card transition hover:bg-brand-light"
               >
                 {t.heroCta1}
@@ -213,25 +214,7 @@ export default function HomePage() {
             </div>
             <p className="mt-5 text-sm font-medium text-ink/60">{t.heroNote}</p>
           </div>
-          <div className="relative">
-            <div className="absolute -left-3 -top-3 h-full w-full rounded-[2rem] border-2 border-gold/60" aria-hidden="true" />
-            <img
-              src={HERO_IMAGE}
-              alt={locale === "de" ? "Aufgeschlagener Koran" : "Open Quran"}
-              className="relative aspect-[4/3] w-full rounded-[2rem] object-cover shadow-lift"
-            />
-            <div className="absolute -bottom-6 left-4 right-4 rounded-2xl bg-brand p-5 text-white shadow-lift sm:left-8 sm:right-auto sm:max-w-sm">
-              <p className="font-arabic text-xl leading-relaxed text-gold-light" dir="rtl">
-                خَيْرُكُمْ مَنْ تَعَلَّمَ الْقُرْآنَ وَعَلَّمَهُ
-              </p>
-              <p className="mt-2 text-sm leading-relaxed text-white/90">
-                {t.heroCardTitle}
-              </p>
-              <p className="mt-1 text-xs font-semibold uppercase tracking-wider text-gold-light">
-                {t.heroCardSub}
-              </p>
-            </div>
-          </div>
+          <HeroTrialForm />
         </div>
       </section>
 
@@ -307,6 +290,34 @@ export default function HomePage() {
                 </div>
               </Link>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* QURAN IMAGE BAND — moved here from the hero (2026-11-12): the hero
+          now holds the trial form, and the Quran photo + hadith card live on
+          as one visual band after the courses preview. */}
+      <section className="bg-brand-deep">
+        <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-20">
+          <div className="relative">
+            <div className="absolute -left-3 -top-3 h-full w-full rounded-[2rem] border-2 border-gold/60" aria-hidden="true" />
+            <img
+              src={HERO_IMAGE}
+              alt={locale === "de" ? "Aufgeschlagener Koran" : "Open Quran"}
+              loading="lazy"
+              className="relative aspect-[16/9] w-full rounded-[2rem] object-cover shadow-lift"
+            />
+            <div className="absolute -bottom-6 left-4 right-4 rounded-2xl bg-brand p-5 text-white shadow-lift sm:left-8 sm:right-auto sm:max-w-sm">
+              <p className="font-arabic text-xl leading-relaxed text-gold-light" dir="rtl">
+                خَيْرُكُمْ مَنْ تَعَلَّمَ الْقُرْآنَ وَعَلَّمَهُ
+              </p>
+              <p className="mt-2 text-sm leading-relaxed text-white/90">
+                {t.heroCardTitle}
+              </p>
+              <p className="mt-1 text-xs font-semibold uppercase tracking-wider text-gold-light">
+                {t.heroCardSub}
+              </p>
+            </div>
           </div>
         </div>
       </section>
