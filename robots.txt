@@ -1,4 +1,4 @@
-# Quran Akademie — robots.txt
+# Online Quran — robots.txt
 # All search engines and AI search crawlers are welcome. Nothing is disallowed.
 
 User-agent: *
