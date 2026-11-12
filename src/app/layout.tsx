@@ -20,6 +20,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        <meta
+          name="google-site-verification"
+          content="lk9u1pDHscgKwY3Xshevgr3xP0pRkA5y_cp0ASi6kmU"
+        />
         <link rel="icon" type="image/svg+xml" href={assetPath("/icon.svg")} />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
