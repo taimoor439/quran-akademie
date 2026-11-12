@@ -1,10 +1,12 @@
 import "./globals.css";
 import { assetPath } from "@/lib/asset";
+import { GA_MEASUREMENT_ID } from "@/lib/analytics";
 import { LocaleProvider } from "@/lib/i18n";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import CookieBanner from "@/components/CookieBanner";
+import AnalyticsConsent from "@/components/AnalyticsConsent";
 
 export const metadata = {
   title: "Online Quran — Online Quran Classes for Families in Germany",
@@ -35,8 +37,22 @@ export default function RootLayout({
           href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@700;800&display=swap"
           rel="stylesheet"
         />
+        {/* Google Analytics (GA4) with consent mode: analytics_storage
+            defaults to denied, so no analytics cookies are set until
+            the visitor accepts in the cookie banner (see
+            AnalyticsConsent + CookieBanner). */}
+        <script
+          async
+          src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
+        />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('consent','default',{'analytics_storage':'denied'});gtag('config','${GA_MEASUREMENT_ID}');`,
+          }}
+        />
       </head>
       <body>
+        <AnalyticsConsent />
         <LocaleProvider>
           <Header />
           <main>{children}</main>

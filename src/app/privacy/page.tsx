@@ -41,6 +41,7 @@ const content = {
           "Lesson and account data: class bookings, attendance, lesson notes and progress records created during your time with us.",
           "Language preference: the language you choose for the website (English or German), stored in your browser.",
           "Cookies and technical data: basic technical information such as your browser type and the pages you visit, used to keep the website working and to understand how it is used.",
+          "Google Analytics (only with your consent): anonymised usage statistics — the pages you visit, approximate location and device type — to understand how the website is used. Google Analytics does not identify you personally, and IP addresses are anonymised.",
         ],
       },
       {
@@ -57,7 +58,7 @@ const content = {
         ],
         list: [
           "Performance of a contract (Art. 6(1)(b)): to provide the classes and services you book with us.",
-          "Consent (Art. 6(1)(a)): where you have given us consent — for example, to record a lesson or to receive optional updates. You may withdraw consent at any time.",
+          "Consent (Art. 6(1)(a)): where you have given us consent — for example, to record a lesson, to receive optional updates, or to measure website visits with Google Analytics. You may withdraw consent at any time.",
           "Legitimate interests (Art. 6(1)(f)): to run and secure our website, respond to enquiries and improve our services, where this does not override your rights.",
           "Legal obligation (Art. 6(1)(c)): where we are required by law to keep certain records, for example for tax purposes.",
         ],
@@ -69,6 +70,7 @@ const content = {
         ],
         list: [
           "Video lesson platforms (such as Zoom or Google Meet) — to hold the live online classes.",
+          "Google (Google Analytics) — to measure website usage, only where you have consented to analytics cookies.",
           "Our hosting provider — to operate this website.",
           "Payment providers — to process payments securely, once payments are enabled at launch.",
           "Our tutors — only the information they need to teach your lessons, such as the student's name, level and lesson history.",
@@ -146,6 +148,7 @@ const content = {
           "Unterrichts- und Kontodaten: Kursbuchungen, Anwesenheit, Unterrichtsnotizen und Fortschrittsaufzeichnungen, die während Ihrer Zeit bei uns entstehen.",
           "Spracheinstellung: die von Ihnen gewählte Website-Sprache (Englisch oder Deutsch), die in Ihrem Browser gespeichert wird.",
           "Cookies und technische Daten: grundlegende technische Informationen wie Browsertyp und besuchte Seiten, um die Website funktionsfähig zu halten und zu verstehen, wie sie genutzt wird.",
+          "Google Analytics (nur mit Ihrer Einwilligung): anonymisierte Nutzungsstatistiken — besuchte Seiten, ungefähre Standort- und Geräteangaben — um zu verstehen, wie die Website genutzt wird. Google Analytics identifiziert Sie nicht persönlich, und IP-Adressen werden anonymisiert.",
         ],
       },
       {
@@ -162,7 +165,7 @@ const content = {
         ],
         list: [
           "Vertragserfüllung (Art. 6 Abs. 1 lit. b): zur Durchführung der von Ihnen gebuchten Kurse und Leistungen.",
-          "Einwilligung (Art. 6 Abs. 1 lit. a): wo Sie uns eine Einwilligung erteilt haben — zum Beispiel für die Aufzeichnung einer Stunde oder für optionale Informationen. Sie können Ihre Einwilligung jederzeit widerrufen.",
+          "Einwilligung (Art. 6 Abs. 1 lit. a): wo Sie uns eine Einwilligung erteilt haben — zum Beispiel für die Aufzeichnung einer Stunde, für optionale Informationen oder zur Messung von Websitebesuchen mit Google Analytics. Sie können Ihre Einwilligung jederzeit widerrufen.",
           "Berechtigte Interessen (Art. 6 Abs. 1 lit. f): zum Betrieb und zur Sicherung unserer Website, zur Beantwortung von Anfragen und zur Verbesserung unserer Leistungen, soweit dies Ihre Rechte nicht überwiegt.",
           "Rechtliche Verpflichtung (Art. 6 Abs. 1 lit. c): wo wir gesetzlich verpflichtet sind, bestimmte Unterlagen aufzubewahren, etwa für Steuerzwecke.",
         ],
@@ -174,6 +177,7 @@ const content = {
         ],
         list: [
           "Videoplattformen für den Unterricht (z. B. Zoom oder Google Meet) — zur Durchführung der Live-Online-Stunden.",
+          "Google (Google Analytics) — zur Messung der Websitenutzung, nur soweit Sie Analyse-Cookies zugestimmt haben.",
           "Unser Hosting-Anbieter — zum Betrieb dieser Website.",
           "Zahlungsdienstleister — zur sicheren Abwicklung von Zahlungen, sobald Zahlungen zum Start aktiviert werden.",
           "Unsere Lehrkräfte — nur die Informationen, die sie für Ihren Unterricht benötigen, etwa Name, Niveau und Unterrichtsverlauf des Schülers.",

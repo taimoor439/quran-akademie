@@ -3,18 +3,23 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { useLocale } from "@/lib/i18n";
+import {
+  COOKIE_CONSENT_KEY,
+  denyAnalyticsConsent,
+  grantAnalyticsConsent,
+} from "@/lib/analytics";
 
-const KEY = "qa_cookie_consent";
+const KEY = COOKIE_CONSENT_KEY;
 
 const text = {
   en: {
-    body: "We use only essential cookies to remember your language choice and improve this preview site. No tracking cookies are set.",
+    body: "We use cookies to remember your language choice and, only with your consent, to measure visits with Google Analytics. You can accept or decline — the website works either way.",
     accept: "Accept",
     decline: "Decline",
     privacy: "Privacy policy",
   },
   de: {
-    body: "Wir verwenden nur notwendige Cookies, um Ihre Sprachauswahl zu speichern und diese Vorschau-Website zu verbessern. Es werden keine Tracking-Cookies gesetzt.",
+    body: "Wir verwenden Cookies, um Ihre Sprachauswahl zu speichern und – nur mit Ihrer Einwilligung – Besuche mit Google Analytics zu messen. Sie können zustimmen oder ablehnen — die Website funktioniert in beiden Fällen.",
     accept: "Akzeptieren",
     decline: "Ablehnen",
     privacy: "Datenschutzerklärung",
@@ -31,6 +36,11 @@ export default function CookieBanner() {
 
   const choose = (value: "accepted" | "declined") => {
     window.localStorage.setItem(KEY, value);
+    if (value === "accepted") {
+      grantAnalyticsConsent();
+    } else {
+      denyAnalyticsConsent();
+    }
     setVisible(false);
   };
 
