@@ -22,10 +22,9 @@ export default function Footer() {
               <p className="mt-5 max-w-xs text-sm leading-relaxed text-white/70">
                 {t.footerTagline}
               </p>
-              <p className="mt-4 text-sm text-gold-light">{t.footerPreview}</p>
             </div>
             <div>
-              <h3 className="text-sm font-bold uppercase tracking-[0.18em] text-gold">
+              <h3 className="text-sm font-bold tracking-wide text-gold">
                 {t.footerAcademy}
               </h3>
               <ul className="mt-4 space-y-2.5 text-sm text-white/75">
@@ -40,7 +39,7 @@ export default function Footer() {
               </ul>
             </div>
             <div>
-              <h3 className="text-sm font-bold uppercase tracking-[0.18em] text-gold">
+              <h3 className="text-sm font-bold tracking-wide text-gold">
                 {t.footerCourses}
               </h3>
               <ul className="mt-4 space-y-2.5 text-sm text-white/75">
@@ -54,7 +53,7 @@ export default function Footer() {
               </ul>
             </div>
             <div>
-              <h3 className="text-sm font-bold uppercase tracking-[0.18em] text-gold">
+              <h3 className="text-sm font-bold tracking-wide text-gold">
                 {t.footerLegal}
               </h3>
               <ul className="mt-4 space-y-2.5 text-sm text-white/75">
@@ -63,7 +62,7 @@ export default function Footer() {
                 <li><Link className="hover:text-white" href="/impressum">Impressum</Link></li>
                 <li><Link className="hover:text-white" href="/safeguarding">Safeguarding / Kinderschutz</Link></li>
               </ul>
-              <h3 className="mt-8 text-sm font-bold uppercase tracking-[0.18em] text-gold">
+              <h3 className="mt-8 text-sm font-bold tracking-wide text-gold">
                 {t.footerContact}
               </h3>
               <p className="mt-4 text-sm text-white/75">
