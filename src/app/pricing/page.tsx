@@ -20,7 +20,7 @@ const content = {
     perMonth: "/month",
     classesPerWeek: (n: number) => `${n} classes per week`,
     minutesPerClass: (n: number) => `${n} minutes per class, 1-to-1`,
-    mostPopular: "Most popular",
+    mostPopular: "Most Popular",
     choosePlan: "Choose this plan",
     notesEyebrow: "Good to know",
     notesTitle: "Everything included, nothing hidden",
@@ -86,7 +86,7 @@ export default function PricingPage() {
                   }`}
                 >
                 {plan.popular && (
-                  <span className="absolute -top-4 left-1/2 -translate-x-1/2 rounded-full bg-gold px-4 py-1.5 text-xs font-bold uppercase tracking-wider text-brand-deep shadow">
+                  <span className="absolute -top-4 left-1/2 -translate-x-1/2 rounded-full bg-gold px-4 py-1.5 text-xs font-bold tracking-wide text-brand-deep shadow">
                     {t.mostPopular}
                   </span>
                 )}

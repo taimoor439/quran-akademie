@@ -241,7 +241,7 @@ export default function BlogPage() {
                   />
                 </Link>
                 <div className="flex flex-1 flex-col p-6">
-                  <p className="text-xs font-bold uppercase tracking-[0.2em] text-gold-dark">
+                  <p className="text-xs font-bold tracking-wide text-gold-dark">
                     {post.category[locale]} · {post.readTime[locale]}
                   </p>
                   <h2 className="mt-3 font-display text-2xl font-bold leading-snug text-brand">

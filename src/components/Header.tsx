@@ -43,7 +43,7 @@ const dropdownDict: Record<
   }
 > = {
   en: {
-    coursesGroup: "Our courses",
+    coursesGroup: "Our Courses",
     allCourses: "All courses",
     allLocations: "All locations",
     cities: {
@@ -100,7 +100,7 @@ function LanguageSwitcher() {
           type="button"
           onClick={() => setLocale(l)}
           aria-pressed={locale === l}
-          className={`px-2.5 py-1.5 text-xs font-bold uppercase tracking-wide transition-colors ${
+          className={`px-2.5 py-1.5 text-xs font-bold tracking-wide transition-colors ${
             locale === l ? "bg-brand text-white" : "text-brand hover:bg-brand-soft"
           }`}
         >
@@ -263,7 +263,7 @@ export default function Header() {
 
   const coursesPanel = (
     <>
-      <p className="text-xs font-bold uppercase tracking-[0.2em] text-gold-dark">
+      <p className="text-xs font-bold tracking-wide text-gold-dark">
         {dd.coursesGroup}
       </p>
       <ul className="mt-4 space-y-1">
@@ -293,7 +293,7 @@ export default function Header() {
 
   const locationsPanel = (
     <>
-      <p className="text-xs font-bold uppercase tracking-[0.2em] text-gold-dark">
+      <p className="text-xs font-bold tracking-wide text-gold-dark">
         {t.navLocations}
       </p>
       <ul className="mt-4 space-y-1">
@@ -427,7 +427,7 @@ export default function Header() {
             open={mobileDropdown === "courses"}
             onToggle={() => toggleMobile("courses")}
           >
-            <p className="pt-3 text-xs font-bold uppercase tracking-[0.2em] text-gold-dark">
+            <p className="pt-3 text-xs font-bold tracking-wide text-gold-dark">
               {dd.coursesGroup}
             </p>
             {courses.map((course) => (
@@ -454,7 +454,7 @@ export default function Header() {
             open={mobileDropdown === "locations"}
             onToggle={() => toggleMobile("locations")}
           >
-            <p className="pt-3 text-xs font-bold uppercase tracking-[0.2em] text-gold-dark">
+            <p className="pt-3 text-xs font-bold tracking-wide text-gold-dark">
               {t.navLocations}
             </p>
             {CITY_LINKS.map((city) => (

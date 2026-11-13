@@ -23,7 +23,7 @@ export function PageHero({
             {arabic}
           </p>
         )}
-        <p className="text-xs font-bold uppercase tracking-[0.25em] text-gold-dark">
+        <p className="text-xs font-bold tracking-wide text-gold-dark">
           {eyebrow}
         </p>
         <h1 className="mx-auto mt-3 max-w-3xl font-display text-4xl font-bold leading-tight text-brand sm:text-5xl">
@@ -49,7 +49,7 @@ export function SectionHeading({
 }) {
   return (
     <div className="text-center">
-      <p className="text-xs font-bold uppercase tracking-[0.25em] text-gold-dark">
+      <p className="text-xs font-bold tracking-wide text-gold-dark">
         {eyebrow}
       </p>
       <h2 className="mx-auto mt-3 max-w-2xl font-display text-3xl font-bold leading-tight text-brand sm:text-4xl">

@@ -15,7 +15,7 @@ const content = {
       arabic: "خَيْرُكُمْ مَنْ تَعَلَّمَ الْقُرْآنَ وَعَلَّمَهُ",
     },
     mission: {
-      eyebrow: "Our mission",
+      eyebrow: "Our Mission",
       title: "Quran learning that fits real family life in Germany",
       paragraphs: [
         "Many Muslim families in Germany want their children to learn the Quran properly — with correct pronunciation, real understanding, and a love for the words of Allah. But finding a qualified teacher who fits around school, work and family life is not always easy.",
@@ -25,7 +25,7 @@ const content = {
       imageAlt: "A mosque at dusk",
     },
     method: {
-      eyebrow: "Our teaching method",
+      eyebrow: "Our Teaching Method",
       title: "Gentle, structured and level-based",
       subtitle:
         "Every student is placed at the right level and follows a clear learning path. Lessons are calm and encouraging — especially for children — with short, focused steps that build real confidence.",
@@ -54,7 +54,7 @@ const content = {
       note: "Lesson length depends on your plan — 25, 30 or 45 minutes — and can be adjusted to suit the student.",
     },
     different: {
-      eyebrow: "What makes us different",
+      eyebrow: "What Makes Us Different",
       title: "Built around your family, not around a timetable",
       points: [
         {
@@ -77,7 +77,7 @@ const content = {
       imageAlt: "A Quran tutor teaching a live online lesson",
     },
     values: {
-      eyebrow: "Our values",
+      eyebrow: "Our Values",
       title: "What guides every lesson",
       items: [
         {
@@ -211,7 +211,7 @@ export default function AboutPage() {
       <section className="bg-white">
         <div className="mx-auto grid max-w-7xl items-center gap-10 px-4 py-16 sm:px-6 lg:grid-cols-2 lg:gap-14 lg:px-8 lg:py-20">
           <div>
-            <p className="text-xs font-bold uppercase tracking-[0.25em] text-gold-dark">
+            <p className="text-xs font-bold tracking-wide text-gold-dark">
               {t.mission.eyebrow}
             </p>
             <h2 className="mt-3 font-display text-3xl font-bold leading-tight text-brand sm:text-4xl">
@@ -267,7 +267,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* What makes us different */}
+      {/* What Makes Us Different */}
       <section className="bg-white">
         <div className="mx-auto grid max-w-7xl items-center gap-10 px-4 py-16 sm:px-6 lg:grid-cols-2 lg:gap-14 lg:px-8 lg:py-20">
           <div className="order-2 overflow-hidden rounded-3xl shadow-card lg:order-1">
@@ -279,7 +279,7 @@ export default function AboutPage() {
             />
           </div>
           <div className="order-1 lg:order-2">
-            <p className="text-xs font-bold uppercase tracking-[0.25em] text-gold-dark">
+            <p className="text-xs font-bold tracking-wide text-gold-dark">
               {t.different.eyebrow}
             </p>
             <h2 className="mt-3 font-display text-3xl font-bold leading-tight text-brand sm:text-4xl">
@@ -312,7 +312,7 @@ export default function AboutPage() {
         <div className="pattern-star-light">
           <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-20">
             <div className="text-center">
-              <p className="text-xs font-bold uppercase tracking-[0.25em] text-gold-light">
+              <p className="text-xs font-bold tracking-wide text-gold-light">
                 {t.values.eyebrow}
               </p>
               <h2 className="mx-auto mt-3 max-w-2xl font-display text-3xl font-bold leading-tight text-white sm:text-4xl">

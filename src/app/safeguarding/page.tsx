@@ -149,7 +149,7 @@ export default function SafeguardingPage() {
       />
       <section className="bg-white">
         <div className="mx-auto max-w-3xl px-4 py-16 sm:px-6 lg:px-8">
-          <p className="text-sm font-bold uppercase tracking-wide text-gold-dark">
+          <p className="text-sm font-bold tracking-wide text-gold-dark">
             {t.lastUpdated}
           </p>
           <p className="mt-6 leading-relaxed text-ink/75">{t.intro}</p>

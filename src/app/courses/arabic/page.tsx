@@ -10,7 +10,7 @@ import { PageHero, CtaBand } from "@/components/Shared";
 // (the snapshot push cannot delete files) so old links land on /courses.
 const content = {
   en: {
-    eyebrow: "Course no longer offered",
+    eyebrow: "Course No Longer Offered",
     title: "Arabic Language",
     subtitle:
       "This course is no longer offered. Please browse our current courses — every course is taught live, 1-to-1, by a certified tutor.",

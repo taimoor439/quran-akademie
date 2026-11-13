@@ -18,7 +18,7 @@ const WHY_IMAGE =
 
 const content = {
   en: {
-    heroEyebrow: "Live 1-to-1 Quran classes · Online",
+    heroEyebrow: "Live 1-to-1 Quran Classes · Online",
     heroTitle: "Learn the Quran, from home, at Germany time.",
     heroSub:
       "Certified tutors, gentle teaching, and after-school slots that fit family life in Germany. Book a free trial class and meet your tutor first.",
@@ -50,7 +50,7 @@ const content = {
         body: "Regular lessons, 4–5 times a week, with a monthly progress report for parents.",
       },
     ],
-    coursesEyebrow: "Our courses",
+    coursesEyebrow: "Our Courses",
     coursesTitle: "A course for every age and every level",
     coursesSub:
       "From a child's first Arabic letters to Hifz and Tafseer for adults — every course is taught live, 1-to-1, by a certified tutor.",
@@ -79,7 +79,7 @@ const content = {
     pricingSub:
       "No lock-in. Sibling discount 10%. Prices in USD — the EUR equivalent is charged at checkout.",
     perMonth: "per month",
-    popular: "Most popular",
+    popular: "Most Popular",
     classesWeek: "classes / week",
     teachersEyebrow: "Our tutors",
     teachersTitle: "Meet our tutors",
@@ -192,7 +192,7 @@ export default function HomePage() {
       <section className="pattern-star bg-cream">
         <div className="mx-auto grid max-w-7xl items-start gap-12 px-4 py-10 sm:px-6 lg:grid-cols-2 lg:px-8 lg:py-12">
           <div>
-            <p className="text-xs font-bold uppercase tracking-[0.25em] text-gold-dark">
+            <p className="text-xs font-bold tracking-wide text-gold-dark">
               {t.heroEyebrow}
             </p>
             <h1 className="mt-4 font-display text-4xl font-bold leading-[1.1] text-brand sm:text-5xl lg:text-[3.4rem]">
@@ -327,7 +327,7 @@ export default function HomePage() {
               <p className="mt-2 text-sm leading-relaxed text-white/90">
                 {t.heroCardTitle}
               </p>
-              <p className="mt-1 text-xs font-semibold uppercase tracking-wider text-gold-light">
+              <p className="mt-1 text-xs font-semibold tracking-wide text-gold-light">
                 {t.heroCardSub}
               </p>
             </Reveal>
@@ -347,7 +347,7 @@ export default function HomePage() {
             />
           </Reveal>
           <div className="order-1 lg:order-2">
-            <p className="text-xs font-bold uppercase tracking-[0.25em] text-gold-dark">
+            <p className="text-xs font-bold tracking-wide text-gold-dark">
               {t.whyEyebrow}
             </p>
             <h2 className="mt-3 font-display text-3xl font-bold leading-tight text-brand sm:text-4xl">
@@ -391,7 +391,7 @@ export default function HomePage() {
                   }`}
                 >
                 {plan.popular && (
-                  <span className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-gold px-4 py-1 text-xs font-bold uppercase tracking-wide text-brand-deep">
+                  <span className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-gold px-4 py-1 text-xs font-bold tracking-wide text-brand-deep">
                     {t.popular}
                   </span>
                 )}

@@ -197,7 +197,7 @@ const content: { en: LocaleContent; de: LocaleContent } = {
       "No lock-in. Sibling discount 10%. Prices in USD — the EUR equivalent is charged at checkout.",
     perMonth: "per month",
     classesWeek: "classes / week",
-    popular: "Most popular",
+    popular: "Most Popular",
     plansCta: "See full pricing",
     faqEyebrow: "Questions",
     faqTitle: "Frequently asked questions",
@@ -437,7 +437,7 @@ export default function GermanyContent() {
       <section className="pattern-star bg-cream">
         <div className="mx-auto grid max-w-7xl items-center gap-12 px-4 py-16 sm:px-6 lg:grid-cols-2 lg:px-8 lg:py-24">
           <div>
-            <p className="text-xs font-bold uppercase tracking-[0.25em] text-gold-dark">
+            <p className="text-xs font-bold tracking-wide text-gold-dark">
               {t.heroEyebrow}
             </p>
             <h1 className="mt-4 font-display text-4xl font-bold leading-[1.1] text-brand sm:text-5xl lg:text-[3.4rem]">
@@ -592,7 +592,7 @@ export default function GermanyContent() {
                 }`}
               >
                 {plan.popular && (
-                  <span className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-gold px-4 py-1 text-xs font-bold uppercase tracking-wide text-brand-deep">
+                  <span className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-gold px-4 py-1 text-xs font-bold tracking-wide text-brand-deep">
                     {t.popular}
                   </span>
                 )}

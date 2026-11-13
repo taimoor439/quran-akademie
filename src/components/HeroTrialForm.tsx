@@ -247,7 +247,7 @@ export default function HeroTrialForm() {
         </div>
       ) : (
         <>
-          <p className="text-xs font-bold uppercase tracking-[0.25em] text-gold-dark">
+          <p className="text-xs font-bold tracking-wide text-gold-dark">
             {t.eyebrow}
           </p>
           <h2 className="mt-2 font-display text-2xl font-bold leading-tight text-brand">

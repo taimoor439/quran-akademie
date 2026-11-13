@@ -16,7 +16,7 @@ const content = {
     vettingBody:
       "Every tutor passes an identity check, provides references and completes safeguarding training before teaching. Lessons follow our safeguarding policy: a parent stays nearby during children's lessons, and tutors never contact children privately outside approved channels.",
     vettingLink: "Read our safeguarding policy",
-    femaleEyebrow: "For girls and sisters",
+    femaleEyebrow: "For Girls and Sisters",
     femaleTitle: "Looking for a female teacher?",
     femaleBody:
       "We have qualified female tutors (Hafiza) for girls and sisters. Simply request a female teacher when you book your free trial class and we will match you with one of them.",
@@ -124,7 +124,7 @@ export default function TeachersPage() {
         <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-20">
           <div className="rounded-3xl bg-brand p-10 text-center shadow-card sm:p-12">
             <div className="pattern-star-light -m-10 rounded-3xl p-10 sm:-m-12 sm:p-12">
-              <p className="text-xs font-bold uppercase tracking-[0.25em] text-gold-light">
+              <p className="text-xs font-bold tracking-wide text-gold-light">
                 {t.femaleEyebrow}
               </p>
               <h2 className="mx-auto mt-3 max-w-2xl font-display text-3xl font-bold leading-tight text-white sm:text-4xl">

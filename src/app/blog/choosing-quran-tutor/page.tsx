@@ -192,7 +192,7 @@ export default function BlogPostPage() {
           >
             {t.back}
           </Link>
-          <p className="mt-8 text-xs font-bold uppercase tracking-[0.25em] text-gold-dark">
+          <p className="mt-8 text-xs font-bold tracking-wide text-gold-dark">
             {t.category} · {t.readTime}
           </p>
           <h1 className="mt-3 font-display text-4xl font-bold leading-tight text-brand sm:text-5xl">
