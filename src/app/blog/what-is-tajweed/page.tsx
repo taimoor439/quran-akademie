@@ -5,6 +5,7 @@ export const metadata: Metadata = {
   title: "What Is Tajweed? Rules, Meaning & How to Learn",
   description:
     "Tajweed is the art of reciting the Quran correctly: every letter from its right place, with its right sound and length. Learn the rules and how to start.",
+  alternates: { canonical: "https://onlinekoran.de/blog/what-is-tajweed" },
 };
 
 export default function WhatIsTajweedPage() {

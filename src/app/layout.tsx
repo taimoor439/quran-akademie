@@ -9,6 +9,7 @@ import CookieBanner from "@/components/CookieBanner";
 import AnalyticsConsent from "@/components/AnalyticsConsent";
 
 export const metadata = {
+  metadataBase: new URL("https://onlinekoran.de"),
   title: "Online Quran — Online Quran Classes for Families in Germany",
   description:
     "Live 1-to-1 Quran classes online for kids and adults in Germany. Certified tutors, female teachers available, after-school slots in Germany time. Book a free trial class.",

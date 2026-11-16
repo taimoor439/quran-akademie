@@ -5,6 +5,7 @@ export const metadata: Metadata = {
   title: "How to Memorize Quran: A Beginner's Hifz Guide",
   description:
     "How to memorize the Quran step by step: start with Juz Amma, use the sabaq–sabqi–manzil method, and revise daily. Realistic timelines and a system that works.",
+  alternates: { canonical: "https://onlinekoran.de/blog/how-to-memorize-quran" },
 };
 
 export default function Page() {

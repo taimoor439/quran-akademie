@@ -5,6 +5,7 @@ export const metadata: Metadata = {
   title: "Online vs In-Person Quran Classes: Honest Comparison",
   description:
     "Online 1-on-1 lessons, mosque school or a home tutor — which fits your family? An honest comparison of cost, flexibility, personal attention and community.",
+  alternates: { canonical: "https://onlinekoran.de/blog/online-vs-in-person-quran-classes" },
 };
 
 export default function OnlineVsInPersonPage() {

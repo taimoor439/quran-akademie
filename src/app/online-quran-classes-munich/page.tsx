@@ -5,6 +5,7 @@ export const metadata: Metadata = {
   title: "Online Quran Classes in Munich — 1-on-1 Live Lessons",
   description:
     "Live 1-on-1 Quran classes for families in Munich — Sendling, Neuperlach & Hasenbergl. After-school times in Munich time, free trial class.",
+  alternates: { canonical: "https://onlinekoran.de/online-quran-classes-munich" },
 };
 
 export default function OnlineQuranClassesMunichPage() {

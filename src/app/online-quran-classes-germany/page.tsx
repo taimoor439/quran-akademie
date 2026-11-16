@@ -5,6 +5,7 @@ export const metadata: Metadata = {
   title: "Online Quran Classes in Germany — 1-on-1 Live Lessons",
   description:
     "Live 1-on-1 Quran classes for families in Germany. Certified tutors, after-school times in CET/CEST, free 30-minute trial class. Book your free lesson today.",
+  alternates: { canonical: "https://onlinekoran.de/online-quran-classes-germany" },
 };
 
 export default function OnlineQuranClassesGermanyPage() {

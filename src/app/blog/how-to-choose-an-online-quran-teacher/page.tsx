@@ -5,6 +5,7 @@ export const metadata: Metadata = {
   title: "How to Choose an Online Quran Teacher: 12 Questions",
   description:
     "Twelve questions to ask before you book an online Quran teacher — Ijazah, Tajweed, safeguarding, trial and pricing. A checklist for parents in Germany.",
+  alternates: { canonical: "https://onlinekoran.de/blog/how-to-choose-an-online-quran-teacher" },
 };
 
 export default function Page() {
